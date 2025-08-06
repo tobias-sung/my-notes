@@ -34,6 +34,7 @@ The Wild Robot is the story of a machine that has been dropped into an environme
 
 > [!Quote] From "The Wild Robot"
 > **Rummage**: Can you explain again what we are doing?
+> 
 > **Roz**: I DON'T KNOW! I’m just...making stuff up! I don't know what I'm doing and I have to! I have to because he's relying on me!
 
 A computer does not make mistakes. Every time our software crashes we might blame the computer, but the truth is that the computer is simply executing what it was told to do. It's the human programmers who make mistakes. Computers are perfect. Humans are not.
@@ -165,7 +166,9 @@ As mentioned before, a generative AI can only "fake it" but can never "make it".
 
 > [!Quote] From "The Wild Robot"
 > **Longneck**: The accident that killed your family, saved you.
+> 
 > **Brightbill**: I-I never thought of it that way.
+> 
 > **Longneck**: Funny, how life works.
 
 As the famous saying goes, we live life forwards but can only understand it backwards. Looking back, the mess of our lives somehow coheres into something beautiful even if we were just trying to get by every day. 
