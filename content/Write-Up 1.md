@@ -1,3 +1,10 @@
+---
+title: Write-Up 1
+draft: false
+tags:
+---
+
+
 # Part 1 - Setting Up Development Environment and Building A Simple "Blink" Program
 
 This project was developed on Ubuntu 22.04.5 LTS.

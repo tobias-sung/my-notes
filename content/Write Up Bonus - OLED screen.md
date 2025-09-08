@@ -1,3 +1,9 @@
+---
+title: Write-Up Bonus
+draft: false
+tags:
+---
+
 I decided to try hooking up an OLED screen to the Pico W so that I could read outputs from there instead of having to use minicom every time. 
 
 The [OLED used](https://www.taiwaniot.com.tw/product/0-96%E5%90%8Boled-%E6%B6%B2%E6%99%B6%E5%B1%8F%E9%A1%AF%E7%A4%BA%E6%A8%A1%E7%B5%84-%E9%BB%91%E5%BA%95%E7%99%BD%E5%AD%97-i2c-oled%E6%A8%A1%E5%A1%8A%EF%BC%81%E5%8F%AA%E9%9C%804%E5%80%8B%E5%BC%95%E8%85%B3/?https://www.taiwaniot.com.tw/products-category/mcuboard/=) was a 0.96 inch display running an [SSD1315](https://cursedhardware.github.io/epd-driver-ic/SSD1315.pdf) driver with an I2C interface.

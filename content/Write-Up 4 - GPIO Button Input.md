@@ -1,3 +1,9 @@
+---
+title: Write-Up 4
+draft: false
+tags:
+---
+
 Similar to the previous [[Write-Up 3 - UART Communication|section]], I want to communicate with the Pico W but this time using push buttons via the board's GPIO pins. 
 
 The design is pretty much the same. GPIO interrupts are enabled so that a handler function is triggered every time the button is pressed. The handler function sends a notification to a Task that handles the button presses.

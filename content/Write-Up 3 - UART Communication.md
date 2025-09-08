@@ -1,4 +1,8 @@
-[GitHub code]()
+---
+title: Write-Up 3
+draft: false
+tags:
+---
 
 With all the basic setup completed, my first task was to setup basic UART communication, which would allow me to send text messages serially to the Pico W through a serial communication program like "minicom". 
 

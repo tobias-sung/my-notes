@@ -1,3 +1,8 @@
+---
+title: Write-Up 2
+draft: false
+tags:
+---
 # Part 2 - Setting Up the Raspberry Pi Debug Probe for Debugging and Flashing
 
 Before writing more complex programs, it's helpful to set up the Raspberry Pi Debug Probe with our Pico W. This will allow us to have more debug options as well as load our program without having to keep reconnecting the Pico W.
