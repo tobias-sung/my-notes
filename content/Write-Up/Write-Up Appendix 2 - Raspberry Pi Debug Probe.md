@@ -1,5 +1,5 @@
 ---
-title: Write-Up Appendix 2
+title: Write-Up Appendix 2 - Debug Probe
 draft: false
 tags:
 ---

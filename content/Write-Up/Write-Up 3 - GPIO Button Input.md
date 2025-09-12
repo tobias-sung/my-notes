@@ -1,5 +1,5 @@
 ---
-title: Write-Up 3
+title: Write-Up 3 - GPIO Button Input
 draft: false
 tags:
 ---
