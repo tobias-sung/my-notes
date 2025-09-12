@@ -1,5 +1,5 @@
 ---
-title: Write-Up 2
+title: Write-Up Appendix 2
 draft: false
 tags:
 ---

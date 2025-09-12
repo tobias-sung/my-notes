@@ -1,5 +1,5 @@
 ---
-title: Write-Up Bonus
+title: Write-Up 6
 draft: false
 tags:
 ---
@@ -40,9 +40,9 @@ Then add the following macros at the start of the code:
 
 I wired the OLED as follows:
 
-![[20250908_131308.jpg|400]]
+![[content/Images/20250908_131308.jpg|400]]
 
-The SDA and SCL pins were connected to GPIO pins 14 and 15 respectively (which are connected to I2C1 of the Pico W). GND pin was connected to the GND pin right next to the GPIO pin 14. As with the [[Write-Up 4 - GPIO Button Input|button]] example, pin 36 (3V3(OUT)) was connected to the positive power rail of the breadboard, and the VCC pin of the OLED was also connected to the same power rail to get power.
+The SDA and SCL pins were connected to GPIO pins 14 and 15 respectively (which are connected to I2C1 of the Pico W). GND pin was connected to the GND pin right next to the GPIO pin 14. As with the [[Write-Up 3 - GPIO Button Input|button]] example, pin 36 (3V3(OUT)) was connected to the positive power rail of the breadboard, and the VCC pin of the OLED was also connected to the same power rail to get power.
 
 And then a setup function:
 
@@ -94,7 +94,7 @@ void main() {
 
 I tried printing text with a variable, since that's what the display would primarily be used for (`sprintf()` requires `#include "stdio.h`). And the result:
 
-![[20250908_132656.jpg|300]]
+![[content/Images/20250908_132656.jpg|300]]
 
 # Bonus: Scrolling Text
 Through some trial and error, I found that the maximum number of characters the can be printed on the screen (in a single line) is 20 characters. I tried implementing scrolling text for strings longer than 20 characters. It's not a really practical solution and I didn't use it in the final project, but I'll still save it here in case it's somehow useful. 

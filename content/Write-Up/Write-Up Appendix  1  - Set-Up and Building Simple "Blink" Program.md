@@ -1,12 +1,8 @@
 ---
-title: Write-Up 1
+title: Write-Up Appendix  1
 draft: false
 tags:
 ---
-
-
-# Part 1 - Setting Up Development Environment and Building A Simple "Blink" Program
-
 This project was developed on Ubuntu 22.04.5 LTS.
 ## Downloading Tools
 First, we'll install some essential tools needed for building our embedded C programs.

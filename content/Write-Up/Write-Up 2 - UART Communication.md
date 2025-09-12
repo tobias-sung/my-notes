@@ -1,10 +1,9 @@
 ---
-title: Write-Up 3
+title: Write-Up 2
 draft: false
 tags:
 ---
-
-With all the basic setup completed, my first task was to setup basic UART communication, which would allow me to send text messages serially to the Pico W through a serial communication program like "minicom". 
+My first task was to setup basic UART communication, which would allow me to send text messages serially to the Pico W through a serial communication program like "minicom". 
 
 What I'm doing is the same as this [video](https://www.youtube.com/watch?v=pbWhoJdYA1s&t=34s), except I'm using FreeRTOS.
 
@@ -14,6 +13,7 @@ In order to detect UART input, I'll use the Pico's built-in UART interrupts. Whe
 
 # UART Initialization 
 I wrote a short function to take care of all the UART initialization. 
+
 ```C
 void UART_setup(){
     uart_init(uart0, 115200);
@@ -99,7 +99,7 @@ void main() {
 
 I used a USB-to-TTL converter to communicate with the Pico's UART over a USB connection to my laptop. I connected the RXD pin of the converter to the GP0 of the Pico W (UART0 TX) and the TXD pin to GP1 (UART0 RX).
 
-![[20250908_112119.jpg|250]]
+![[content/Images/20250908_112119.jpg|250]]
 
 I then used minicom (which I ran in the terminal using `sudo minicom -D /dev/ttyUSB0`) to send messages to the UART and it appears to be working.
 
@@ -107,8 +107,11 @@ I then used minicom (which I ran in the terminal using `sudo minicom -D /dev/tty
 
 
 # References
-- [FreeRTOS Direct-to-Task Notifications (Blog Post)](https://www.freertos.org/Documentation/02-Kernel/02-Kernel-features/03-Direct-to-task-notifications/01-Task-notifications)
+**Documentation**
 - [FreeRTOS Task Notification API Documentation](https://freertos.org/Documentation/02-Kernel/04-API-references/05-Direct-to-task-notifications/00-RTOS-task-notifications)
 - [Pico W Pinout Diagram](https://datasheets.raspberrypi.com/picow/PicoW-A4-Pinout.pdf)
+**Concepts**
+- [FreeRTOS Direct-to-Task Notifications (Blog Post)](https://www.freertos.org/Documentation/02-Kernel/02-Kernel-features/03-Direct-to-task-notifications/01-Task-notifications)
+
 
 

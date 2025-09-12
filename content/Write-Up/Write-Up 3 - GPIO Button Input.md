@@ -1,10 +1,10 @@
 ---
-title: Write-Up 4
+title: Write-Up 3
 draft: false
 tags:
 ---
 
-Similar to the previous [[Write-Up 3 - UART Communication|section]], I want to communicate with the Pico W but this time using push buttons via the board's GPIO pins. 
+Similar to the previous [[Write-Up 2 - UART Communication|section]], I want to communicate with the Pico W but this time using push buttons via the board's GPIO pins. 
 
 The design is pretty much the same. GPIO interrupts are enabled so that a handler function is triggered every time the button is pressed. The handler function sends a notification to a Task that handles the button presses.
 
@@ -92,7 +92,7 @@ void main() {
 ```
 
 And here's how I wired the push buttons to the board:
-![[20250908_122324.jpg|500]]
+![[content/Images/20250908_122324.jpg|500]]
 I connected Pin 36 (3V3 (OUT)) to the positive power rail of the breadboard (i.e. the red power rail). I then connected each of the buttons to the positive power rail.
 
 Then I connected the remaining pin of each push button to GPIO pins 18, 19 and 20 (which I had defined in the code).
