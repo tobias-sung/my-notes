@@ -1,5 +1,5 @@
 ---
-title: Write Up 7 - Reading from TXT File
+title: Write-Up 7 - Reading from TXT File
 draft: false
 tags:
   -
