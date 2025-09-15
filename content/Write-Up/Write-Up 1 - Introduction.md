@@ -20,7 +20,7 @@ Then I implemented [[Write-Up 4 - TCP Client|TCP client functionality]], as inti
 
 Later, the server was upgraded to be an HTTPS server with Transport Layer Security (TLS). So I implemented [[Write-Up 5 - HTTPS Client|HTTPS client functionality]].
 
-With the main features completed, I added two extra ones to make the system more convenient. The first was to add an [[Write Up 6 - OLED screen|small OLED screen]] that printed out console messages. The second was to have the Pico W [[Write-Up 7 - Reading from TXT File|read configuration information from a text file]].  
+With the main features completed, I added two extra ones to make the system more convenient. The first was to add an [[Write-Up 6 - OLED screen|small OLED screen]] that printed out console messages. The second was to have the Pico W [[Write-Up 7 - Reading from TXT File|read configuration information from a text file]].  
 
 
 

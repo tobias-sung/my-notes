@@ -3,6 +3,7 @@ title: Write-Up 3 - GPIO Button Input
 draft: false
 tags:
 ---
+[GitHub code](https://github.com/tobias-sung/picow_freertos_gpio_button)
 
 Similar to the previous [[Write-Up 2 - UART Communication|section]], I want to communicate with the Pico W but this time using push buttons via the board's GPIO pins. 
 

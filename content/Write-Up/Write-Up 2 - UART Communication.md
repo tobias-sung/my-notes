@@ -3,6 +3,8 @@ title: Write-Up 2 - UART Communication
 draft: false
 tags:
 ---
+[GitHub code](https://github.com/tobias-sung/uart_console)
+
 My first task was to setup basic UART communication, which would allow me to send text messages serially to the Pico W through a serial communication program like "minicom". 
 
 What I'm doing is the same as this [video](https://www.youtube.com/watch?v=pbWhoJdYA1s&t=34s), except I'm using FreeRTOS.

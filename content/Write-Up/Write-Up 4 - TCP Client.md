@@ -4,6 +4,8 @@ draft: false
 tags:
   -
 ---
+[GitHub code](https://github.com/tobias-sung/picow_freertos_tcp_client)
+
 The goal now is to get the Pico W to connect to a TCP server and send the messages typed in by the user through the [[Write-Up 2 - UART Communication]]. 
 
 The TCP client functionality was implemented using the ["tcp_client" example](https://github.com/raspberrypi/pico-examples/tree/master/pico_w/wifi/tcp_client) from the "pico-examples" GitHub repository as a base. The original example sends random data back and forth between the Pico W and a local Python server a fixed number of times in a for-loop, ending the connection once the transfers are completed. For my program, I want to keep the connection open indefinitely and send messages inputted via UART whenever the user presses ENTER.
