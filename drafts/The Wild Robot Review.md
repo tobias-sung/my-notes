@@ -4,7 +4,7 @@ These artificial constructs are designed to get a real emotional reaction out of
 
 For me, The Wild Robot succeeded. It easily ranks among Dreamworks' best films, transcending its familiar story to be much more than just an artificial construct.
 
-![[Flight.png]]
+![[content/Images/Flight.png]]
 # You Don't Understand Anything
 
 > [!Quote] From The Wild Robot
@@ -16,7 +16,7 @@ Like most of the general public, I have no idea how artificial intelligence actu
 
 Generative AI is obviously the hottest thing right now, with everyone and their mother using ChatGPT for just about anything you can imagine. One of the biggest fears surrounding gen-AI is how it will impact the film industry. From replacing voice actors to generating entire films, studio executives are salivating at how much money they could potentially save by creating million dollar hits out of nothing more than prompts. What if you could just tell a gen-AI to make an animated film based on the bestselling book "The Wild Robot" instead of waiting 4 years for hundreds of creatives to painstakingly handcraft the final product? For now, that's just a dream. Gen-AI is currently nowhere near that level, at least as far as I know. This [article](https://www.forbes.com/sites/bernardmarr/2024/05/08/the-important-difference-between-generative-ai-and-agi/) from Forbes has a great quote on the limitations of gen-AI using a topic that's quite relevant to The Wild Robot: love.
 
-![[Emotion.png]]
+![[content/Images/Emotion.png]]
 
 Gen-AI cannot understand or feel love. It can draw on an enormous database of words and phrases that describe love or process billions of images depicting expressions of love (of which there are many, perhaps *too many*). And after analyzing all this data and identifying all the patterns, it can only *predict* what might evoke love. It's an incredibly advanced parrot, but like a parrot it doesn't know what it's saying. 
 
@@ -39,7 +39,7 @@ Although ROZZUM 7134 starts out looking like a fool, she is still technically "p
 
 And in order to complete this task, the once-perfect ROZZUM 7134 has to become increasingly imperfect. Increasingly human.
 
-![[Ambiguity.png]]
+![[content/Images/Ambiguity.png]]
 
 Being human is an incredibly messy and frustrating affair. Yet our race, in all its stupid glory, somehow stumbled into being the most advanced civilization on the planet. And it's because we have this strange ability of developing good ideas. But where do good ideas come from? No one knows for sure, but what we do know is that they don't come easily. It's a messy and inefficient process of failure and self-doubt. And at the end of it all, it's hard to define exactly how you even got there. You could probably trace a series of incidents or logical statements but sooner or later, you start making unexplainable leaps that don't make sense yet somehow lead to something incredible. To put it simply, you just start making stuff up.
 
@@ -74,11 +74,11 @@ Fly by fall.
 
 But of course, this is a gross over-simplification. While feeding the gosling is simple (the lush Island is full of tasty worms and plants), making sure the gosling *learns* important survival skills is not so straightforward. ROZZUM 7134 was trained to solve problems with logic or, if all else fails, brute force. But this task requires...a gentler touch.
 
-![[Emotional.png]]
+![[content/Images/Emotional.png]]
 
 Learning is an incredibly emotional process. It means overcoming the pain of failure multiple times just to attain the most basic level of competency at something. Failing to manage our emotions, we end up giving up and making no progress. Adults (mostly) can learn things on their own because they have the *emotional intelligence* to deal with failure. But a newborn child is still running off the most basic programming of avoiding pain. When they inevitably fail, they won't push through unless they have the guidance and encouragement of an adult.
 
-![[Guidance.png]]
+![[content/Images/Guidance.png]]
 
 At the beginning of their relationship, both Roz and Brightbill lack emotional intelligence. In Roz's case, it's because she doesn't have any emotions. For Brightbill, it's because he has too many. Yet somehow Roz has to get Brightbill through the very emotional process of learning to grow up. A child raising a child.
 
@@ -106,13 +106,13 @@ While there's nothing conclusive about it yet, there are a lot of theories sugge
 
 At the most basic level, mirror neurons allow us to, you guessed it, "mirror" the actions of another person. For example, if you do a silly face or stick your tongue out at an infant, there's a chance that the baby will copy your facial expression.
 
-![[Mirror1.png]]
+![[content/Images/Mirror1.png]]
 
 But the theory is that when we "mirror" someone, we go beyond mere copying. Somehow, we understand the intention or emotion behind that action, and learn how to use it in our own lives. 
 
 So if you're a parent and you spend a lot of time smiling at your new little human, the baby might smile back at you despite not understanding what the smile means. But then, the act of smiling somehow triggers a positive feeling in their head. Therefore, they learn to associate smiling with positive emotion. The baby understands that whenever their parent is smiling, it's because they are happy. And so the baby learns to express its own joy through a smile (or to charm people into giving them what they want).
 
-![[Cute.png]]
+![[content/Images/Cute.png]]
 
 In short, mirror neurons allow us to understand what other people are feeling. We can observe an action and instinctively know (and feel) the associated emotion.
 
@@ -122,7 +122,7 @@ The same holds true when we watch films, which (if they're doing their job) make
 
 Which brings us back to The Wild Robot. If Roz can perfectly mirror the action of another living being, can she understand the emotion driving that action *through* her mimicry?
 
-![[Mimic1.png]]
+![[content/Images/Mimic1.png]]
 
 Brightbill, upon first hatching, takes his first glimpse of the world and what he sees are the gleaming blue eyes of ROZZUM 7134. And at that moment, as far as he's concerned, Roz *is* the entire world. And, in the purest expression of love, he presses his little face against hers. But is it really love? We later learn that goslings imprint on the first thing they see. Real-life geese *have* been shown to literally "fall in love" with something as silly as a scientist's boots. While their "reason" might be programmed into them, I believe the resulting emotion is still quite real. I believe in that one simple, earth-shattering moment, Brightbill was programatically expressing a very real love. And Roz, somehow, feels it too. 
 
@@ -130,13 +130,13 @@ Brightbill, upon first hatching, takes his first glimpse of the world and what h
 
 It's important that this isn't the very first animal that Roz encountered on the Island. So far, every single animal has either run away from her or tried to murder her. Although Roz is still emotionally bare, she knows enough to understand these reactions to be negative. [Just like how a cat feels threatened even if you yell profanities at it that it cannot understand](https://www.youtube.com/watch?v=23Te7QAsH6w). But along comes Brightbill, who does something that no other animal has ever done before: voluntarily engaging in prolonged physical contact. Even if Roz doesn't know what love is, she can understand that there's something special about this, something completely *new*. It causes her entire body to glow brilliantly in a way it has never done before, her core exploding into colorful shapes, as if some beautiful defect has compromised her entire system.
 
-![[Glow.png]]
+![[content/Images/Glow.png]]
 
 And for the rest of her life, Roz will associate this simple action with this strange sensation.
 
 Near the end of the film, when Roz has finally "learned" how to feel, we see her "mirror" the same action, except this time with complete understanding and acceptance of what it means. Even the shot itself is a literal mirror of the first one.
 
-![[Mimic.png]]
+![[content/Images/Mimic.png]]
 
 The Wild Robot doesn't waste time on the question of, "Will the robot learn how to feel?" We already know she will. The filmmakers instead put all their efforts into telling the story of *how* the robot learns to feel, to ensure that it happened in a natural and organic way. 
 
@@ -146,7 +146,7 @@ Roz's programming compels her to complete the task of raising Brightbill, but sh
 
 There's no clear cut-off point where you can say, "Oh, this is *the* moment where Roz becomes a mother." There's no clear turning point where her voice just starts to distinctly become more human (an idea which was in the original script but thankfully changed for the final performance). Rather, there's a weird back and forth that goes on throughout most of the film where Roz can't seem to figure out what she is.
 
-![[Confused.png]]
+![[content/Images/Confused.png]]
 
 She refuses to refer to Brightbill as her son most of the time, and when he accuses her of taking care of him out of guilt she defensively says that she needed a task. 
 
@@ -156,7 +156,7 @@ On the day he is to leave on migration and they are likely to be parted forever,
 
 Is she taking care of Brightbill out of obligation from her programming, or is it something more? Does her joy come from checking requirements off of a list or seeing her child grow stronger? Is her inability to verbally express love because of a genuine lack of it, or because she is afraid of being vulnerable? What makes Roz's struggle feel so compelling is the fact that real humans with real hearts can also suffer from these doubts. 
 
-![[Conflict.png]]
+![[content/Images/Conflict.png]]
 
 As mentioned before, a generative AI can only "fake it" but can never "make it". It can mimic love, but it will never gain an understanding of love through its mimicry. It can study billions of images of facial expressions to approximate empathy, but it can never be truly empathic. But Roz is not ChatGPT. She's us. We start off faking the person we're trying to be, and then one day we realize we've been that person for longer than we've thought. We can't point to that exact moment when things changed, when the role became reality. It just kind of happened along the way. 
 
@@ -188,7 +188,7 @@ Life is a series of coincidences and chance encounters. Even the most advanced c
 
 Although Roz is technically the "hero" of the story, her presence on the Island turns out to have more than a few negative repercussions.
 
- ![[Disruption.png]]
+ ![[content/Images/Disruption.png]]
 
 Upon her arrival, she disrupts the environment with her noisy advertising and destructive attempts at "helping" the local animals (from handing out free stickers to destroying a beaver's dam). 
 
@@ -196,7 +196,7 @@ Her clumsiness eventually leads to an accident that kills an entire family of ge
 
 And worst of all, by activating her transmitter she alerts the humans of the location of the Island, which leads to a massive forest fire at the climax of the film. Although the forest is saved, the Island is now vulnerable to further damage from the humans.
 
-![[Fire.png]]
+![[content/Images/Fire.png]]
 
 The thing is, Roz isn't directly responsible for all the terrible things that happen in the film, but at the same time none of these things would have happened if she had never crashed onto the Island. 
 
@@ -204,7 +204,7 @@ Roz can't help but be the product of a destructive system. A system that destroy
 
 She killed Brightbill's family but chose to raise him. The same technological progress that created her also led to the blizzard that killed many of the Island's inhabitants, and yet she still uses her advanced technology to save the survivors and keep them alive through the long winter. At the end of the film, she knows going back to her creators won't solve everything but at least it will keep the Island safe for now.
 
-![[Underwater.png]]
+![[content/Images/Underwater.png]]
 
 Brightbill tells Roz that what happened to his family was not her fault. But what she did to *try* and fix it was "everything". He doesn't tell her that she *fixed* everything. Brightbill will always be a little broken, a little out of place. The world is forever scarred by the work of her creators. It's the fact that she tried that *is* everything.
 
@@ -228,7 +228,7 @@ Living beings are also programmed to do certain things, under certain circumstan
 
 A lot of the time we are being re-written by forces outside of ourselves. Whether it's the big corporations running the Internet, the expectations of society or the people who surround us every day. Or maybe our "code" becomes corrupted when functions that once served us well in our prehistoric environment start going haywire in the modern world, like when our sensitivity to threats (which would have been very useful in a wilderness filled with predators) causes us to become eaten up by the smallest things.
 
-![[Re-programming.png]]
+![[content/Images/Re-programming.png]]
 
 Yet we also have the ability to override our programming on our own, and the key is being *aware*. To stop and think. To question the world that we were born into. Acting according to our programming is the same as acting without thinking, continuing to do the things the same way they have always been done.
 
@@ -236,7 +236,7 @@ There's evidence that in ancient times, humans spent centuries stubbornly using 
 
 Sometimes it's easier to stay in a miserable but familiar situation rather than take the plunge into the terrifying unknown. Sometimes, in order for new ideas to be born, you need to introduce a rogue element into the environment. Someone who has not spent their whole lives living in quiet desperation under a flawed system. Someone who can't fall into routine because they never had the chance to develop one. Like a certain clueless Universal Dynamics robot, fresh out of her crate.
 
-![[Think.png]]
+![[content/Images/Think.png]]
 
 Roz is scrambling to get by from day one. 
 
@@ -268,7 +268,7 @@ One of the most well-known tropes in storytelling is the "Deus ex Machina", mean
 
 After being kidnapped onto a spaceship by the villainess VONTRA, Roz has her memories wiped and is shut down. Brightbill discovers her body and desperately attempts to revive her, only to be greeted by his own reflection in her lifeless eyes. Crawling into his favorite position on her neck, he tells her all the things he had meant to say but never had the maturity to admit.
 
-![[Tomb.png]]
+![[content/Images/Tomb.png]]
 
 Roz is dead. Her power is cut. Her memories wiped. There's no way she could possibly hear him. Even if she were revived, she should have no memory of this strange little goose perched on her shoulder. 
 
@@ -298,7 +298,7 @@ And that's just it. I've struggled to put into words why The Wild Robot gets awa
 
 A group of experienced human storytellers took these familiar story blocks, put them together and infused it with something good. The mix of beautiful animation, stirring music and voice actors going way too hard for a kid's movie result in something that, somehow, becomes more than a cold and lifeless artificial construct. It has a soul.
 
-![[Hug1.png]]
+![[content/Images/Hug1.png]]
 # Sources
 - [Thinking is Hard](https://www.learningscientists.org/blog/2024/9/4)
 - [The Wild Robot screenplay](https://universalpicturesawards.com/the-wild-robot/screenplay/The_Wild_Robot.pdf)
