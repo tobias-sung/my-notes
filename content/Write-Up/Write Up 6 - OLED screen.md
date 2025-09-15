@@ -1,5 +1,5 @@
 ---
-title: Write-Up 6
+title: Write-Up 6 - OLED screen
 draft: false
 tags:
 ---
