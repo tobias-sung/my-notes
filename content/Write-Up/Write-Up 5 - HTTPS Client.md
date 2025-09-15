@@ -4,14 +4,11 @@ draft: false
 tags:
   -
 ---
-The next part of the project was to get the Pico W to connect to an HTTPS server with TLS (Transport Layer Security). Functionally, it's exactly the same as the [[Write-Up 4 - TCP Client|previous section]], it's just a different kind of server with more security. 
+The next part of the project was to get the Pico W to connect to an HTTPS server with TLS (Transport Layer Security). Functionally, it's exactly the same as the [[Write-Up 4 - TCP Client|previous section]], it's just that after the TCP handshake is completed an additional TLS handshake is carried out to verify the authenticity of the server. Accordingly, the lwIP developers have made their "altcp" API library very similar to the "tcp" API library in terms of naming and structure.
 
-The HTTPS server was set up by my mentor and reacts to specific text messages like "RESET_OK". Regradless of whether it recognized the text message, it sends back a 200 response to indicate the message was successfully received. 
+The HTTPS server was already setup by the team  and recognizes specific text messages like "RESET_OK", which will trigger changes in a Web UI. Regradless of whether it recognized the text message, it sends back an HTTP 200 response to indicate the message was successfully received. So unlike the [[Write-Up 4 - TCP Client|previous section]], I didn't set up my own test server.
 
 I used the ["tls_client" example](https://github.com/raspberrypi/pico-examples/tree/master/pico_w/wifi/tls_client) from the "pico-example" GitHub repository as a starting point. The example simply sends a single TLS request before closing the connection. Once again, I'll modify it to keep the connection open indefinitely and send messages inputted via UART. 
-
-# Clarifying What Happens During A HTTPS Connection
-After the TCP connection has been established, what's known as a TLS handshake occurs in which the client verifies the server's authenticity by checking its SSL certificate against a copy that is saved in the code. Once it has been authenticated, the handshake is completed and the connection is established.
 
 # Copying Over The Code
 ## lwIP Application Layer configurations
@@ -43,7 +40,7 @@ typedef struct TLS_CLIENT_T_ {
 } TLS_CLIENT_T;
 ```
 ## Callback Functions
-"tls_common.c" contains the following callbacks:
+"tls_common.c" contains the following callbacks, most of which have equivalent functions in the TCP client API:
 - `tls_client_sent()`
 - `tls_client_connected()` 
 - `tls_client_poll()`
@@ -53,8 +50,29 @@ typedef struct TLS_CLIENT_T_ {
 ## Setup functions
 `tls_client_init()` initializes the TLS client while `tls_client_open()` establishes the connection.
 ****
-Finally, in `run_tls_client_test()` I uncommented a line of code that runs the function `mbedtls_ssl_conf_authmode()` which causes the TLS handshake to fail should the server's SSL ceritficate not pass authentication against a root certificate I'll define in my code later. I also removed code that would close the connection so as to keep it open indefinitely. 
+Finally, in `run_tls_client_test()` I uncommented this line of code: 
+```C
+mbedtls_ssl_conf_authmode(&tls_config->conf, MBEDTLS_SSL_VERIFY_REQUIRED);
+```
 
+The first parameter is `tls_config`, the TLS client's configuration handle. The second configures which authentication mode will be used. By using `MBEDTLS_SSL_VERIFY_REQUIRED`, I set the TLS handshake to fail should the server's SSL ceritficate not pass authentication against a root certificate I'll define in my code later. 
+
+After uncommenting `mbedtls_ssl_conf_authmode()`, I was getting this error when building the program: `invalid use of undefined type 'struct altcp_tls_config'`. I searched through the Pico SDK files for references to `struct altcp_tls_config` and eventually found the definition in "pico-sdk/lib/lwip/src/apps/altcp_tls/altcp_tls_mbedtls.c": 
+
+```C
+struct altcp_tls_config {
+  mbedtls_ssl_config conf;
+  mbedtls_x509_crt *cert;
+  mbedtls_pk_context *pkey;
+  u8_t cert_count;
+  u8_t cert_max;
+  u8_t pkey_count;
+  u8_t pkey_max;
+  mbedtls_x509_crt *ca;
+}; 
+```
+
+I copied it over into "tls_common.c" which finally made it build.
 # Root Certificate
 I was given a root certificate that would certify the HTTPS server (defined as a macro at the start of the code using `#define`). In order to test that the authentication worked, I also copied two root certificates from ["tls_verify.c"](https://github.com/raspberrypi/pico-examples/blob/master/pico_w/wifi/tls_client/tls_verify.c) in the "tls_client" example to make sure that the TLS handshake only passed using the root certificate that I was given.
 
@@ -92,7 +110,7 @@ Then sending the message itself:
     cyw43_arch_lwip_end();
 ```
 
-Much like in the TCP example, we have to first call `altcp_write()` to write the data that is to be sent, then call `altcp_output`  to trigger the actual sending of the message. 
+Much like in the TCP example, we have to first call `altcp_write()` to write the data that is to be sent, then call `altcp_output()`  to trigger the actual sending of the message. 
 
 # Result
 I integrated the UART input code in the same way I did in the [[Write-Up 4 - TCP Client|TCP section]] (copying over the relevant task/functions and modifying the task to call `tls_send()` when it detects an 
