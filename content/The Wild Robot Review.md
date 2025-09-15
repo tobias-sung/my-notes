@@ -1,6 +1,6 @@
 ---
 title: The Wild Robot Review
-draft: false
+draft: true
 tags:
 ---
 Films are artificial constructs, nothing more than blinking lights trying to convince you that they are reality. Modern animated films like The Wild Robot are literally *programmed* on computers. 
