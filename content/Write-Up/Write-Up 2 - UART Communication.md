@@ -11,7 +11,7 @@ What I'm doing is the same as this [video](https://www.youtube.com/watch?v=pbWho
 
 My plan is to create a Task for processing UART input. This Task is usually in a blocked state, and only unblocks if UART input is detected. 
 
-In order to detect UART input, I'll use the Pico's built-in UART interrupts. When the interrupt is triggered, the interrupt handler will send a [direct-to-task notifcation](https://www.freertos.org/Documentation/02-Kernel/02-Kernel-features/03-Direct-to-task-notifications/01-Task-notifications) to the UART task and unblock so it can handle the incoming UART data.
+In order to detect UART input, I'll use the Pico's built-in UART interrupts. When the interrupt is triggered, the interrupt handler will send a [direct-to-task notification](https://www.freertos.org/Documentation/02-Kernel/02-Kernel-features/03-Direct-to-task-notifications/01-Task-notifications) to the UART task and unblock so it can handle the incoming UART data.
 
 # UART Initialization 
 I wrote a short function to take care of all the UART initialization. 

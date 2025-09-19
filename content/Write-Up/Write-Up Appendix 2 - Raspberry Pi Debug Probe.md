@@ -3,15 +3,13 @@ title: Write-Up Appendix 2 - Debug Probe
 draft: false
 tags:
 ---
-# Part 2 - Setting Up the Raspberry Pi Debug Probe for Debugging and Flashing
-
-Before writing more complex programs, it's helpful to set up the Raspberry Pi Debug Probe with our Pico W. This will allow us to have more debug options as well as load our program without having to keep reconnecting the Pico W.
+These are notes on how I set up the Raspberry Pi Debug Probe with the Pico W. Using the Debug Probe allowed me to get a closer look at what was going wrong during crashes and made it much more convenient to reload programs onto the Pico W. 
 
 ## Connecting the Debug Probe to the Pico W
 The Debug Probe comes with 3 debug cables. Take the 3-pin debug to 3-pin debug cable and connect the "D" port on the probe to the debug connector on the Pico W (it's located in the middle of the board). Then take the 3-pin debug to male cable and connect the "U" port of the probe to the RX (orange), GND (black) and TX (yellow) pins on the Pico W.
 
 ## Installing OpenOCD
-Although installing OpenOCD on Ubuntu can be as simple as running `sudo apt-get install openocd`, building from source can help us identify any dependency issues during installation.
+Although installing OpenOCD on Ubuntu can be as simple as running `sudo apt-get install openocd`, building from source helped me identify dependency issuess during installation (which I write about in more detail in the final "optional" part of this post).
 
 ```Shell
 git clone https://github.com/raspberrypi/openocd.git
@@ -22,6 +20,50 @@ make -j4
 sudo make install
 ```
 
+To test if OpenOCD is working, I `cd`'d into the "build" folder of the "blink" project directory and ran the following command to load "blink.elf" onto the Pico W:
+```Shell
+sudo openocd -f interface/cmsis-dap.cfg -f target/rp2040.cfg -c "adapter speed 5000" -c "program blink.elf verify reset exit"
+```
+
+I got several lines of output ending with:
+
+```Shell
+** Programming Finished **  
+** Verify Started **  
+** Verified OK **  
+** Resetting Target **  
+shutdown command invoked
+```
+
+## Installing and Running GDB
+OpenOCD is meant to run alongside GDB to provide debugging functionality.
+
+Since I'm debugging the Pico W from an Ubuntu machine, I need to install `gdb-multiarch` which will allow us to debug the Pico W's ARM architecture:
+
+```Shell
+sudo apt-get install gdb-multiarch
+```
+
+To start a debug session, first start an OpenOCD server:
+```Shell
+sudo openocd -f interface/cmsis-dap.cfg -f target/rp2040.cfg -c "adapter speed 5000"
+```
+
+Then in a seperate terminal window, in the "build" folder of the project directory:
+```Shell
+gdb-multiarch blink.elf
+```
+
+Then, once GDB is running enter the following commands:
+```
+target remote localhost:3333
+monitor reset init
+continue
+```
+
+All commands after the `monitor` keyword are [OpenOCD commands](https://openocd.org/doc/html/General-Commands.html). So any time we want to run an OpenOCD command from GDB, we have to prefix it with the `monitor` keyword.
+
+And that's the setup! But the process wasn't without issues, thanks to some weird system problems which I'll share in the next section, just in case other Ubuntu users somehow experience the same thing.
 ### Installation Issues (optional)
 When I initially installed OpenOCD the simple way using `apt-get`, I kept getting this error after running `sudo openocd -f interface/cmsis-dap.cfg -f target/rp2040.cfg -c "adapter speed 5000"`: 
 
@@ -83,63 +125,14 @@ to the PKG_CONFIG_PATH environment variable
 No package 'libhidapi' found
 ```
 
-After some digging, I found that all the relevant `.pc` files were located in `/usr/lib/x86_64-linx-gnu/pkgconfig`. So simply changing the environment variable `PKG_CONFIG_PATH`:
+After some digging, I found that all the relevant `.pc` files were located in `/usr/lib/x86_64-linx-gnu/pkgconfig`. So I changed the environment variable `PKG_CONFIG_PATH` accordingly:
 
 ```Shell
 export $PKG_CONFIG_PATH /usr/lib/x86_64-linux-gnu/pkgconfig
 ```
 
-finally allowed me to successfully build OpenOCD with all the relevant debuggers enabled.
+This finally allowed me to successfully build OpenOCD with all the relevant debuggers enabled.
 
-To test if OpenOCD is working, we can `cd` into the "build" folder of our "blink" project directory and run:
-```Shell
-sudo openocd -f interface/cmsis-dap.cfg -f target/rp2040.cfg -c "adapter speed 5000" -c "program blink.elf verify reset exit"
-```
-
-If all goes well, we should get several lines of debug information ending with:
-
-```Shell
-** Programming Started **  
-Warn : Function FUNC_BOOTROM_STATE_RESET not found in RP2xxx ROM. (probably an RP2040 or an RP2350 A0)  
-Warn : Function FUNC_FLASH_RESET_ADDRESS_TRANS not found in RP2xxx ROM. (probably an RP2040 or an RP2350 A0)  
-Info : RP2040 Flash Probe: 33554432 bytes @0x10000000, in 8192 sectors  
-  
-Info : Padding image section 1 at 0x10005224 with 220 bytes (bank write end alignment)  
-Warn : Adding extra erase range, 0x10005300 .. 0x10005fff  
-** Programming Finished **  
-** Verify Started **  
-** Verified OK **  
-** Resetting Target **  
-shutdown command invoked
-```
-
-## Installing and Running GDB
-Since we're debugging the Pico W from a Ubuntu machine, we need to install `gdb-multiarch` which will allow us to debug the Pico W's ARM architecture:
-
-```Shell
-sudo apt-get install gdb-multiarch
-```
-
-To start a debug session, first start an OpenOCD server:
-```Shell
-sudo openocd -f interface/cmsis-dap.cfg -f target/rp2040.cfg -c "adapter speed 5000"
-```
-
-Then in a separete terminal window:
-```Shell
-gdb-multiarch blink.elf
-```
-
-Then, once GDB is running enter the following commands:
-```
-target remote localhost:3333
-monitor reset init
-continue
-```
-
-Note that all commands after the `monitor` keyword are [OpenOCD commands](https://openocd.org/doc/html/General-Commands.html). So any time we want to run an OpenOCD command from GDB, we have to prefix it with the `monitor` keyword.
-
-Now that we've got our debug setup working, we can start implementing our code.
 
 # References
 - [Raspberry Pi Debug Probe Documentation](https://www.raspberrypi.com/documentation/microcontrollers/debug-probe.html)
