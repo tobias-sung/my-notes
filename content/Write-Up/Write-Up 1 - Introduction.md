@@ -14,13 +14,16 @@ The Pico W sends messages to a server every time a new track/car is registered a
 
 ![[Pasted image 20250912165109.png]]
 
-I started by getting the inputs for [[Write-Up 2 - UART Communication|UART]] (for entering text commands and registering a new track/car) and [[Write-Up 3 - GPIO Button Input|GPIO]] (for the push buttons representing race events) working. 
+Here's the process of development (with links to posts detailing each step):
 
-Then I implemented [[Write-Up 4 - TCP Client|TCP client functionality]], as intially the server controlling the Web UI was a simple TCP server with no application layer security.
+1. Developing a [[Write-Up 2 - UART Communication|UART console]] for entering text commands 
+2. Connecting [[Write-Up 3 - GPIO Button Input|push buttons]] via GPIO for simulating race events
+3. Implementing [[Write-Up 4 - TCP Client|TCP client functionality]] for connecting to a TCP server 
+4. Implementing [[Write-Up 5 - HTTPS Client|TLS client functionality]] for connecting to an HTTPS server with Transport Layer Security.
 
-Later, the server was upgraded to be an HTTPS server with Transport Layer Security (TLS). So I implemented [[Write-Up 5 - HTTPS Client|HTTPS client functionality]].
-
-With the main features completed, I added two extra ones to make the system more convenient. The first was to add an [[Write-Up 6 - OLED screen|small OLED screen]] that printed out console messages. The second was to have the Pico W [[Write-Up 7 - Reading from TXT File|read configuration information from a text file]].  
+With the main features completed, I added two extra features:
+5. Connecting a [[Write-Up 6 - OLED screen|small OLED screen]] for printing out messages
+6. Reading configuration options from a [[Write-Up 7 - Reading from TXT File|text file in internal flash]].  
 
 
 
