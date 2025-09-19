@@ -22,6 +22,7 @@ Here's the process of development (with links to posts detailing each step):
 4. Implementing [[Write-Up 5 - HTTPS Client|TLS client functionality]] for connecting to an HTTPS server with Transport Layer Security.
 
 With the main features completed, I added two extra features:
+
 5. Connecting a [[Write-Up 6 - OLED screen|small OLED screen]] for printing out messages
 6. Reading configuration options from a [[Write-Up 7 - Reading from TXT File|text file in internal flash]].  
 
