@@ -10,7 +10,7 @@ The Pico W comes with 2 UART interfaces (uart0 and uart1). Therefore, I set abou
 
 # Initializing uart1
 I first modified my [[Write-Up 2 - UART Communication#UART Initialization| UART setup function]] to set up the uart1 interface:
-```C
+```c
 void UART_setup(){
     uart_init(uart0, 115200);
     
@@ -34,7 +34,7 @@ I also called `uart_set_translate_crlf()` which formats the UART output by conve
 Although I wanted to try putting everything in a macro (so that I could just define all the code in my global header file without having to create another ".c" file), I ended up just writing a function `debug_print()` which uses the function `uart_puts()` to send output to the uart1 interface. 
 
 Initially, it was really simple and could only print out non-formatted strings:
-```C
+```c
 int debug_print(const char* msg){
 	uart_puts(uart1, msg);
 }
@@ -44,7 +44,7 @@ Of course, this isn't very useful since the whole point of debug messages is tha
 
 Through researching how to write custom `printf()` functions, I learned about the ellipsis `...` operator which can be used to accept a variable number of arguments in a function. A variable argument list `va_list` can store all the arguments and then pass them to the function `vsprintf()`, which packages the formatted output into a string. I could then pass this string to `uart_puts()` for the final output.
 
-```C
+```c
 int debug_print(const char* msg, ...){
     char buffer[512];
     memset(buffer, 0, sizeof(buffer));

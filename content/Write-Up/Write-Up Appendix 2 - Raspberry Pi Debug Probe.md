@@ -5,13 +5,13 @@ tags:
 ---
 These are notes on how I set up the Raspberry Pi Debug Probe with the Pico W. Using the Debug Probe allowed me to get a closer look at what was going wrong during crashes and made it much more convenient to reload programs onto the Pico W. 
 
-## Connecting the Debug Probe to the Pico W
+# Connecting the Debug Probe to the Pico W
 The Debug Probe comes with 3 debug cables. Take the 3-pin debug to 3-pin debug cable and connect the "D" port on the probe to the debug connector on the Pico W (it's located in the middle of the board). Then take the 3-pin debug to male cable and connect the "U" port of the probe to the RX (orange), GND (black) and TX (yellow) pins on the Pico W.
 
-## Installing OpenOCD
+# Installing OpenOCD
 Although installing OpenOCD on Ubuntu can be as simple as running `sudo apt-get install openocd`, building from source helped me identify dependency issuess during installation (which I write about in more detail in the final "optional" part of this post).
 
-```Shell
+```shellscript
 git clone https://github.com/raspberrypi/openocd.git
 cd openocd
 ./bootstrap
@@ -21,13 +21,13 @@ sudo make install
 ```
 
 To test if OpenOCD is working, I `cd`'d into the "build" folder of the "blink" project directory and ran the following command to load "blink.elf" onto the Pico W:
-```Shell
+```shellscript
 sudo openocd -f interface/cmsis-dap.cfg -f target/rp2040.cfg -c "adapter speed 5000" -c "program blink.elf verify reset exit"
 ```
 
 I got several lines of output ending with:
 
-```Shell
+```
 ** Programming Finished **  
 ** Verify Started **  
 ** Verified OK **  
@@ -35,27 +35,27 @@ I got several lines of output ending with:
 shutdown command invoked
 ```
 
-## Installing and Running GDB
+# Installing and Running GDB
 OpenOCD is meant to run alongside GDB to provide debugging functionality.
 
 Since I'm debugging the Pico W from an Ubuntu machine, I need to install `gdb-multiarch` which will allow us to debug the Pico W's ARM architecture:
 
-```Shell
+```shellscript
 sudo apt-get install gdb-multiarch
 ```
 
 To start a debug session, first start an OpenOCD server:
-```Shell
+```shellscript
 sudo openocd -f interface/cmsis-dap.cfg -f target/rp2040.cfg -c "adapter speed 5000"
 ```
 
 Then in a seperate terminal window, in the "build" folder of the project directory:
-```Shell
+```shellscript
 gdb-multiarch blink.elf
 ```
 
-Then, once GDB is running enter the following commands:
-```
+Then, once GDB is running enter the following GDB commands:
+```shellscript
 target remote localhost:3333
 monitor reset init
 continue
@@ -64,7 +64,7 @@ continue
 All commands after the `monitor` keyword are [OpenOCD commands](https://openocd.org/doc/html/General-Commands.html). So any time we want to run an OpenOCD command from GDB, we have to prefix it with the `monitor` keyword.
 
 And that's the setup! But the process wasn't without issues, thanks to some weird system problems which I'll share in the next section, just in case other Ubuntu users somehow experience the same thing.
-### Installation Issues (optional)
+# Installation Issues (optional)
 When I initially installed OpenOCD the simple way using `apt-get`, I kept getting this error after running `sudo openocd -f interface/cmsis-dap.cfg -f target/rp2040.cfg -c "adapter speed 5000"`: 
 
 ```
@@ -107,7 +107,7 @@ Use Capstone disassembly framework      no
 
 The CMSIS-DAP debugger wasn't being enabled. In fact, none of the debug adpters were being enabled. I tried running `./configure` again except with the following flag:
 
-```Shell
+```shellscript
 ./configure --enable-cmsis-dap
 ```
 
@@ -127,7 +127,7 @@ No package 'libhidapi' found
 
 After some digging, I found that all the relevant `.pc` files were located in `/usr/lib/x86_64-linx-gnu/pkgconfig`. So I changed the environment variable `PKG_CONFIG_PATH` accordingly:
 
-```Shell
+```shellscript
 export $PKG_CONFIG_PATH /usr/lib/x86_64-linux-gnu/pkgconfig
 ```
 

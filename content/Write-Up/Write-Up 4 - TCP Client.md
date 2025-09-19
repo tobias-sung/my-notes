@@ -17,7 +17,7 @@ Then I went over the main code of the example to see which essential code blocks
 ## TCP Client Object
 
 The TCP client object is represented by a structure as defined below (I removed several values from the structure that weren't necessary for my project): 
-```C
+```c
 typedef struct TCP_CLIENT_T_ {
     struct tcp_pcb *tcp_pcb; //Process Control Block
     ip_addr_t remote_addr; //IP Address of TCP Server (to be connected to)
@@ -50,7 +50,7 @@ Finally, I deleted the `printf()` statement in `tcp_client_poll` because it wasn
 With all the TCP client setup done, I could start testing it out. But before I could do anything, I'd have to connect the Pico W to the Internet (the feature that separates it from the regular old Pico).
 
 The problem was that sometimes it would fail to connect to Wi-Fi on the first attempt, and after getting frustrated with having to restart the Pico W once or twice to successfully connect, I had the Pico W automatically try to reconnect 5 times before it gives up:
-```C
+```c
 int attempts = 0;
 //Connect to WiFi. Stops trying to reconnect after 5 failed attempts
 while (cyw43_arch_wifi_connect_timeout_ms(WIFI_SSID, WIFI_PASSWORD, CYW43_AUTH_WPA2_AES_PSK, 10000) && attempts < 5) {
@@ -74,7 +74,7 @@ On my local Python server:
 ![[Pasted image 20250909122824.png|400]]
 # Sending Messages to Server
 I wrote the following function to send text messages to the TCP server.
-```C
+```c
 void tcp_send(char message[]){   
     cyw43_arch_lwip_begin();
     
@@ -100,11 +100,11 @@ It was simply a matter of copying `vUARTCallback()`, `UART_setup()` and `vUARTTa
 There was a little issue where after I sent one message to the TCP server, the program would freeze and nothing would happen. By using the Raspberry Pi debug probe, I eventually realized that a stack overflow was occuring and the issue was fixed by allocating more stack depth to `vUARTTask()`. 
 
 So from:
-```C
+```c
 xTaskCreate(vUARTTask, "UART Task", 256,  NULL, 1, NULL);
 ```
 to
-```C
+```c
 xTaskCreate(vUARTTask, "UART Task", 512,  NULL, 1, NULL);
 ```
 

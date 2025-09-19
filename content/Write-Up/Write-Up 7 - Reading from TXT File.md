@@ -21,13 +21,13 @@ I copied the following files over:
 - wifi_settings.c
 
 In "tusb_config.h", I changed the following setting since this is a FreeRTOS project:
-```C
+```c
 #define CFG_TUSB_OS OPT_OS_FREERTOS
 ```
 
 Then, in my "main.c", I wrote the following FreeRTOS task by adapting code from the ["cdc_msc_freertos"](https://github.com/hathach/tinyusb/blob/master/examples/device/cdc_msc_freertos/src/main.c) example from the TinyUSB GitHub repo:
 
-```C
+```c
 TaskHandle_t usbHandle;
 
 static void vUSBTask() {
@@ -54,7 +54,7 @@ This task waits for USB events to occur and processes them when they happen.
 
 I then adapted the code from the project for reading the config info and connecting to Wi-Fi:
 
-```C
+```c
 wifi_setting_t wifi_setting;
 //Attempt to read Wi-Fi settings from text file
 if (!wifisetting_read(&wifi_setting)) {
@@ -97,7 +97,7 @@ Secondly, I created a new Task with the sole purpose of writing to flash.
 Originally, the function `wifisetting_write()` was being called from inside the callback function `tud_msc_write10_cb()` (located in "msc_disk.c, and invoked whenever the changes to the text file are saved). `wifisetting_write()` contains the critical flash operations that can't be interrupted, so it didn't seem like a good idea to call it from a callback function.  
 
 So I created a new Task called "vWriteTask" that would wait for a notification before calling `wifisetting_write()` to save the changes to the text file. I gave it a stack depth of 256 (any lower would cause the program to crash).
-```C
+```c
 void vWriteTask(){
 	uint32_t output;
 	writeHandle = xTaskGetCurrentTaskHandle();
@@ -119,7 +119,7 @@ Adding additional configuration settings was very simple thanks to the way the o
 
 I tried adding an extra option for configuring the domain name of the HTTPS server, and I just had to make the following changes:
 **"wifi_setting.h"**
-```C
+```c
 typedef struct {
     uint8_t magic[4];
     uint8_t ssid[33];
@@ -128,7 +128,7 @@ typedef struct {
 } wifi_setting_t;
 ```
 **"wifi_setting.c"**
-```C
+```c
 bool wifisetting_parse(wifi_setting_t *setting, const uint8_t *buffer, size_t buffer_len) {
     int n = sscanf(
 		    buffer,
@@ -148,7 +148,7 @@ void wifisetting_encode(uint8_t *buffer, wifi_setting_t *setting) {
 }
 ```
 **"msc_disk.c"**
-```C
+```c
 #define DEFAULT_SETTING "ssid=SET_SSID\npassword=SET_PASSWORD\nhttp_server=SET_HTTP_SERVER\n"
 ```
 

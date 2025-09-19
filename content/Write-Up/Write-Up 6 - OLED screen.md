@@ -33,7 +33,7 @@ target_link_libraries(blink
 
 Then add the following macros at the start of the code:
 
-```
+```c
 #include "hardware/i2c.h"
 //Assuming you copied "ssd1306.h" to the same directory as "main.c"
 #include "ssd1306.h"
@@ -47,7 +47,7 @@ The SDA and SCL pins were connected to GPIO pins 14 and 15 respectively (which a
 
 And then a setup function:
 
-```C
+```c
 #define OLED_SCL 15
 #define OLED_SDA 14
 
@@ -70,7 +70,7 @@ void setup_oled(void) {
 # Printing a string onto the OLED
 Printing a string onto the screen is fairly straightforward:
 
-```C
+```c
 void print_oled(char* word){
     ssd1306_clear(&disp);
     //Draw the string at position x:8, y:24 with scale 1
@@ -81,7 +81,7 @@ void print_oled(char* word){
 
 # Putting It All Together
 Since most of the code is squared away in the functions, the `main()` functions ends up looking fairly simple.
-```C
+```c
 void main() {
     int test = 7134;
     char message[50];
@@ -108,7 +108,7 @@ The screen can fit 20 characters. The width of the screen is 128 pixels. Dividin
 
 The number of extra characters in the word would be `strlen(word) - 20`. Rounding up 6.4 to 7 (to leave more room at the end of the string), I wrote the following:
 
-```C
+```c
 for (int i = 0; i < (strlen(word) - 20) * 7; i++){
         ssd1306_clear(&disp);
         //8 is the initial x-position

@@ -18,14 +18,14 @@ The push button is connected on one end to the GPIO pin, while the other end is 
 
 # GPIO Initialization
 First, I defined which GPIO pins I'll be using.
-```C
+```c
 #define BUTTON_1 18 
 #define BUTTON_2 19
 #define BUTTON_3 20
 ```
 
 Then a function to initialize the GPIO pins and enable interrupts.
-```C
+```c
 void GPIO_setup(){
     gpio_init(BUTTON_1);
     gpio_init(BUTTON_2);
@@ -40,12 +40,12 @@ The interrupts are triggered on the falling edge of the GPIO input (i.e. when th
 
 # GPIO Task
 First, I define a global variable to save the Task Handle of the GPIO task (so the interrupt handler can refer to it when sending the notification.)
-```C
+```c
 TaskHandle_t buttonHandle;
 ```
 
 Then the task itself:
-```C
+```c
 void vButtonTask(void *pvParameters){
     buttonHandle = xTaskGetCurrentTaskHandle();
     uint32_t gpio; //The GPIO number of the button pressed
@@ -62,7 +62,7 @@ void vButtonTask(void *pvParameters){
 An issue I faced when implementing this program was that multiple button presses would be detected even if I only pushed the button once. I adapted a debouncing solution from [here](https://github.com/raspberrypi/pico-examples/pull/45/commits/e67ce83063b6ff718971f9d91315c652aa8fab4a) which seemed to fix the problem.
 
 Here's the code I ended up with:
-```C
+```c
 //Global variables
 unsigned long push_time = to_ms_since_boot(get_absolute_time());
 const int delayTime = 100; 
@@ -82,7 +82,7 @@ All that remiains to be done is to notify the GPIO task that a button has been p
 
 # Putting It All Together
 Finally, the `main()` function:
-```C
+```c
 void main() {
     stdio_init_all();
 	push_time = to_ms_since_boot(get_absolute_time());

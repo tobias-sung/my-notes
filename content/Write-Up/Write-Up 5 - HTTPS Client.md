@@ -16,7 +16,7 @@ I used the ["tls_client" example](https://github.com/raspberrypi/pico-examples/t
 ## lwIP Application Layer configurations
 I copied over a few extra configuration options for "lwipopts.h" that are unique to the TLS client project.
 
-```C
+```c
 /* TCP WND must be at least 16 kb to match TLS record size
    or you will get a warning "altcp_tls: TCP_WND is smaller than the RX decrypion buffer, connection RX might stall!" */
 #undef TCP_WND
@@ -33,7 +33,7 @@ I copied over a few extra configuration options for "lwipopts.h" that are unique
 I then copied ["tls_common.c"](https://github.com/raspberrypi/pico-examples/blob/master/pico_w/wifi/tls_client/tls_common.c) which defines the TLS client object, callbacks and setup functions .
 ## TLS Client Object 
 I removed a few of the values of the TLS Client structure, simplifying it to be: 
-```C
+```c
 typedef struct TLS_CLIENT_T_ {
     struct altcp_pcb *pcb; //Protocol Control Block
     bool connected; //Connection status (True or False)
@@ -53,7 +53,7 @@ typedef struct TLS_CLIENT_T_ {
 `tls_client_init()` initializes the TLS client while `tls_client_open()` establishes the connection.
 ****
 Finally, in `run_tls_client_test()` I uncommented this line of code: 
-```C
+```c
 mbedtls_ssl_conf_authmode(&tls_config->conf, MBEDTLS_SSL_VERIFY_REQUIRED);
 ```
 
@@ -61,7 +61,7 @@ The first parameter is `tls_config`, the TLS client's configuration handle. The 
 
 After uncommenting `mbedtls_ssl_conf_authmode()`, I was getting this error when building the program: `invalid use of undefined type 'struct altcp_tls_config'`. I searched through the Pico SDK files for references to `struct altcp_tls_config` and eventually found the definition in "pico-sdk/lib/lwip/src/apps/altcp_tls/altcp_tls_mbedtls.c": 
 
-```C
+```c
 struct altcp_tls_config {
   mbedtls_ssl_config conf;
   mbedtls_x509_crt *cert;
@@ -80,7 +80,7 @@ I was given a root certificate that would certify the HTTPS server (defined as a
 
 # Writing a function for sending data
 I then wrote a function to send text message to the HTTPS server. I first created a character array and formatted the HTTP request using `snprintf()`:
-```C
+```c
 bool tls_send(char message[]){
      
     char request_buffer[256];
@@ -97,7 +97,7 @@ bool tls_send(char message[]){
 ```
 
 Then sending the message itself:
-```C
+```c
 	cyw43_arch_lwip_begin();
 
     int err = altcp_write(tls_client->pcb, (const char*)request_buffer, request_len, TCP_WRITE_FLAG_COPY);

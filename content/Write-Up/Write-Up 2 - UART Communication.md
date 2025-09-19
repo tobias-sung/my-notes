@@ -16,7 +16,7 @@ In order to detect UART input, I'll use the Pico's built-in UART interrupts. Whe
 # UART Initialization 
 I wrote a short function to take care of all the UART initialization. 
 
-```C
+```c
 void UART_setup(){
     uart_init(uart0, 115200);
     irq_set_exclusive_handler(UART0_IRQ, vUARTCallback);
@@ -27,12 +27,12 @@ void UART_setup(){
 I'm using UART0 with a baud rate of 115200. I set the handler of the UART interrupts to be a function called `vUARTCallback()` (to be written later). Finally, I enabled the UART IRQ and set it so that it triggers an interrupt when the UART RX buffer contains data (the second and third parameters of `uart_set_irqs_enabled()` are used to determine whether the RX buffer and the TX buffer trigger interrupts respectively).  
 # UART Task
 First, I set a global variable for storing the task handle of the UART task. I made it global so that the UART interrupt handler can refer to it because it has to send a notification to the UART task when the interrupt is triggered.
-```C
+```c
 TaskHandle_t uartHandle;
 ```
 
 Some basic set-up first:
-```C
+```c
 void vUARTTask(void *pvParameters) {
     uartHandle = xTaskGetCurrentTaskHandle(); //Get the task handle
     uint32_t output_char; //Variable for storing the UART character inputted at interrupt
@@ -43,7 +43,7 @@ void vUARTTask(void *pvParameters) {
 ```
 
 Now for the loop:
-```C 
+```c 
     for (;;){
 	    //Task is blocked until notification is received
 	    //Stores notification data in variable "output_char"
@@ -73,7 +73,7 @@ I added in some dummy responses to certain messages (like "reset" and "query") j
 
 # UART Interrupt Handler
 Finally, the interrupt handler that fires whenever UART input is detected.
-```C
+```c
 void vUARTCallback(){
 	//Read character that was inputted and store in variable "input"
     uint32_t input = getchar();
@@ -87,7 +87,7 @@ Direct-to-task notifications can store a 32-bit value, and this value can be upd
 
 # Putting It All Together
 Finally, it can all be put together in the `main()` function:
-```C
+```c
 void main() {
     stdio_init_all();
     UART_setup();
