@@ -80,5 +80,20 @@ I can communicate with uart0 with `minicom -D /dev/ttyUSB0` and uart1 with `mini
 On the left is uart0, which I use for inputting commands. On the right is uart1, which outputs debug messages in response to my inputs in uart0. 
 
 I'm actually still using `printf()` to print out the typed characters on uart0, but this can be skipped by using CTRL+A+E to activate echo mode in minicom, which echoes the inputted characters onto the screen.
+
+# Re-Routing UART output to Debug Probe
+My final task was to connect the Raspberry Pi debug probe to UART1 so that it would receive the debug messages.
+
+All I had to was take the SWD to male wire included with the debug probe, and connect the debug probe's UART port to the TX and RX pins of UART1. 
+
+![[20250923_153549.jpg|250]]
+
+I used `minicom -D /dev/ttyACM0` to interface with the debug probe, and sure enough it was printing my debug messages. At first. 
+
+While the Pico W was connecting to Wi-Fi and then the server, the debug probe relayed all the debug messages but after the task scheduler was started and the Pico W began waiting for input, the debug probe would apparently go to sleep. The probe's on-board red LED (used to indicate power) went dark, and no more debug messages were displayed.
+
+I found this [post](https://github.com/raspberrypi/debugprobe/issues/71) detailing this exact issue, and followed the suggested solution. I opened the file "/sys/module/usbcore/parameters/autosuspend" on my computer,  and changed its contents from from 2 to -1. This prevents Linux from automatically suspending inactive USB devices, and ultimately fixed the issue.
+
 # Resources
 - [vsprintf() - TutorialsPoint](https://www.tutorialspoint.com/c_standard_library/c_function_vsprintf.htm)
+- [Raspberry Pi Debug Probe Documentation](https://www.raspberrypi.com/documentation/microcontrollers/debug-probe.html#serial-connections)

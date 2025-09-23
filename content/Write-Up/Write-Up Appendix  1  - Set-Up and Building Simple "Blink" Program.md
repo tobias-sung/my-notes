@@ -3,6 +3,8 @@ title: Write-Up Appendix  1 - Setup
 draft: false
 tags:
 ---
+![[Pasted image 20250912165442.png]]
+
 These are some notes on the process I went through to set up the development environment and get familiar with the very basics of a FreeRTOS project. I followed this [guide](https://embeddedcomputing.com/technology/open-source/linux-freertos-related/using-freertos-with-the-raspberry-pi-pico) but there were some parts I had to modify since I'm using the Pico W and not the Pico.
 
 (This was all done on Ubuntu 22.04.5 LTS.)

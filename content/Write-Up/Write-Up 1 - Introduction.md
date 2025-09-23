@@ -4,15 +4,13 @@ draft: false
 tags:
   -
 ---
-![[Pasted image 20250912165442.png]]
+This documents the process of working on a FreeRTOS program written in C for the Raspberry Pico W. The program is used for tracking the time during a toy car race. The following diagram provides a simple overview of the program, where blue refers to output from the Pico W and green refers to inputs: 
 
-This documents the process of working on a FreeRTOS program written in C for the Raspberry Pico W. The program is used for tracking the time during a toy car race.
+![[Project-Overview.excalidraw.png]]
 
-Each track and its respective car are registered into the system via information inputted via the UART interface. During development, buttons were used to simulate events such as the starting of a race and a car crossing the finish line. 
+Each track and its respective car are registered into the system via information inputted via the UART interface. During development, buttons were used to simulate race events such as the starting of a race and when a car crosses the finish line. 
 
-The Pico W sends messages to a server every time a new track/car is registered as well as when important race events occur. The server then updates a Web UI that displays the status of the race (pictured below):
-
-![[Pasted image 20250912165109.png]]
+The Pico W sends messages to a server every time a new track/car is registered as well as when important race events occur. The server then updates a Web UI that displays the status of the race.
 
 Here's the process of development (with links to posts detailing each step):
 
@@ -24,7 +22,7 @@ Here's the process of development (with links to posts detailing each step):
 With the main features completed, I added two extra features:
 
 5. Connecting a [[Write-Up 6 - OLED screen|small OLED screen]] for printing out messages
-6. Reading configuration options from a [[Write-Up 7 - Reading from TXT File|text file in internal flash]].  
+6. Reading configuration options from a [[Write-Up 7 - Reading from Configuration File|text file in internal flash]].  
 
 
 

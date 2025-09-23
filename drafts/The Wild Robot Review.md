@@ -222,19 +222,19 @@ Programming is a set of clearly defined rules. For example, a lot of computer pr
 
 But if something unexpected happens, and the program goes through all its if-statements and can't find any corresponding action...it dies. 
 
-Okay, "crashes" is probably the more accurate term, but from the perspective of a computer program that is basically death. A program only lives as long as it is running. Unless the programmer has hastily added in a routine for handling exceptions, although this usually boils down to just resetting the program which is, once again, a kind of death.
+Okay, "crashes" is probably the more accurate term, but from the perspective of a computer program that is basically death. A program only lives as long as it is running. 
 
-Living beings are also programmed to do certain things, under certain circumstances. *How* exactly we are programmed is a matter of scientific debate. *Who* programmed us is a matter of theological debate. But what we do know is that unlike a computer program, our "code" is not fixed. It is being rewritten every single day, whether we realize it or not. 
+Living beings are also programmed to do certain things, under certain circumstances. *How* we are programmed is a matter of scientific debate. *Who* programmed us is a matter of theological debate. But what we do know is that unlike a computer program, our "code" is not fixed. It is being rewritten every single day, whether we realize it or not. 
 
-A lot of the time we are being re-written by forces outside of ourselves. Whether it's the big corporations running the Internet, the expectations of society or the people who surround us every day. Or maybe our "code" becomes corrupted when functions that once served us well in our prehistoric environment start going haywire in the modern world, like when our sensitivity to threats (which would have been very useful in a wilderness filled with predators) causes us to become eaten up by the smallest things.
+A lot of the time we are being re-written by forces outside of ourselves. Whether it's the big corporations running the Internet, the expectations of society or the people who surround us every day. 
 
 ![[content/Images/Re-programming.png]]
 
-Yet we also have the ability to override our programming on our own, and the key is being *aware*. To stop and think. To question the world that we were born into. Acting according to our programming is the same as acting without thinking, continuing to do the things the same way they have always been done.
+Yet we also have the ability to override our own programming. The key is being *aware*. To stop and think. To question the world that we were born into. Acting according to our programming is the same as acting without thinking, continuing to do the things the same way they have always been done.
 
 There's evidence that in ancient times, humans spent centuries stubbornly using the same tools before a better alternative was found. It's not that they were lazy or lacked imagination. It's just that breaking out of our routines is really, really hard. 
 
-Sometimes it's easier to stay in a miserable but familiar situation rather than take the plunge into the terrifying unknown. Sometimes, in order for new ideas to be born, you need to introduce a rogue element into the environment. Someone who has not spent their whole lives living in quiet desperation under a flawed system. Someone who can't fall into routine because they never had the chance to develop one. Like a certain clueless Universal Dynamics robot, fresh out of her crate.
+Sometimes it's easier to stay in a miserable but familiar situation rather than take the plunge into the terrifying unknown. Sometimes, in order for new ideas to be born, a rogue element needs to be introduced into the environment. Someone who has not spent their whole lives living in quiet desperation under a flawed system. Someone who can't fall into routine because they don't even have one yet. Like a certain clueless Universal Dynamics robot, fresh out of her crate.
 
 ![[content/Images/Think.png]]
 
