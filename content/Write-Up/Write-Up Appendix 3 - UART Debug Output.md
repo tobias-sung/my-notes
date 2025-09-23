@@ -82,7 +82,7 @@ On the left is uart0, which I use for inputting commands. On the right is uart1,
 I'm actually still using `printf()` to print out the typed characters on uart0, but this can be skipped by using CTRL+A+E to activate echo mode in minicom, which echoes the inputted characters onto the screen.
 
 # Re-Routing UART output to Debug Probe
-My final task was to connect the Raspberry Pi debug probe to UART1 so that it would receive the debug messages.
+My final task was to connect the Raspberry Pi debug probe to UART1 so that it would receive the debug messages (so the debug probe would replace the second USB-to-TTL converter I was using before).
 
 All I had to was take the SWD to male wire included with the debug probe, and connect the debug probe's UART port to the TX and RX pins of UART1. 
 
