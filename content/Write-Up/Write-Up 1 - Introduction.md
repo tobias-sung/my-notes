@@ -5,8 +5,7 @@ tags:
   -
 ---
 This documents the process of working on a FreeRTOS program written in C for the Raspberry Pico W. The program is used for tracking the time during a toy car race. The following diagram provides a simple overview of the program, where blue refers to output from the Pico W and green refers to inputs: 
-
-![[Project-Overview.excalidraw.png]]
+![[Project Overview.excalidraw.png]]
 
 Each track and its respective car are registered into the system via information inputted via the UART interface. During development, buttons were used to simulate race events such as the starting of a race and when a car crosses the finish line. 
 
