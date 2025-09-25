@@ -1,6 +1,6 @@
 ---
-title: Welcome to Quartz
+title: Welcome to My Notes
 ---
+![[Putting-It-Together.png]]
 
-This is a blank Quartz installation.
-See the [documentation](https://quartz.jzhao.xyz) for how to get started.
+This is just a simple website where I keep notes on the computer projects I've worked on. Feel free to look around!
