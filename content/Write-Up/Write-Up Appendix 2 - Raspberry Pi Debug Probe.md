@@ -128,7 +128,7 @@ Then, once GDB is running I can connect to the GDB server I started earlier and 
 > (gdb) continue
 ```
 
-All commands after the `monitor` keyword are [OpenOCD commands](https://openocd.org/doc/html/General-Commands.html), which are slightly different from pyOCD commands. 
+All commands after the `monitor` keyword are [OpenOCD commands](https://openocd.org/doc/html/General-Commands.html), which are slightly different from [pyOCD commands](https://pyocd.io/docs/command_reference.html). 
 ## OpenOCD Installation Issues 
 When I initially installed OpenOCD the simple way using `apt-get`, I kept getting this error after running `sudo openocd -f interface/cmsis-dap.cfg -f target/rp2040.cfg -c "adapter speed 5000"`: 
 
