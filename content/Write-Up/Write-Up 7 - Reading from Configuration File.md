@@ -10,6 +10,8 @@ So far, I've been defining a lot of configuration information (such as the Wi-Fi
 
 Therefore, it was proposed to find a way to get the Pico W to read the information from a text file stored in its flash storage. Then, every time we want to adjust the configuration, we would simply have to plug the Pico W into a computer, open the text file and make the changes, before rebooting the Pico W.
 
+Initially, I tried directly loading a binary file onto the internal flash using OpenOCD/pyOCD, but this proved to not be very user-friendly (I go into more detail in [[Appendix 4]]).
+
 I looked up if other Pico W developers had tried implementing similar solutions, and was fortunate enough to find this [project](https://github.com/oyama/pico-msc-wifi-setting) (which makes use of the TinyUSB library) that exactly suited my needs. It hooks up the Pico W as a FAT12 storage device with a text file that stores the Wi-Fi configuration. Upon startup it reads the file before connecting to Wi-Fi based on its contents. All I needed to do was adapt it for a FreeRTOS program, which turned out to be a bit more difficult than expected.
 
 # Copying Over The Code
