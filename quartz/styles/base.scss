@@ -518,10 +518,15 @@ code {
   background: var(--lightgray);
 }
 
+li:not(.overflow-end) {
+  border-bottom: 1px solid #bbb;
+}
+
+
 tbody,
 li,
 p {
-  line-height: 1.6rem;
+  line-height: 2rem;
 }
 
 .table-container {
