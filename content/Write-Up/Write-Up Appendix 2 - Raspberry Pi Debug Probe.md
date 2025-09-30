@@ -62,13 +62,17 @@ Once I re-plugged the debug probe, it finally showed up when I ran `pyocd list`:
   0   Raspberry Pi Debug Probe (CMSIS-DAP)   E6616407E3225229   n/a     
 
 ```
-## Starting a GDB Server and Debugging
-To start a GDB server, I ran:
+
+# Loading a Program using pyOCD
+
+
+# Starting a GDB Server and Debugging
+To start a GDB server, I `cd`'d into the build folder of my project directory and ran:
 ```shellscript
 pyocd gdbserver -t rp2040 --persist --allow-remote
 ```
 
-Then, in a separate terminal window I `cd`'d into the build folder of my project directory and started gdb (I'm using `gdb-multiarch`, since I'm debugging a Pi program from a non-Pi system):
+Then, in a separate terminal window (but in the same folder) I started gdb (I'm using `gdb-multiarch`, since I'm debugging a Pi program from a non-Pi system):
 ```shellscript
 gdb-multiarch blink.elf
 ```
@@ -111,17 +115,17 @@ shutdown command invoked
 Which confirms that OpenOCD is up and running.
 
 ## Starting a GDB Server and Debugging
-To start a GDB server:
+In the "build" folder of the project directory, run:
 ```shellscript
-sudo openocd -f interface/cmsis-dap.cfg -f target/rp2040.cfg -c "adapter speed 5000"
+openocd -f interface/cmsis-dap.cfg -f target/rp2040.cfg -c "adapter speed 5000"
 ```
 
-Then in a seperate terminal window, in the "build" folder of the project directory:
+Then in a seperate terminal window, in the same folder, run:
 ```shellscript
 gdb-multiarch blink.elf
 ```
 
-Then, once GDB is running I can connect to the GDB server I started earlier and start entering OpenOCD commands:
+With GDB running, I can connect to the GDB server I started earlier and start entering OpenOCD commands:
 ```shellscript
 > (gdb) target remote localhost:3333
 > (gdb) monitor reset init

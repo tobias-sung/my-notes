@@ -18,6 +18,7 @@ The linker script defines the different sections of the program on memory. The f
 To find out the actual address of `.flash_end`, I can refer to the linker map file (mine was called "blink.elf.map") that is generated when my program is built. It's only generated if you specified `pico_add_extra_outputs(blink)` in "CMakeLists.txt".
 
 Searching for references to `.flash_end` in "blink.elf.map", I found the following address:
+
 ```
 .flash_end      0x000000001004a970        0x0
 ```
@@ -33,8 +34,8 @@ By loading my config file directly after the program code, I was trying to write
 So when I loaded the config file, the write operation would first erase the last section of the program code. Which is why, when I restarted the program after loading the config file, the startup routine `crt0` would trigger a [hard fault](https://community.st.com/t5/stm32-mcus/how-to-debug-a-hardfault-on-an-arm-cortex-m-stm32/ta-p/672235#toc-hId-956277377) interrupt. Presumably, it crashed after trying to jump into my code, because the code was incomplete.
 
 The solution is to load the config file into the next flash sector following the program code. Knowing that a sector is 4 KB large, the formula to calculate the address of the next flash sector would be: 
-
 $$\textrm{4 KB}\times\textrm{rounded up value of }(\frac{\textrm{end address of code}}{\textrm{4 KB}})$$
+
 A while ago, I found that the section `.flash_end` was located at "0x1004A970". So the correct address to write to, using this formula, would be "0x1004B000".
 # Loading The Binary File Using pyOCD
 First, I created a file named "config":
