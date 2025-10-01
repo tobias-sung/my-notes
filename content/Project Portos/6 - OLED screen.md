@@ -1,5 +1,5 @@
 ---
-title: Write-Up 6 - OLED screen
+title: 6 - OLED screen
 draft: false
 tags:
 ---
@@ -43,7 +43,7 @@ I wired the OLED as follows:
 
 ![[content/Images/20250908_131308.jpg|400]]
 
-The SDA and SCL pins were connected to GPIO pins 14 and 15 respectively (which are connected to I2C1 of the Pico W). GND pin was connected to the GND pin right next to the GPIO pin 14. As with the [[Write-Up 3 - GPIO Button Input|button]] example, pin 36 (3V3(OUT)) was connected to the positive power rail of the breadboard, and the VCC pin of the OLED was also connected to the same power rail to get power.
+The SDA and SCL pins were connected to GPIO pins 14 and 15 respectively (which are connected to I2C1 of the Pico W). GND pin was connected to the GND pin right next to the GPIO pin 14. As with the [[3 - GPIO Button Input|button]] example, pin 36 (3V3(OUT)) was connected to the positive power rail of the breadboard, and the VCC pin of the OLED was also connected to the same power rail to get power.
 
 And then a setup function:
 

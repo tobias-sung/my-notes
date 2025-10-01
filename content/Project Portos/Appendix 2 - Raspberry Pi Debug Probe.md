@@ -1,5 +1,5 @@
 ---
-title: Write-Up Appendix 2 - Debug Probe
+title: Appendix 2 - Raspberry Pi Debug Probe
 draft: false
 tags:
 ---
@@ -63,9 +63,6 @@ Once I re-plugged the debug probe, it finally showed up when I ran `pyocd list`:
 
 ```
 
-# Loading a Program using pyOCD
-
-
 # Starting a GDB Server and Debugging
 To start a GDB server, I `cd`'d into the build folder of my project directory and ran:
 ```shellscript
@@ -84,7 +81,14 @@ Once gdb was started, I could connect to the GDB server I had started earlier an
 > (gdb) monitor continue
 ```
 
-All PyOCD commands must be prefaced with the "monitor" keyword. A full list of PyOCD commands can be found [here](https://pyocd.io/docs/command_reference.html).
+All PyOCD commands must be prefaced with the "monitor" keyword. A full list of PyOCD commands can be found [here](https://pyocd.io/docs/command_reference.html). 
+
+To start with, I'd like to load my program executable ("blink.elf") onto the Pico W (this is only possible if the pyOCD GDB server was started in the build folder):
+```shellscript
+> (gdb) monitor load blink.elf
+> (gdb) monitor reset
+```
+
 # (Bonus) Installing OpenOCD
 Before using pyOCD, I followed the instructions of the official [Raspberry Pi debug probe documentation](https://www.raspberrypi.com/documentation/microcontrollers/debug-probe.html) and used OpenOCD to interface with the debug probe instead. I eventually switched to pyOCD because it was easier to setup. I include my notes on getting OpenOCD up and running here just for future reference.
 
@@ -100,7 +104,7 @@ sudo make install
 
 To test if OpenOCD is working, I `cd`'d into the "build" folder of the "blink" project directory and ran the following command to load "blink.elf" onto the Pico W:
 ```shellscript
-sudo openocd -f interface/cmsis-dap.cfg -f target/rp2040.cfg -c "adapter speed 5000" -c "program blink.elf verify reset exit"
+openocd -f interface/cmsis-dap.cfg -f target/rp2040.cfg -c "adapter speed 5000" -c "program blink.elf verify reset exit"
 ```
 
 I got several lines of output, which ended with:
@@ -113,7 +117,6 @@ shutdown command invoked
 ```
 
 Which confirms that OpenOCD is up and running.
-
 ## Starting a GDB Server and Debugging
 In the "build" folder of the project directory, run:
 ```shellscript
@@ -201,7 +204,6 @@ export $PKG_CONFIG_PATH /usr/lib/x86_64-linux-gnu/pkgconfig
 ```
 
 This finally allowed me to successfully build OpenOCD with all the relevant debuggers enabled.
-
 
 # References
 - [Raspberry Pi Debug Probe Documentation](https://www.raspberrypi.com/documentation/microcontrollers/debug-probe.html)

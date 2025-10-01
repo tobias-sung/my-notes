@@ -1,14 +1,14 @@
 ---
-title: Write-Up 5 - HTTPS Client
+title: 5 - HTTPS Client
 draft: false
 tags:
   -
 ---
 [GitHub code](https://github.com/tobias-sung/picow_freertos_tls_client)
 
-The next part of the project was to get the Pico W to connect to an HTTPS server with TLS (Transport Layer Security). Functionally, it's exactly the same as the [[Write-Up 4 - TCP Client|previous section]], it's just that after the TCP handshake is completed an additional TLS handshake is carried out to verify the authenticity of the server. Accordingly, the lwIP developers have made their "altcp" API library very similar to the "tcp" API library in terms of naming and structure.
+The next part of the project was to get the Pico W to connect to an HTTPS server with TLS (Transport Layer Security). Functionally, it's exactly the same as the [[4 - TCP Client|previous section]], it's just that after the TCP handshake is completed an additional TLS handshake is carried out to verify the authenticity of the server. Accordingly, the lwIP developers have made their "altcp" API library very similar to the "tcp" API library in terms of naming and structure.
 
-The HTTPS server was already setup by the team  and recognizes specific text messages like "RESET_OK", which will trigger changes in a Web UI. Regradless of whether it recognized the text message, it sends back an HTTP 200 response to indicate the message was successfully received. So unlike the [[Write-Up 4 - TCP Client|previous section]], I didn't set up my own test server.
+The HTTPS server was already setup by the team  and recognizes specific text messages like "RESET_OK", which will trigger changes in a Web UI. Regradless of whether it recognized the text message, it sends back an HTTP 200 response to indicate the message was successfully received. So unlike the [[4 - TCP Client|previous section]], I didn't set up my own test server.
 
 I used the ["tls_client" example](https://github.com/raspberrypi/pico-examples/tree/master/pico_w/wifi/tls_client) from the "pico-example" GitHub repository as a starting point. The example simply sends a single TLS request before closing the connection. Once again, I'll modify it to keep the connection open indefinitely and send messages inputted via UART. 
 
@@ -115,7 +115,7 @@ Then sending the message itself:
 Much like in the TCP example, we have to first call `altcp_write()` to write the data that is to be sent, then call `altcp_output()`  to trigger the actual sending of the message. 
 
 # Result
-I integrated the UART input code in the same way I did in the [[Write-Up 4 - TCP Client|TCP section]] (copying over the relevant task/functions and modifying the task to call `tls_send()` when it detects an 
+I integrated the UART input code in the same way I did in the [[4 - TCP Client|TCP section]] (copying over the relevant task/functions and modifying the task to call `tls_send()` when it detects an 
 ENTER). 
 
 Before starting the scheduler, I added `tls_send("Hello")` to send a dummy message to the HTTPS server, because if no message is sent within 10 seconds the server shuts down the connection.

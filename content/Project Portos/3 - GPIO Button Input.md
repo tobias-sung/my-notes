@@ -1,15 +1,17 @@
 ---
-title: Write-Up 3 - GPIO Button Input
+title: 3 - GPIO Button Input
 draft: false
 tags:
 ---
 [GitHub code](https://github.com/tobias-sung/picow_freertos_gpio_button)
 
-Similar to the previous [[Write-Up 2 - UART Communication|section]], I want to communicate with the Pico W but this time using push buttons via the board's GPIO pins. 
+Similar to the previous [[2 - UART Communication|section]], I want to communicate with the Pico W but this time using push buttons via the board's GPIO pins. 
 
 The design is pretty much the same. GPIO interrupts are enabled so that a handler function is triggered every time the button is pressed. The handler function sends a notification to a Task that handles the button presses.
 
 For the sake of simplicity, I'll only put in 3 buttons.
+
+![[Pasted image 20251001121934.png]]
 
 # Clarifying How GPIO Push Buttons Work
 The principle behind push buttons and GPIO input is simple, but I thought it was good to clarify it first before I got down to programming and wiring the breadboard.

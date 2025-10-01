@@ -1,5 +1,5 @@
 ---
-title: Write-Up Appendix  1 - Setup
+title: Appendix  1  - Set-Up and Building Simple "Blink" Program
 draft: false
 tags:
 ---

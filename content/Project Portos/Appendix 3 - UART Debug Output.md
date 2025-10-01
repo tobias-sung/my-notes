@@ -1,5 +1,5 @@
 ---
-title: Write-Up Appendix 3 - UART Debug Output
+title: Appendix 3 - UART Debug Output
 draft: false
 tags:
   -
@@ -8,8 +8,9 @@ During development, I used a lot of `printf()` statements for debugging purposes
 
 The Pico W comes with 2 UART interfaces (uart0 and uart1). Therefore, I set about changing all the `printf()` statements to output to uart1 instead, allowing uart0 to focus solely on receiving external inputs.
 
+![[Pasted image 20251001123506.png]]
 # Initializing uart1
-I first modified my [[Write-Up 2 - UART Communication#UART Initialization| UART setup function]] to set up the uart1 interface:
+I first modified my [[2 - UART Communication#UART Initialization| UART setup function]] to set up the uart1 interface:
 ```c
 void UART_setup(){
     uart_init(uart0, 115200);

@@ -1,5 +1,5 @@
 ---
-title: Write-Up 2 - UART Communication
+title: 2 - UART Communication
 draft: false
 tags:
 ---
@@ -7,12 +7,13 @@ tags:
 
 My first task was to setup basic UART communication, which would allow me to send text messages serially to the Pico W through a serial communication program like "minicom". 
 
-What I'm doing is the same as this [video](https://www.youtube.com/watch?v=pbWhoJdYA1s&t=34s), except I'm using FreeRTOS.
+![[Pasted image 20251001121636.png]]
 
 My plan is to create a Task for processing UART input. This Task is usually in a blocked state, and only unblocks if UART input is detected. 
 
 In order to detect UART input, I'll use the Pico's built-in UART interrupts. When the interrupt is triggered, the interrupt handler will send a [direct-to-task notification](https://www.freertos.org/Documentation/02-Kernel/02-Kernel-features/03-Direct-to-task-notifications/01-Task-notifications) to the UART task and unblock so it can handle the incoming UART data.
 
+![[Pasted image 20251001121737.png]]
 # UART Initialization 
 I wrote a short function to take care of all the UART initialization. 
 
@@ -24,6 +25,7 @@ void UART_setup(){
     uart_set_irqs_enabled(uart0, 1, 0);
 }
 ```
+
 I'm using UART0 with a baud rate of 115200. I set the handler of the UART interrupts to be a function called `vUARTCallback()` (to be written later). Finally, I enabled the UART IRQ and set it so that it triggers an interrupt when the UART RX buffer contains data (the second and third parameters of `uart_set_irqs_enabled()` are used to determine whether the RX buffer and the TX buffer trigger interrupts respectively).  
 # UART Task
 First, I set a global variable for storing the task handle of the UART task. I made it global so that the UART interrupt handler can refer to it because it has to send a notification to the UART task when the interrupt is triggered.
@@ -114,6 +116,7 @@ I then used minicom (which I ran in the terminal using `sudo minicom -D /dev/tty
 - [Pico W Pinout Diagram](https://datasheets.raspberrypi.com/picow/PicoW-A4-Pinout.pdf)
 **Concepts**
 - [FreeRTOS Direct-to-Task Notifications (Blog Post)](https://www.freertos.org/Documentation/02-Kernel/02-Kernel-features/03-Direct-to-task-notifications/01-Task-notifications)
+-  [(Video) Communicate with your Pico serially](https://www.youtube.com/watch?v=pbWhoJdYA1s&t=34s)
 
 
 

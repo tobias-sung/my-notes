@@ -1,14 +1,16 @@
 ---
-title: Write-Up 4 - TCP Client
+title: 4 - TCP Client
 draft: false
 tags:
   -
 ---
 [GitHub code](https://github.com/tobias-sung/picow_freertos_tcp_client)
 
-The goal now is to get the Pico W to connect to a TCP server and send the messages typed in by the user through the [[Write-Up 2 - UART Communication]]. 
+The goal now is to get the Pico W to connect to a TCP server and send the messages typed in by the user through the [[2 - UART Communication|UART interface]]. 
 
 The TCP client functionality was implemented using the ["tcp_client" example](https://github.com/raspberrypi/pico-examples/tree/master/pico_w/wifi/tcp_client) from the "pico-examples" GitHub repository as a base. The original example sends random data back and forth between the Pico W and a local Python server a fixed number of times in a for-loop, ending the connection once the transfers are completed. For my program, I want to keep the connection open indefinitely and send messages inputted via UART whenever the user presses ENTER.
+
+![[Pasted image 20251001122315.png]]
 
 # Copying Over The Code
 I created a file called `lwipopts.h`, which holds configuration options for the lwIP library. Then I copied the contents of ["lwipopts_example_common.h"](https://github.com/raspberrypi/pico-examples/blob/master/pico_w/wifi/lwipopts_examples_common.h) from the "pico-examples" GitHub repo into this file. 
