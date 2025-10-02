@@ -84,7 +84,7 @@ with open(r'blink.elf.map', 'r') as fp:
 			address = 4096 * math.ceil(int(end_addr,16)/4096)
 ```
 
-Once the script knows where it needs to load the file to, it can call in the pyOCD API to start the loading process:
+Once the script knows where it needs to load the file to, it can call in the pyOCD API to start the loading process[^1]:
 
 ```python
 from pyocd.core.helpers import ConnectHelper
@@ -265,5 +265,5 @@ OpenOCD will then carry out all the commands in the Tcl script (i.e. load the fi
 - [(Tutorial)How to search for a string in text file using Python](https://www.geeksforgeeks.org/python/python-how-to-search-for-a-string-in-text-files/)
 - [(Documentation) OpenOCD Tcl crash course](https://openocd.org/doc/html/Tcl-Crash-Course.html#source-and-find-commands) 
 
-# Extra Notes
-- *When writing the Python script for calling pyOCD, I kept getting an `ModuleNotFound` error and it was because I named my Python script "pyocd.py", the same name as the package I was trying to import! Changing it "pyocd_test.py" fixed the issue.*
+# Footnotes
+[^1]: When writing the Python script for calling pyOCD, I kept getting an `ModuleNotFound` error and it was because I named my Python script "pyocd.py", the same name as the package I was trying to import! Changing it "pyocd_test.py" fixed the issue.
