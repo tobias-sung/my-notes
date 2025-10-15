@@ -8,7 +8,7 @@ So far in the development, the Pico W has been powered by the micro-USB connecti
 # Using the Power Profiler Kit 2 as a Power Source
 First, I connect the VOUT pin of the PPK2 to the VSYS pin on the Pico W, and the GND pin of the PPK2 pin to any GND pin on the Pico W (one of which is conveniently located next to the VSYS pin). 
 
-![[20251014_151006.jpg|250]]
+![[20251014_151006.jpg|300]]
 
 Then I connect the PPK2 to my laptop via micro-USB cable (making sure to use the micro-USB port labelled "Data/Power"). 
 
