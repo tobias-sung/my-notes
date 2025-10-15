@@ -23,9 +23,9 @@ const config: QuartzConfig = {
       fontOrigin: "googleFonts",
       cdnCaching: true,
       typography: {
-        header: "Gabarito",
+        header: "IM Fell English",
         body: "Gabarito",
-        code: "Cascadia Code",
+        code: "JetBrains Mono SemiBold",
       },
       colors: {
         lightMode: {

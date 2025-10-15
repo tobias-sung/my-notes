@@ -4,7 +4,7 @@ draft: false
 tags:
   -
 ---
-[GitHub code](https://github.com/tobias-sung/picow_freertos_read_txt)
+*[View the full code on GitHub](https://github.com/tobias-sung/picow_freertos_read_txt)*
 
 So far, I've been defining a lot of configuration information (such as the Wi-Fi SSID/password and server address) as macros in the code. While this was convenient for initial development, having to rebuild the program every time we wanted to make a simple change to the configuration would get very tedious.
 

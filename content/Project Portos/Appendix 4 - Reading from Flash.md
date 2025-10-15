@@ -266,4 +266,4 @@ OpenOCD will then carry out all the commands in the Tcl script (i.e. load the fi
 - [(Documentation) OpenOCD Tcl crash course](https://openocd.org/doc/html/Tcl-Crash-Course.html#source-and-find-commands) 
 
 # Footnotes
-[^1]: When writing the Python script for calling pyOCD, I kept getting an `ModuleNotFound` error and it was because I named my Python script "pyocd.py", the same name as the package I was trying to import! Changing it "pyocd_test.py" fixed the issue.
+[^1]: *When writing the Python script for calling pyOCD, I kept getting an `ModuleNotFound` error and it was because I named my Python script "pyocd.py", the same name as the package I was trying to import! Changing it "pyocd_test.py" fixed the issue.*

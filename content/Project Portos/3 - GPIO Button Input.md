@@ -3,7 +3,7 @@ title: 3 - GPIO Button Input
 draft: false
 tags:
 ---
-[GitHub code](https://github.com/tobias-sung/picow_freertos_gpio_button)
+*[View the full code on GitHub](https://github.com/tobias-sung/picow_freertos_gpio_button)*
 
 Similar to the previous [[2 - UART Communication|section]], I want to communicate with the Pico W but this time using push buttons via the board's GPIO pins. 
 
@@ -95,7 +95,9 @@ void main() {
 ```
 
 And here's how I wired the push buttons to the board:
+
 ![[content/Images/20250908_122324.jpg|500]]
+
 I connected Pin 36 (3V3 (OUT)) to the positive power rail of the breadboard (i.e. the red power rail). I then connected each of the buttons to the positive power rail.
 
 Then I connected the remaining pin of each push button to GPIO pins 18, 19 and 20 (which I had defined in the code).

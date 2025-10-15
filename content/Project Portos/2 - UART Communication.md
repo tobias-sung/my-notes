@@ -3,7 +3,7 @@ title: 2 - UART Communication
 draft: false
 tags:
 ---
-[GitHub code](https://github.com/tobias-sung/uart_console)
+*[View the full code on GitHub](https://github.com/tobias-sung/uart_console)*
 
 My first task was to setup basic UART communication, which would allow me to send text messages serially to the Pico W through a serial communication program like "minicom". 
 

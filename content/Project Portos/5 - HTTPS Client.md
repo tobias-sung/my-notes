@@ -4,7 +4,7 @@ draft: false
 tags:
   -
 ---
-[GitHub code](https://github.com/tobias-sung/picow_freertos_tls_client)
+*[View the full code on GitHub](https://github.com/tobias-sung/picow_freertos_tls_client)*
 
 The next part of the project was to get the Pico W to connect to an HTTPS server with TLS (Transport Layer Security). Functionally, it's exactly the same as the [[4 - TCP Client|previous section]], it's just that after the TCP handshake is completed an additional TLS handshake is carried out to verify the authenticity of the server. Accordingly, the lwIP developers have made their "altcp" API library very similar to the "tcp" API library in terms of naming and structure.
 

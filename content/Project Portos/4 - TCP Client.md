@@ -4,7 +4,7 @@ draft: false
 tags:
   -
 ---
-[GitHub code](https://github.com/tobias-sung/picow_freertos_tcp_client)
+*[View the full code on GitHub](https://github.com/tobias-sung/picow_freertos_tcp_client)*
 
 The goal now is to get the Pico W to connect to a TCP server and send the messages typed in by the user through the [[2 - UART Communication|UART interface]]. 
 

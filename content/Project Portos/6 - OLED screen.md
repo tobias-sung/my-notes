@@ -3,7 +3,7 @@ title: 6 - OLED screen
 draft: false
 tags:
 ---
-[GitHub code](https://github.com/tobias-sung/picow_oled)
+*[View the full code on GitHub](https://github.com/tobias-sung/picow_oled)*
 
 I decided to try hooking up an OLED screen to the Pico W so that I could read outputs from there instead of having to use minicom every time. 
 

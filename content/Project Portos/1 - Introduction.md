@@ -4,6 +4,8 @@ draft: false
 tags:
   -
 ---
+*[View the full code on GitHub](https://github.com/tobias-sung/picow-race-timer)*
+
 This documents the process of working on a FreeRTOS program written in C for the Raspberry Pico W. The program is used for tracking the time during a toy car race. The following diagram provides a simple overview of the program, where blue refers to output from the Pico W and green refers to inputs: 
 ![[Project Overview.excalidraw.png]]
 
