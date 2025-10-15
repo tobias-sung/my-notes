@@ -90,14 +90,59 @@ Although it was working fine with just one task running in the scheduler, things
 
 The process of writing to flash was being interrupted, likely due to the Pico W using the "eXecute In Place" (XIP) technique of running code directly from flash. During the writing process, the Pico W was probably executing code from elsewhere on the flash and causing a conflict.
 
-In order to get it to work properly, I made two changes.
+In order to get it to work properly, I made 3 changes.
 
+## 1 - Reduce to Single-Core
 First, I configured FreeRTOS to use only one core by changing the following in "FreeRTOSConfig.h":
 ```
 #define configNUM_CORES 1
 ```
+## 2 - Use `flash_safe_execute()`
+Secondly, when calling the flash API functions for erasing and writing to flash, I would use the `flash_safe_execute()` function, which disables all IRQs and prevents the other core from executing/reading from flash while the flash operations are in progress. 
 
-Secondly, I created a new Task with the sole purpose of writing to flash. 
+One issue is that `flash_safe_execute()` only executes functions that have a single input parameter. So I need to define functions that take in a single array of parameters, parse the array and then call the flash API functions:
+
+```c
+//Erase flash
+static void call_flash_range_erase(void *param) {
+    uint32_t offset = (uint32_t)param;
+    flash_range_erase(offset, FLASH_SECTOR_SIZE);
+}
+
+//Load to flash
+void call_flash_range_program(void *param) {
+    uint32_t offset = ((uintptr_t*)param)[0];
+    const uint8_t *data = (const uint8_t *)((uintptr_t*)param)[1];
+    flash_range_program(offset, data, FLASH_PAGE_SIZE);
+}
+```
+
+Then, I can modify the function that writes to flash:
+```c
+void wifisetting_write(wifi_setting_t *setting) {
+    uint8_t buffer[FLASH_PAGE_SIZE];
+    
+    memcpy(setting->magic, WIFI_SETTING_MAGIC, sizeof(setting->magic));
+    memcpy(buffer, setting, sizeof(wifi_setting_t));
+
+    flash_safe_execute(call_flash_range_erase, (void*)FLASH_TARGET_OFFSET, UINT32_MAX));
+    
+    uintptr_t params[] = { FLASH_TARGET_OFFSET, (uintptr_t)buffer};
+    flash_safe_execute(call_flash_range_program, params, UINT32_MAX));
+
+}
+```
+
+Even though I've already configured the system to use only one core, `flash_safe_execute()` doesn't know that and still assumes that the other core is active. Therefore, it will not execute the flash operations unless I add the following to "CMakeLists.txt":
+```
+target_compile_definitions(blink PRIVATE
+  PICO_FLASH_ASSUME_CORE1_SAFE=1
+)
+```
+
+Now this should ensure that no other flash operations will occur during erases and writes to flash.
+## 3 - Dedicated Task for Writing
+Finally, I created a new Task with the sole purpose of writing to flash. 
 
 Originally, the function `wifisetting_write()` was being called from inside the callback function `tud_msc_write10_cb()` (located in "msc_disk.c, and invoked whenever the changes to the text file are saved). `wifisetting_write()` contains the critical flash operations that can't be interrupted, so it didn't seem like a good idea to call it from a callback function.  
 

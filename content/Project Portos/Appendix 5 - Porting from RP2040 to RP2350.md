@@ -21,6 +21,7 @@ Then in "FreeRTOSConfig.h" I added the following lines[^1]:
 #define configENABLE_FPU                        0
 #define configENABLE_MPU                        0
 #define configENABLE_TRUSTZONE                  0
+#define configRUN_FREERTOS_SECURE_ONLY 0
 #define configMAX_SYSCALL_INTERRUPT_PRIORITY    1
 ```
 
