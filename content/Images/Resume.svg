@@ -1,0 +1,760 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 793.70081 1122.5197"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25)"
+   sodipodi:docname="Resume.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showguides="true"
+     inkscape:zoom="1.0242632"
+     inkscape:cx="549.66341"
+     inkscape:cy="464.23615"
+     inkscape:window-width="1865"
+     inkscape:window-height="1025"
+     inkscape:window-x="0"
+     inkscape:window-y="55"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g82">
+    <sodipodi:guide
+       position="793.70079,596.46805"
+       orientation="1,0"
+       id="guide3"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="383.10701,999.3375"
+       orientation="0,-1"
+       id="guide1"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1">
+    <rect
+       x="275.77164"
+       y="395.30416"
+       width="430.91353"
+       height="51.316698"
+       id="rect13" />
+    <rect
+       x="278.42373"
+       y="158.96681"
+       width="220.62453"
+       height="49.202521"
+       id="rect10" />
+    <rect
+       x="274.79122"
+       y="45.916126"
+       width="112.99253"
+       height="35.416251"
+       id="rect7" />
+    <rect
+       x="180.82731"
+       y="33.592266"
+       width="207.81096"
+       height="43.719658"
+       id="rect1" />
+    <rect
+       x="278.42374"
+       y="158.96681"
+       width="222.81701"
+       height="74.201067"
+       id="rect10-9" />
+    <rect
+       x="278.42374"
+       y="158.96681"
+       width="222.81702"
+       height="74.201065"
+       id="rect10-9-9" />
+    <rect
+       x="278.42374"
+       y="158.96681"
+       width="46.404873"
+       height="18.608994"
+       id="rect15" />
+    <rect
+       x="274.79123"
+       y="45.916126"
+       width="112.99253"
+       height="35.416252"
+       id="rect7-5" />
+    <rect
+       x="278.42374"
+       y="158.96681"
+       width="222.81702"
+       height="74.201065"
+       id="rect10-9-5" />
+    <rect
+       x="278.42374"
+       y="158.96681"
+       width="222.81702"
+       height="74.201065"
+       id="rect10-9-9-4" />
+    <rect
+       x="275.77164"
+       y="395.30417"
+       width="430.91354"
+       height="51.316696"
+       id="rect13-7" />
+    <rect
+       x="278.42374"
+       y="158.96681"
+       width="46.404873"
+       height="18.608994"
+       id="rect15-6" />
+    <rect
+       x="274.79123"
+       y="45.916126"
+       width="112.99253"
+       height="35.416252"
+       id="rect82" />
+    <rect
+       x="274.79123"
+       y="45.916126"
+       width="112.99253"
+       height="35.416252"
+       id="rect20" />
+  </defs>
+  <g
+     inkscape:label="Background"
+     inkscape:groupmode="layer"
+     id="layer1"
+     style="display:none"
+     sodipodi:insensitive="true">
+    <path
+       style="fill:#ffe6d5;fill-opacity:1;stroke:none;stroke-width:1.00157;stroke-opacity:1"
+       d="m 0,0 c 0,204.68776 0,202.84936 0,202.84936 0,0 74.858437,-45.78942 206.44787,-40.99076 131.58944,4.79866 140.37104,45.91288 363.81198,22.92263 C 793.70081,161.79097 793.70081,162.5889 793.70081,162.5889 V 0 H 0"
+       id="path3" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Name">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;font-family:'Tw Cen MT';-inkscape-font-specification:'Tw Cen MT';text-align:start;text-anchor:start;fill:#ffe6d5;fill-opacity:1;stroke:none;stroke-width:1.00157;stroke-opacity:1"
+       x="355.83835"
+       y="57.34034"
+       id="text3"><tspan
+         sodipodi:role="line"
+         id="tspan3"
+         x="355.83835"
+         y="57.34034"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-family:'AvantGarde LT Medium';-inkscape-font-specification:'AvantGarde LT Medium,  Medium';text-align:start;text-anchor:start;fill:#000000;fill-opacity:1">宋士衡</tspan></text>
+    <a
+       id="a4"
+       xlink:href="https://github.com/tobias-sung"
+       xlink:show="new"
+       transform="translate(479.07498,2.4883194)">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.6667px;font-family:'Tw Cen MT';-inkscape-font-specification:'Tw Cen MT';text-align:center;text-anchor:middle;fill:#ffe6d5;fill-opacity:1;stroke:none;stroke-width:1.00157;stroke-opacity:1"
+         x="39.221764"
+         y="85.349792"
+         id="text4"><tspan
+           sodipodi:role="line"
+           id="tspan4"
+           x="39.221764"
+           y="85.349792"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.6667px;font-family:'Tw Cen MT';-inkscape-font-specification:'Tw Cen MT';text-align:start;text-anchor:start;fill:#0000ff;fill-opacity:1">Github</tspan></text>
+    </a>
+    <a
+       id="a5"
+       xlink:href="https://github.com/tobias-sung"
+       xlink:show="new"
+       transform="translate(186.25489,1.2033994)"
+       inkscape:transform-center-x="-0.24467379"
+       inkscape:transform-center-y="4.7706025">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.6667px;font-family:'Tw Cen MT';-inkscape-font-specification:'Tw Cen MT';text-align:start;text-anchor:start;fill:#ffe6d5;fill-opacity:1;stroke:none;stroke-width:1.00157;stroke-opacity:1"
+         x="33.656414"
+         y="85.474556"
+         id="text5"><tspan
+           sodipodi:role="line"
+           id="tspan5"
+           x="33.656414"
+           y="85.474556"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.6667px;font-family:'Tw Cen MT';-inkscape-font-specification:'Tw Cen MT';text-align:start;text-anchor:start;fill:#1a1a1a;fill-opacity:1">(886) 970 093 038</tspan></text>
+    </a>
+    <a
+       id="a6"
+       xlink:href="https://github.com/tobias-sung"
+       xlink:show="new"
+       transform="translate(313.11455,1.6151794)"
+       inkscape:transform-center-x="-0.24467379"
+       inkscape:transform-center-y="4.7706025">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.6667px;font-family:'Tw Cen MT';-inkscape-font-specification:'Tw Cen MT';text-align:start;text-anchor:start;fill:#ffe6d5;fill-opacity:1;stroke:none;stroke-width:1.00157;stroke-opacity:1"
+         x="33.656414"
+         y="85.474556"
+         id="text6"><tspan
+           sodipodi:role="line"
+           id="tspan6"
+           x="33.656414"
+           y="85.474556"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.6667px;font-family:'Tw Cen MT';-inkscape-font-specification:'Tw Cen MT';text-align:start;text-anchor:start;fill:#1a1a1a;fill-opacity:1">tobias.sung923@gmail.com</tspan></text>
+    </a>
+  </g>
+  <g
+     id="layer3"
+     inkscape:label="Education"
+     transform="translate(-110.27705,133.03989)"
+     inkscape:groupmode="layer">
+    <rect
+       style="fill:#b3b3b3;fill-opacity:1;stroke:none;stroke-width:2.20213;stroke-opacity:1"
+       id="rect6"
+       width="488.97458"
+       height="326.77515"
+       x="269.62805"
+       y="66.157639"
+       rx="32.795792" />
+    <text
+       xml:space="preserve"
+       id="text7"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;font-family:'Tw Cen MT';-inkscape-font-specification:'Tw Cen MT';text-align:start;white-space:pre;shape-inside:url(#rect7);fill:#b3b3b3;fill-opacity:1;stroke:none;stroke-width:1.00157;stroke-opacity:1"
+       transform="translate(20.291196,37.159584)"><tspan
+         x="274.79102"
+         y="69.564453"
+         id="tspan10"><tspan
+           style="font-weight:bold;font-family:'Gen Jyuu Gothic';-inkscape-font-specification:'Gen Jyuu Gothic Bold';fill:#1a1a1a"
+           id="tspan9">學歷</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:'Futura Bk BT';-inkscape-font-specification:'Futura Bk BT';text-align:start;text-anchor:start;fill:#1a1a1a;fill-opacity:1;stroke:none;stroke-width:1.00157;stroke-opacity:1"
+       x="295.97821"
+       y="135.07674"
+       id="text8"><tspan
+         sodipodi:role="line"
+         id="tspan8"
+         x="295.97821"
+         y="135.07674"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:'Gen Jyuu Gothic';-inkscape-font-specification:'Gen Jyuu Gothic'">香港大學 工學學士 (計算機工程)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:'Gen Jyuu Gothic';-inkscape-font-specification:'Gen Jyuu Gothic';fill:#1a1a1a;stroke-width:1.00157"
+       x="555.37292"
+       y="134.60799"
+       id="text1"><tspan
+         sodipodi:role="line"
+         id="tspan1"
+         x="555.37292"
+         y="134.60799"
+         style="font-style:normal;font-variant:normal;font-weight:200;font-stretch:normal;font-family:'Gen Jyuu Gothic';-inkscape-font-specification:'Gen Jyuu Gothic Ultra-Light'">2019年9月 - 2023 年6月</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:'Futura Bk BT';-inkscape-font-specification:'Futura Bk BT';text-align:start;text-anchor:start;fill:#1a1a1a;fill-opacity:1;stroke:none;stroke-width:1.00157;stroke-opacity:1"
+       x="295.97821"
+       y="164.35912"
+       id="text9"><tspan
+         sodipodi:role="line"
+         id="tspan7"
+         x="295.97821"
+         y="164.35912"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:16px;font-family:'Gen Jyuu Gothic';-inkscape-font-specification:'Gen Jyuu Gothic Bold'">專案</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.6667px;font-family:'Futura Bk BT';-inkscape-font-specification:'Futura Bk BT';text-align:start;text-anchor:start;fill:#1a1a1a;fill-opacity:1;stroke:none;stroke-width:1.00157;stroke-opacity:1"
+       x="295.97821"
+       y="186.36644"
+       id="text9-2"><tspan
+         sodipodi:role="line"
+         id="tspan7-3"
+         x="295.97821"
+         y="186.36644"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:14.6667px;font-family:'Gen Jyuu Gothic';-inkscape-font-specification:'Gen Jyuu Gothic Bold'">VHDL 自動評分系統</tspan></text>
+    <text
+       xml:space="preserve"
+       id="text10-2"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.3333px;font-family:'Gen Jyuu Gothic';-inkscape-font-specification:'Gen Jyuu Gothic Bold';white-space:pre;shape-inside:url(#rect10-9);display:inline;fill:#1a1a1a;stroke-width:1.00157"
+       transform="translate(17.058286,104.87024)"><tspan
+         x="278.42383"
+         y="172.10478"
+         id="tspan17"><tspan
+           style="font-weight:200;-inkscape-font-specification:'Gen Jyuu Gothic Ultra-Light'"
+           id="tspan11">-    </tspan><tspan
+           style="font-weight:200;-inkscape-font-specification:'Gen Jyuu Gothic Ultra-Light'"
+           id="tspan13">研究現有的程式設計自動評分系統</tspan><tspan
+           style="font-weight:200;-inkscape-font-specification:'Gen Jyuu Gothic Ultra-Light'"
+           id="tspan16">
+</tspan></tspan><tspan
+         x="278.42383"
+         y="188.77141"
+         id="tspan24"><tspan
+           style="font-weight:200;-inkscape-font-specification:'Gen Jyuu Gothic Ultra-Light'"
+           id="tspan18">-    </tspan><tspan
+           style="font-weight:200;-inkscape-font-specification:'Gen Jyuu Gothic Ultra-Light'"
+           id="tspan19">開發</tspan><tspan
+           style="font-weight:200;-inkscape-font-specification:'Gen Jyuu Gothic Ultra-Light'"
+           id="tspan20">VHDL</tspan><tspan
+           style="font-weight:200;-inkscape-font-specification:'Gen Jyuu Gothic Ultra-Light'"
+           id="tspan23">評分系統原型，功能包括</tspan></tspan><tspan
+         x="278.42383"
+         y="205.43804"
+         id="tspan29"><tspan
+           style="font-weight:200;-inkscape-font-specification:'Gen Jyuu Gothic Ultra-Light'"
+           id="tspan25">靜態程式分析</tspan><tspan
+           style="font-weight:200;-inkscape-font-specification:'Gen Jyuu Gothic Ultra-Light'"
+           id="tspan26"> (</tspan><tspan
+           style="font-weight:200;-inkscape-font-specification:'Gen Jyuu Gothic Ultra-Light'"
+           id="tspan27">static code analysis</tspan><tspan
+           style="font-weight:200;-inkscape-font-specification:'Gen Jyuu Gothic Ultra-Light'"
+           id="tspan28">) </tspan></tspan><tspan
+         x="278.42383"
+         y="222.10466"
+         id="tspan33"><tspan
+           style="font-weight:200;-inkscape-font-specification:'Gen Jyuu Gothic Ultra-Light'"
+           id="tspan30">以及通過</tspan><tspan
+           style="font-weight:200;-inkscape-font-specification:'Gen Jyuu Gothic Ultra-Light'"
+           id="tspan31">ModelSim</tspan><tspan
+           style="font-weight:200;-inkscape-font-specification:'Gen Jyuu Gothic Ultra-Light'"
+           id="tspan32">模擬器驗證輸出</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3333px;font-family:'Futura Bk BT';-inkscape-font-specification:'Futura Bk BT';text-align:start;text-anchor:start;fill:#1a1a1a;fill-opacity:1;stroke:none;stroke-width:1.00157;stroke-opacity:1"
+       x="295.98343"
+       y="254.75984"
+       id="text12"><tspan
+         sodipodi:role="line"
+         id="tspan12"
+         x="295.98343"
+         y="254.75984"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.3333px;font-family:'Gen Jyuu Gothic';-inkscape-font-specification:'Gen Jyuu Gothic Bold'">主要工作內容:</tspan></text>
+    <text
+       xml:space="preserve"
+       id="text10-2-7"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.3333px;font-family:'Gen Jyuu Gothic';-inkscape-font-specification:'Gen Jyuu Gothic Bold';white-space:pre;shape-inside:url(#rect10-9-9);display:inline;fill:#1a1a1a;stroke-width:1.00157"
+       transform="translate(276.58385,104.7986)"><tspan
+         x="278.42383"
+         y="172.10478"
+         id="tspan37"><tspan
+           style="font-weight:200;-inkscape-font-specification:'Gen Jyuu Gothic Ultra-Light'"
+           id="tspan34">程式語言</tspan><tspan
+           style="font-weight:200;-inkscape-font-specification:'Gen Jyuu Gothic Ultra-Light'"
+           id="tspan35"> - </tspan><tspan
+           style="font-weight:200;-inkscape-font-specification:'Gen Jyuu Gothic Ultra-Light'"
+           id="tspan36">C, Python
+</tspan></tspan><tspan
+         x="278.42383"
+         y="188.77141"
+         id="tspan41"><tspan
+           style="font-weight:200;-inkscape-font-specification:'Gen Jyuu Gothic Ultra-Light'"
+           id="tspan38">軟體</tspan><tspan
+           style="font-weight:200;-inkscape-font-specification:'Gen Jyuu Gothic Ultra-Light'"
+           id="tspan39"> - </tspan><tspan
+           style="font-weight:200;-inkscape-font-specification:'Gen Jyuu Gothic Ultra-Light'"
+           id="tspan40">hdlConvertAst, ModelSim, </tspan></tspan><tspan
+         x="278.42383"
+         y="205.43804"
+         id="tspan45"><tspan
+           style="font-weight:200;-inkscape-font-specification:'Gen Jyuu Gothic Ultra-Light'"
+           id="tspan42">Flex/Bison, MongoDB, Flask</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3333px;font-family:'Futura Bk BT';-inkscape-font-specification:'Futura Bk BT';text-align:start;text-anchor:start;fill:#1a1a1a;fill-opacity:1;stroke:none;stroke-width:1.00157;stroke-opacity:1"
+       x="555.50897"
+       y="254.68825"
+       id="text12-2"><tspan
+         sodipodi:role="line"
+         id="tspan12-0"
+         x="555.50897"
+         y="254.68825"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.3333px;font-family:'Gen Jyuu Gothic';-inkscape-font-specification:'Gen Jyuu Gothic Bold'">開發工具:</tspan></text>
+    <text
+       xml:space="preserve"
+       id="text13"
+       style="font-style:normal;font-variant:normal;font-weight:200;font-stretch:normal;font-size:13.3333px;font-family:'Gen Jyuu Gothic';-inkscape-font-specification:'Gen Jyuu Gothic Ultra-Light';white-space:pre;shape-inside:url(#rect13);fill:#1a1a1a;stroke-width:1.00157"
+       transform="translate(19.594746,-198.61434)"><tspan
+         x="275.77148"
+         y="408.44268"
+         id="tspan48">目標是研究可在大學初級VHDL課程使用的評分系統，讓老師/教學助理毋</tspan><tspan
+         x="275.77148"
+         y="425.1093"
+         id="tspan50">須親手改每一份功課</tspan></text>
+    <text
+       xml:space="preserve"
+       id="text14"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.3333px;font-family:'Gen Jyuu Gothic';-inkscape-font-specification:'Gen Jyuu Gothic Bold';white-space:pre;shape-inside:url(#rect15);display:inline;fill:#1a1a1a;stroke-width:1.00157"
+       transform="translate(17.88512,196.85154)"><tspan
+         x="278.42383"
+         y="172.10478"
+         id="tspan52"><tspan
+           style="font-weight:200;-inkscape-font-specification:'Gen Jyuu Gothic Ultra-Light'"
+           id="tspan51">GitHub</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.3333px;font-family:'Futura Bk BT';-inkscape-font-specification:'Futura Bk BT';text-align:start;text-anchor:start;fill:#1a1a1a;fill-opacity:1;stroke:none;stroke-width:1.00157;stroke-opacity:1"
+       x="295.98343"
+       y="348.94269"
+       id="text15"><tspan
+         id="tspan15"
+         x="295.98343"
+         y="348.94269"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.3333px;font-family:'Gen Jyuu Gothic';-inkscape-font-specification:'Gen Jyuu Gothic Bold'"
+         sodipodi:role="line">相關資源:</tspan></text>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer4"
+     inkscape:label="Internships"
+     transform="translate(-114.92603,178.85672)">
+    <rect
+       style="fill:#b3b3b3;fill-opacity:1;stroke:#000000;stroke-width:2.0404;stroke-opacity:0"
+       id="rect6-9"
+       width="488.97458"
+       height="280.54117"
+       x="273.25684"
+       y="370.97839"
+       rx="32.795792"
+       inkscape:label="Bubble" />
+    <text
+       xml:space="preserve"
+       id="text7-3"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;font-family:'Tw Cen MT';-inkscape-font-specification:'Tw Cen MT';text-align:start;white-space:pre;shape-inside:url(#rect7-5);display:inline;fill:#b3b3b3;fill-opacity:1;stroke:none;stroke-width:1.00157;stroke-opacity:1"
+       transform="translate(23.919979,341.98034)"
+       inkscape:label="Title"><tspan
+         x="274.79102"
+         y="69.564453"
+         id="tspan54"><tspan
+           style="font-weight:bold;font-family:'Gen Jyuu Gothic';-inkscape-font-specification:'Gen Jyuu Gothic Bold';fill:#1a1a1a"
+           id="tspan53">實習經歷</tspan></tspan></text>
+    <g
+       inkscape:groupmode="layer"
+       id="g63"
+       inkscape:label="Interships 3"
+       transform="translate(23.648013,14.420825)"
+       style="display:inline">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:'Futura Bk BT';-inkscape-font-specification:'Futura Bk BT';text-align:start;text-anchor:start;fill:#1a1a1a;fill-opacity:1;stroke:none;stroke-width:1.00157;stroke-opacity:1"
+         x="293.76978"
+         y="564.20782"
+         id="text59"><tspan
+           sodipodi:role="line"
+           id="tspan59"
+           x="293.76978"
+           y="564.20782"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:'Gen Jyuu Gothic';-inkscape-font-specification:'Gen Jyuu Gothic'">程式設計實習生 <tspan
+   style="font-style:normal;font-variant:normal;font-weight:200;font-stretch:normal;font-family:'Gen Jyuu Gothic';-inkscape-font-specification:'Gen Jyuu Gothic Ultra-Light'"
+   id="tspan64">Podconn Limited</tspan></tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:'Gen Jyuu Gothic';-inkscape-font-specification:'Gen Jyuu Gothic';fill:#1a1a1a;stroke-width:1.00157"
+         x="553.16449"
+         y="563.73907"
+         id="text60"><tspan
+           sodipodi:role="line"
+           id="tspan60"
+           x="553.16449"
+           y="563.73907"
+           style="font-style:normal;font-variant:normal;font-weight:200;font-stretch:normal;font-family:'Gen Jyuu Gothic';-inkscape-font-specification:'Gen Jyuu Gothic Ultra-Light'">2023年9月 - 12月</tspan></text>
+      <ellipse
+         style="fill:#1a1a1a;stroke-width:1.00157"
+         id="ellipse60"
+         cx="282.07175"
+         cy="557.97339"
+         rx="3.1986582"
+         ry="3.4765625" />
+      <ellipse
+         style="fill:#1a1a1a;stroke-width:0.657498"
+         id="ellipse61"
+         cx="300.01889"
+         cy="596.4895"
+         rx="2.1892374"
+         ry="2.1890252" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:200;font-stretch:normal;font-size:13.3333px;font-family:'Gen Jyuu Gothic';-inkscape-font-specification:'Gen Jyuu Gothic Ultra-Light';fill:#1a1a1a;stroke-width:1.00157"
+         x="310.60934"
+         y="600.552"
+         id="text61"><tspan
+           sodipodi:role="line"
+           id="tspan61"
+           x="310.60934"
+           y="600.552">開發 Boot Image Manager 讓嵌入式系統能夠通過 OAD 更新韌體</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:200;font-stretch:normal;font-size:13.3333px;font-family:'Gen Jyuu Gothic';-inkscape-font-specification:'Gen Jyuu Gothic Ultra-Light';fill:#1a1a1a;stroke-width:1.00157"
+         x="298.2323"
+         y="583.71759"
+         id="text63"><tspan
+           sodipodi:role="line"
+           id="tspan63"
+           x="298.2323"
+           y="583.71759">開發工具: Code Composer, UniFlash</tspan></text>
+    </g>
+    <g
+       inkscape:groupmode="layer"
+       id="layer6"
+       inkscape:label="Interships 2"
+       transform="translate(23.648013,-68.568846)"
+       style="display:inline">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:'Futura Bk BT';-inkscape-font-specification:'Futura Bk BT';text-align:start;text-anchor:start;fill:#1a1a1a;fill-opacity:1;stroke:none;stroke-width:1.00157;stroke-opacity:1"
+         x="293.76978"
+         y="564.20782"
+         id="text46"><tspan
+           sodipodi:role="line"
+           id="tspan46"
+           x="293.76978"
+           y="564.20782"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:'Gen Jyuu Gothic';-inkscape-font-specification:'Gen Jyuu Gothic'">程式設計實習生 <tspan
+   style="font-style:normal;font-variant:normal;font-weight:200;font-stretch:normal;font-family:'Gen Jyuu Gothic';-inkscape-font-specification:'Gen Jyuu Gothic Ultra-Light'"
+   id="tspan49">Weava</tspan></tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:'Gen Jyuu Gothic';-inkscape-font-specification:'Gen Jyuu Gothic';fill:#1a1a1a;stroke-width:1.00157"
+         x="553.16449"
+         y="563.73907"
+         id="text47"><tspan
+           sodipodi:role="line"
+           id="tspan47"
+           x="553.16449"
+           y="563.73907"
+           style="font-style:normal;font-variant:normal;font-weight:200;font-stretch:normal;font-family:'Gen Jyuu Gothic';-inkscape-font-specification:'Gen Jyuu Gothic Ultra-Light'">2022年 6月 - 8月</tspan></text>
+      <ellipse
+         style="fill:#1a1a1a;stroke-width:1.00157"
+         id="ellipse47"
+         cx="282.07175"
+         cy="557.97339"
+         rx="3.1986582"
+         ry="3.4765625" />
+      <ellipse
+         style="fill:#1a1a1a;stroke-width:0.657498"
+         id="ellipse55"
+         cx="300.01889"
+         cy="596.4895"
+         rx="2.1892374"
+         ry="2.1890252" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:200;font-stretch:normal;font-size:13.3333px;font-family:'Gen Jyuu Gothic';-inkscape-font-specification:'Gen Jyuu Gothic Ultra-Light';fill:#1a1a1a;stroke-width:1.00157"
+         x="310.60934"
+         y="600.552"
+         id="text55"><tspan
+           sodipodi:role="line"
+           id="tspan55"
+           x="310.60934"
+           y="600.552">設計 CI/CD 流程</tspan></text>
+      <ellipse
+         style="fill:#1a1a1a;stroke-width:0.657498"
+         id="ellipse56"
+         cx="300.01889"
+         cy="614.25018"
+         rx="2.1892374"
+         ry="2.1890252" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:200;font-stretch:normal;font-size:13.3333px;font-family:'Gen Jyuu Gothic';-inkscape-font-specification:'Gen Jyuu Gothic Ultra-Light';fill:#1a1a1a;stroke-width:1.00157"
+         x="310.60934"
+         y="618.31268"
+         id="text56"><tspan
+           sodipodi:role="line"
+           id="tspan56"
+           x="310.60934"
+           y="618.31268">寫軟件測試</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:200;font-stretch:normal;font-size:13.3333px;font-family:'Gen Jyuu Gothic';-inkscape-font-specification:'Gen Jyuu Gothic Ultra-Light';fill:#1a1a1a;stroke-width:1.00157"
+         x="298.2323"
+         y="583.71759"
+         id="text57"><tspan
+           sodipodi:role="line"
+           id="tspan57"
+           x="298.2323"
+           y="583.71759">開發工具: Bitbucket Pipelines, Cypress</tspan></text>
+    </g>
+    <g
+       inkscape:groupmode="layer"
+       id="layer5"
+       inkscape:label="Internships 1"
+       style="display:inline"
+       transform="translate(23.648013,-68.568846)">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:'Futura Bk BT';-inkscape-font-specification:'Futura Bk BT';text-align:start;text-anchor:start;fill:#1a1a1a;fill-opacity:1;stroke:none;stroke-width:1.00157;stroke-opacity:1"
+         x="293.76978"
+         y="509.27667"
+         id="text8-5"><tspan
+           sodipodi:role="line"
+           id="tspan8-2"
+           x="293.76978"
+           y="509.27667"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:'Gen Jyuu Gothic';-inkscape-font-specification:'Gen Jyuu Gothic'">程式設計實習生 <tspan
+   style="font-style:normal;font-variant:normal;font-weight:200;font-stretch:normal;font-family:'Gen Jyuu Gothic';-inkscape-font-specification:'Gen Jyuu Gothic Ultra-Light'"
+   id="tspan43">Podconn Limited</tspan></tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:'Gen Jyuu Gothic';-inkscape-font-specification:'Gen Jyuu Gothic';fill:#1a1a1a;stroke-width:1.00157"
+         x="553.16449"
+         y="508.80792"
+         id="text1-5"><tspan
+           sodipodi:role="line"
+           id="tspan1-4"
+           x="553.16449"
+           y="508.80792"
+           style="font-style:normal;font-variant:normal;font-weight:200;font-stretch:normal;font-family:'Gen Jyuu Gothic';-inkscape-font-specification:'Gen Jyuu Gothic Ultra-Light'">2021年8月</tspan></text>
+      <ellipse
+         style="fill:#1a1a1a;stroke-width:1.00157"
+         id="path43"
+         cx="282.07175"
+         cy="503.0423"
+         rx="3.1986582"
+         ry="3.4765625" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:200;font-stretch:normal;font-size:13.3333px;font-family:'Gen Jyuu Gothic';-inkscape-font-specification:'Gen Jyuu Gothic Ultra-Light';fill:#1a1a1a;stroke-width:1.00157"
+         x="311.70142"
+         y="530.08966"
+         id="text44"><tspan
+           sodipodi:role="line"
+           id="tspan44"
+           x="311.70142"
+           y="530.08966">設計多執行緒 Python 程式，透過水電公司的API下載水錶的數據點</tspan></text>
+      <ellipse
+         style="fill:#1a1a1a;stroke-width:0.657498"
+         id="path43-9"
+         cx="301.11096"
+         cy="526.02716"
+         rx="2.1892374"
+         ry="2.1890252" />
+    </g>
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:0.623622;stroke-dasharray:none;stroke-opacity:1"
+       d="m 305.71976,437.95 c 0,47.97796 0,47.97796 0,47.97796 v 0"
+       id="path83" />
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:0.529134;stroke-dasharray:none;stroke-opacity:1"
+       d="m 305.71977,490.64609 c 0,78.92713 0,78.92713 0,78.92713 v 0"
+       id="path84" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="g82"
+     inkscape:label="Skills"
+     transform="translate(-110.22967,488.79198)"
+     style="display:inline">
+    <rect
+       style="fill:#b3b3b3;fill-opacity:1;stroke:none;stroke-width:1.63832;stroke-opacity:1"
+       id="rect64"
+       width="488.97458"
+       height="180.86835"
+       x="262.59277"
+       y="366.72061"
+       rx="32.795792"
+       inkscape:label="Bubble" />
+    <text
+       xml:space="preserve"
+       id="text66"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24px;font-family:'Tw Cen MT';-inkscape-font-specification:'Tw Cen MT';text-align:start;white-space:pre;shape-inside:url(#rect82);display:inline;fill:#b3b3b3;fill-opacity:1;stroke:none;stroke-width:1.00157;stroke-opacity:1"
+       transform="translate(13.255937,337.72256)"
+       inkscape:label="Title"><tspan
+         x="274.79102"
+         y="69.564453"
+         id="tspan62"><tspan
+           style="font-weight:bold;font-family:'Gen Jyuu Gothic';-inkscape-font-specification:'Gen Jyuu Gothic Bold';fill:#1a1a1a"
+           id="tspan58">技能</tspan></tspan></text>
+    <g
+       inkscape:groupmode="layer"
+       id="layer7"
+       inkscape:label="Programming Languages">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:'Futura Bk BT';-inkscape-font-specification:'Futura Bk BT';text-align:start;text-anchor:start;display:inline;fill:#1a1a1a;fill-opacity:1;stroke:none;stroke-width:1.00157;stroke-opacity:1"
+         x="288.10162"
+         y="440.07669"
+         id="text8-4"><tspan
+           sodipodi:role="line"
+           id="tspan8-9"
+           x="288.10162"
+           y="440.07669"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:'Gen Jyuu Gothic';-inkscape-font-specification:'Gen Jyuu Gothic'">程式設計類</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:200;font-stretch:normal;font-size:13.3333px;font-family:'Gen Jyuu Gothic';-inkscape-font-specification:'Gen Jyuu Gothic Ultra-Light';display:inline;fill:#1a1a1a;stroke-width:1.00157"
+         x="381.37054"
+         y="438.15744"
+         id="text63-8"><tspan
+           sodipodi:role="line"
+           id="tspan63-7"
+           x="381.37054"
+           y="438.15744">Python, Java, C, C++, C#, PHP, JavaScript, TypeScript, </tspan><tspan
+           sodipodi:role="line"
+           x="381.37054"
+           y="454.82407"
+           id="tspan87">SQL, RISC-V</tspan></text>
+    </g>
+    <g
+       inkscape:groupmode="layer"
+       id="layer8"
+       inkscape:label="Software">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:'Futura Bk BT';-inkscape-font-specification:'Futura Bk BT';text-align:start;text-anchor:start;display:inline;fill:#1a1a1a;fill-opacity:1;stroke:none;stroke-width:1.00157;stroke-opacity:1"
+         x="288.10162"
+         y="482.74423"
+         id="text88"><tspan
+           sodipodi:role="line"
+           id="tspan88"
+           x="288.10162"
+           y="482.74423"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:'Gen Jyuu Gothic';-inkscape-font-specification:'Gen Jyuu Gothic'">軟件</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:200;font-stretch:normal;font-size:13.3333px;font-family:'Gen Jyuu Gothic';-inkscape-font-specification:'Gen Jyuu Gothic Ultra-Light';display:inline;fill:#1a1a1a;stroke-width:1.00157"
+         x="381.37054"
+         y="480.82498"
+         id="text90"><tspan
+           sodipodi:role="line"
+           x="381.37054"
+           y="480.82498"
+           id="tspan90">MatLab, ModelSim, Vivado Design Suite, Code Composer</tspan></text>
+    </g>
+    <g
+       inkscape:groupmode="layer"
+       id="g22"
+       inkscape:label="Software"
+       transform="translate(-1.7373696,25.079906)">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:'Futura Bk BT';-inkscape-font-specification:'Futura Bk BT';text-align:start;text-anchor:start;display:inline;fill:#1a1a1a;fill-opacity:1;stroke:none;stroke-width:1.00157;stroke-opacity:1"
+         x="289.83899"
+         y="485.80212"
+         id="text21"><tspan
+           sodipodi:role="line"
+           id="tspan21"
+           x="289.83899"
+           y="485.80212"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:'Gen Jyuu Gothic';-inkscape-font-specification:'Gen Jyuu Gothic'">語文能力</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:200;font-stretch:normal;font-size:13.3333px;font-family:'Gen Jyuu Gothic';-inkscape-font-specification:'Gen Jyuu Gothic Ultra-Light';display:inline;fill:#1a1a1a;stroke-width:1.00157"
+         x="383.74594"
+         y="486.88913"
+         id="text22"><tspan
+           sodipodi:role="line"
+           x="383.74594"
+           y="486.88913"
+           id="tspan22">英語 (IELTS 8.5)</tspan></text>
+    </g>
+  </g>
+</svg>
