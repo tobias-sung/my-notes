@@ -4,7 +4,12 @@ draft: false
 tags:
   -
 ---
- # Skills 專長
+# Skills 專長
+
+| ## Programming Languages                          | ## Debuggers                                                                | ## Microprocessors                                      |
+| ------------------------------------------------- | --------------------------------------------------------------------------- | ------------------------------------------------------- |
+| - C/C++<br>- Python/MicroPython<br>- Shell script | - Software: GDB<br>- Hardware: Raspberry Pi Debug Probe, XDS110 Debug Probe | - Raspberry Pi Pico W/2W<br>- Texas Instruments CC1312R |
+
 ## Programming Languages
 - C/C++
 - Python/MicroPython
