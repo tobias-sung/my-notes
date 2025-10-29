@@ -167,7 +167,7 @@ Originally, I had intended to send the updated configuration settings from `tud_
 # Adding additional settings
 Adding additional configuration settings was very simple thanks to the way the original project was designed. 
 
-I tried adding an extra option for configuring the domain name of the HTTPS server, and I just had to make the following changes:
+I tried adding an extra option for configuring the domain name of the HTTPS server (titled `http_server`), and I just had to make the following changes:
 **"wifi_setting.h"**
 ```c
 typedef struct {
@@ -205,6 +205,72 @@ void wifisetting_encode(uint8_t *buffer, wifi_setting_t *setting) {
 Afterwards, I could refer to the `http_server` value from the `wifi_setting_t`-type structure the same way I referred to the `ssid` and `password` values.
 
 ![[Pasted image 20250915140235.png]]
+
+## Automating the process
+In the previous section I outlined how I could add additional options by modifying a few functions. But the number of configuration options I was having to add grew far larger than anticipated, and it was getting quite tedious.
+
+It was decided to simplify the process as follows. 
+
+A CSV file contains a list of all the configuration options, as well as each respective option's data length and default value. Here's an example of the format:
+```
+setting_name,length,default_setting
+conn_type,4,none
+ssid,33,my_ssid
+password,64,my_password
+https_domain,64,my.domain.xyz
+```
+
+A Python script then reads this CSV file and generates the C files with all the relevant functions. 
+
+Therefore, every time I want to add a new configuration option, I simply edit the CSV file and then run the Python script. Then I erase the Pico's internal flash, rebuild and load the program, and we're up and running with the new configuration file format!
+
+The Python script is quite long since I'm writing large amounts of code with just a few variables here and there being changed based on the contents of the CSV file, so I won't include any snippets here. Here's the [full Python script](https://github.com/tobias-sung/picow-race-timer/blob/main/gen_conf.py) and a sample [CSV file](https://github.com/tobias-sung/picow-race-timer/blob/main/config_fmt.csv). Python's "f-string" feature made formatting the text for the code file very simple.
+
+# Temporary Solution for Garbage Writes
+A weird issue was occuring where the configuration text file would get randomly overwritten with garbage characters (�). At first I thought it was because the file was getting overwritten whenever I reloaded the program binary, but it turned out that a random write request would randomly get triggered on startup that wrote garbage into the text file.
+
+Unable to find out what was triggering this garbage write request, I implemented a temporary workaround which was to verify the contents of every write request before allowing it to execute.
+
+I wrote a simple function that takes in a string and checks if there are any non-alphanumerical characters.
+```c
+int verify_config(const char *str) {
+  if (str == NULL) {
+    return 0;
+  }
+  for (int i = 0; str[i] != '\0'; i++) {
+	//isalnum() checks if the character is alphanumerical
+    if (!isalnum((unsigned char)str[i])) {
+        //Allow dots and dashes
+        if(str[i] != '-' && str[i] != '.'){
+          return 0;
+        }
+    }
+  }
+  return 1; 
+}
+```
+
+Then, in the Write Task:
+```c
+for (;;){
+        xTaskNotifyWait(0, 0, NULL, portMAX_DELAY);
+        taskENTER_CRITICAL();
+        if(!verify_config(global_config.conn_type) ||
+			!verify_config(global_config.ssid) ||
+			...)
+		{
+            debug_print("Garbage characters detected in config file, aborting write\n");
+        } else {
+            configsetting_write(&global_config);
+        }
+        taskEXIT_CRITICAL();
+    }
+```
+
+This solution works, and I'd keep it in even if I were to fix the source of these phantom garbage write requests since it's important to protect the text file in any case. 
+
+Sometimes, when I was modifying the text file and saved my changes, the program would detect garbage characters and refuse to write. For some reason, if I copied the contents of the text file to a blank text editor, made my changes, then copied it back into USB text file, it would work fine. I need to think about a more streamlined process for updating the configuration file.
+
 # References
 **Code**
 - [Project for reading Wi-Fi settings from TXT file](https://github.com/oyama/pico-msc-wifi-setting)
