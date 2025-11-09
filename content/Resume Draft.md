@@ -11,8 +11,8 @@ tags:
 - Bash script
   
 **Debuggers**:
-Software - GDB
-Hardware - Raspberry Pi Debug Probe, XDS110 Debug Probe
+- **Software** - GDB
+- **Hardware** - Raspberry Pi Debug Probe, XDS110 Debug Probe
 
 **Microprocessor Units (MCU)**:
 - Raspberry Pi Pico Family
@@ -28,13 +28,13 @@ Hardware - Raspberry Pi Debug Probe, XDS110 Debug Probe
 - PulseView (for displaying Logic Analyzer output)
 
 **Development Environments**:
-IDE - Visual Studio Code, Code Composer
-Toolchains - GCC, CLang
+- **IDEs** - Visual Studio Code, Code Composer
+- **Toolchains** - GCC, CLang
 
 **Project Management**:
-Version Control - Git
-Code Repositories - GitHub, BitBucket
-Documentation - Markdown
+- **Version Control** - Git
+- **Code Repositories** - GitHub, BitBucket
+- **Documentation** - Markdown
 
 # Projects 專案成就
 ## NB-IoT Water Meter Data Loader
