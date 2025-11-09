@@ -9,26 +9,33 @@ tags:
  - C/C++
 - Python/MicroPython
 - Bash script
+  
 **Debuggers**:
 Software - GDB
 Hardware - Raspberry Pi Debug Probe, XDS110 Debug Probe
+
 **Microprocessor Units (MCU)**:
 - Raspberry Pi Pico Family
 - Texas Instruments CC13XX MCU Family
+
 **Embedded Operating Systems**:
 - Embedded Linux
 - TI-RTOS/FreeRTOS
+
 **Embedded Software Development Tools**:
 - OpenOCD/pyOCD
 - UniFlash
 - PulseView (for displaying Logic Analyzer output)
+
 **Development Environments**:
 IDE - Visual Studio Code, Code Composer
 Toolchains - GCC, CLang
+
 **Project Management**:
 Version Control - Git
 Code Repositories - GitHub, BitBucket
 Documentation - Markdown
+
 # Projects 專案成就
 ## NB-IoT Water Meter Data Loader
 Wrote a **Python** script that: 
