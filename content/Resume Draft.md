@@ -5,34 +5,49 @@ tags:
   -
 ---
 # Skills 專長
-
-| **Programming Languages**                         | **Debuggers**                                                               | **Microprocessors**                                     |
-| ------------------------------------------------- | --------------------------------------------------------------------------- | ------------------------------------------------------- |
-| - C/C++<br>- Python/MicroPython<br>- Shell script | - Software: GDB<br>- Hardware: Raspberry Pi Debug Probe, XDS110 Debug Probe | - Raspberry Pi Pico W/2W<br>- Texas Instruments CC1312R |
-
-| **Embedded Operating Systems**         | **Embedded Software Development Tools**                     | **Development Environments**                                         |
-| -------------------------------------- | ----------------------------------------------------------- | -------------------------------------------------------------------- |
-| - Embedded Linux<br>- TI-RTOS/FreeRTOS | - OpenOCD<br>- UniFlash<br>- PulseView (Logic Analyzer GUI) | - IDE: Visual Studio Code, Code Composer<br>- Toolchains: GCC, CLang |
-
-| **Project Management**               |
-| ------------------------------------ |
-| - Git<br>- GitHub, GitLab, BitBucket |
+**Programming Languages**:
+ - C/C++
+- Python/MicroPython
+- Bash script
+**Debuggers**:
+Software - GDB
+Hardware - Raspberry Pi Debug Probe, XDS110 Debug Probe
+**Microprocessor Units (MCU)**:
+- Raspberry Pi Pico Family
+- Texas Instruments CC13XX MCU Family
+**Embedded Operating Systems**:
+- Embedded Linux
+- TI-RTOS/FreeRTOS
+**Embedded Software Development Tools**:
+- OpenOCD/pyOCD
+- UniFlash
+- PulseView (for displaying Logic Analyzer output)
+**Development Environments**:
+IDE - Visual Studio Code, Code Composer
+Toolchains - GCC, CLang
+**Project Management**:
+Version Control - Git
+Code Repositories - GitHub, BitBucket
+Documentation - Markdown
 # Projects 專案成就
 ## NB-IoT Water Meter Data Loader
-Wrote a Python script that: 
+Wrote a **Python** script that: 
 1. Downloads data from 8000 NB-IoT water meter devices via OneNET API
-2. Organizes and loads the data into an Elasticsearch index
-Used recursion[^1] and multithreading to handle the large amount of data[^2].
+2. Organizes and loads the data into an **Elasticsearch** index
+Used **recursion**[^1] and **multithreading** to handle the large amount of data[^2].
 ## TI-RTOS Boot Image Manager
-Implemented a **boot image manager** for loading firmware image on a **Texas Instruments CC1312R MCU** running **TI-RTOS**. [^4]
+Implemented a **boot image manager** for loading firmware image on a **Texas Instruments CC1312R MCU** running **TI-RTOS**. [^4] Written in **C**.
 ## Raspberry Pi Z2W: Wake-Up via Real-Time Clock 
-Implemented a system for waking up a Raspberry Pi Z2W using a real-time clock [^4]
+Implemented a system for waking up a Raspberry Pi Z2W using a real-time clock [^4] with the following design flow:
+1. The Raspberry Pi Z2W sets an alarm on the real-time clock via Bash script and goes to sleep
+2. The alarm goes off which triggers an interrupt on a Raspberry Pi Pico, which is running a MicroPython program waiting for such interrupts
+3. The Pico sends a signal to the reboot pin of the Z2W, waking it up
 
 ## Raspberry Pi Pico W: FreeRTOS Time-Tracking System
-- Implemented a system for keeping time during a race
-- Split various features into FreeRTOS tasks to enable multi-tasking
-- Used FreeRTOS' "Direct-to-Task notification" system for inter-task communication
-- Used the Pico's TinyUSB hardware abstraction library to implement reading configuration settings from a text file easily accessible by USB connection
+Implemented a system for keeping time during a race. This involved:
+- Splitting various features into **FreeRTOS tasks** to enable multi-tasking
+- Using FreeRTOS' "**Direct-to-Task notification**" system for inter-task communication
+- Enabling more convenient settings configuration by exposing the Pico as a USB storage device with an editable text file (using the **TinyUSB** hardware abstraction library)
 # 自傳
 
 > [!Note] Sample 自傳 from [104](https://pda.104.com.tw/resumes/HuNJ1UVd2/about?utm_source=oldsite&utm_medium=301)
@@ -83,22 +98,6 @@ I currently use generative artifical intelligence as a search engine replacement
 I also look forward to honing my technical writing skills, whether in English or Chinese, so that I can share my knowledge with the world and improve the clarity of my technical understanding. 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## Original resume
 ![[Resume.svg]]
 
@@ -107,6 +106,5 @@ I also look forward to honing my technical writing skills, whether in English or
 [^2]: - Due to the large amount of data that had to be downloaded and processed, multi-threading (using the `concurrent.futures` Python module) was implemented such that multiple downloads could happen simulatenously.
 
 [^3]:-  Identified a bug where the image header contained an invalid image length, which prevented the boot image manager from loading the firmware image:
-- Wrote a function for generating a factory image
 
 [^4]:  It was meant for use in a fish farm monitoring system that would be woken up at certain intervals to collect sensor data
