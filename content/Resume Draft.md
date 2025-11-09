@@ -60,22 +60,27 @@ Implemented a system for waking up a Raspberry Pi Z2W using a real-time clock [^
 > 期許未來能夠發揮我的專長與經驗，運用AI和電腦視覺處理技術，在民生相關的居家智能管理，或是工業4.0的自動化產業鏈方面發展，幫公司解決問題與需求。
 
 ### About Me
-I was born in 2001 in Hong Kong. My parents had moved here from America, and so I grew up speaking English and consider it my native language. My dad was a software engineer and passed down an interest in computers to me. Ever since learning my first programming language, Pascal, in high school I have become fascinated by the poetry of writing code.   
+I was born in 2001 in Hong Kong. My parents had moved here from America, and so I grew up speaking English and consider it my native language. My dad was a software engineer and passed down an interest in computers to me. Ever since learning my first programming language, Pascal, in high school I have become fascinated by the beauty of code.   
 
-出生於2001年，香港人。父母是從美國搬過來的，家裏從小到大都是說英文。父親是工程師，對電腦的興趣是他傳給我的。他鼓勵我在中學修讀電腦科，我就是這樣學習我第一個程式語言 Pascal, 從此我就被程式設計的美妙所吸引。
+出生於2001年，香港人。父母是從美國搬過來的，家裏從小到大都是說英文。父親是工程師，是他鼓勵我在中學修讀電腦科。我就是這樣學習我第一個程式語言 Pascal, 從此我就被程式設計的美妙所吸引。
 
- In university, I was introduced to the wider world of programming with languages like C, C++, Java, Python and RISC-V Assembly, along with complex projects that forced us to really put into practice what we learned. 
+In university, I was introduced to the wider world of programming with languages like C, C++, Java, Python and RISC-V Assembly, along with complex projects that forced us to really put into practice what we learned. 
 
-For my final year project, I worked on an auto-grading system for assessing VHDL assignments (my supervisor taught a Digital System Design course). While the system itself is woefully outdated in today's world of generative AI, it was an incredible learning experience that made me learn about a broad range of subjects from compiler lexical/syntax analysis to web design. The report-writing process also made me discover the joy of technical writing, of taking complex subjects and making them simple to understand through clean and concise language.
+在大學我接觸了更多的程式語言，例如 C/C++, Java, Python, 連比較低階的語言如RISC-V Assembly 也有寫過。教授都會給我們滿有挑戰性的專案，推動我們把所學的認真地實用。
 
-Outside of school, I began delving deeper into embedded programming through a remote internship I was fortunate enough to receive from Podconn Limited. Although I had great mentors, a lot of my time was spent on my own reading documentation and learning the technology. It put my knowledge management skills to the test, and I built large databases of personal notes and articles using software such as Notion and Obsidian.
+For my final year project, I worked on an auto-grading system for assessing VHDL assignments. It was an incredible learning experience in which I learned about a wide range of subjects from compiler-level syntax analysis to web design. The report-writing process also made me discover the joy of technical writing, of taking complex subjects and making them simple to understand through clean and concise language.
+
+大學末年，我的專題是研究一個能自動批改VHDL功課的網上平台(我的導師是教VHDL課程的)。這個經驗帶給我的收穫很多，讓我學習了多元的程式設計領域。低階的也有（如編譯器語法分析)，高階的也有 (如網頁設計）。
+
+Outside of school, I began delving deeper into embedded programming through a remote internship I was fortunate enough to receive from Podconn Limited. Although I had great mentors, a lot of my time was spent on my own reading documentation and learning the technology. It put my knowledge management skills to the test, and I built large databases of personal notes and articles using software such as Notion and Obsidian. It also taught me that good programming isn't simply judged by how many lines of code you write, but whether you are willing to take the time to properly read through the documentation to make effective use of pre-existing functions and tools. 
+
+在學校以外，我也通過實習經驗有更深入地學習怎麽寫嵌入式程式。雖然我有很棒的指導，但是我大部分的時間都是自己在閲讀大量的技術手冊，學習怎麽去用龐大的SDK （如 Raspberry Pi Pico, FreeRTOS 等） 去達到程式的目的。這讓我明白寫程式不只是看你寫多少行程式碼，也是看你有沒有耐性認真閲讀去明白怎麽善用手上的科技。
 
 I currently use generative artifical intelligence as a search engine replacement when programming, but I'm excited to learn how to use this this fledgling technology to the fullest to improve the quality of my work and to launch projects that weren't possible before. 
 
+我在未來希望
+
 I also look forward to honing my technical writing skills, whether in English or Chinese, so that I can share my knowledge with the world and improve the clarity of my technical understanding. 
-
-Finally, I am also very interested in writing energy-efficient programs that save power and help relieve the burden of technology on our planet.
-
 
 
 
