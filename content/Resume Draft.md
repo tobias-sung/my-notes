@@ -5,34 +5,49 @@ tags:
   -
 ---
 # Skills 專長
-
-| **Programming Languages**                         | **Debuggers**                                                               | **Microprocessors**                                     |
-| ------------------------------------------------- | --------------------------------------------------------------------------- | ------------------------------------------------------- |
-| - C/C++<br>- Python/MicroPython<br>- Shell script | - Software: GDB<br>- Hardware: Raspberry Pi Debug Probe, XDS110 Debug Probe | - Raspberry Pi Pico W/2W<br>- Texas Instruments CC1312R |
-
-| **Embedded Operating Systems**         | **Embedded Software Development Tools**                     | **Development Environments**                                         |
-| -------------------------------------- | ----------------------------------------------------------- | -------------------------------------------------------------------- |
-| - Embedded Linux<br>- TI-RTOS/FreeRTOS | - OpenOCD<br>- UniFlash<br>- PulseView (Logic Analyzer GUI) | - IDE: Visual Studio Code, Code Composer<br>- Toolchains: GCC, CLang |
-
-| **Project Management**               |
-| ------------------------------------ |
-| - Git<br>- GitHub, GitLab, BitBucket |
+**Programming Languages**:
+ - C/C++
+- Python/MicroPython
+- Bash script
+**Debuggers**:
+Software - GDB
+Hardware - Raspberry Pi Debug Probe, XDS110 Debug Probe
+**Microprocessor Units (MCU)**:
+- Raspberry Pi Pico Family
+- Texas Instruments CC13XX MCU Family
+**Embedded Operating Systems**:
+- Embedded Linux
+- TI-RTOS/FreeRTOS
+**Embedded Software Development Tools**:
+- OpenOCD/pyOCD
+- UniFlash
+- PulseView (for displaying Logic Analyzer output)
+**Development Environments**:
+IDE - Visual Studio Code, Code Composer
+Toolchains - GCC, CLang
+**Project Management**:
+Version Control - Git
+Code Repositories - GitHub, BitBucket
+Documentation - Markdown
 # Projects 專案成就
 ## NB-IoT Water Meter Data Loader
-Wrote a Python script that: 
+Wrote a **Python** script that: 
 1. Downloads data from 8000 NB-IoT water meter devices via OneNET API
-2. Organizes and loads the data into an Elasticsearch index
-Used recursion[^1] and multithreading to handle the large amount of data[^2].
+2. Organizes and loads the data into an **Elasticsearch** index
+Used **recursion**[^1] and **multithreading** to handle the large amount of data[^2].
 ## TI-RTOS Boot Image Manager
-Implemented a **boot image manager** for loading firmware image on a **Texas Instruments CC1312R MCU** running **TI-RTOS**. [^4]
+Implemented a **boot image manager** for loading firmware image on a **Texas Instruments CC1312R MCU** running **TI-RTOS**. [^4] Written in **C**.
 ## Raspberry Pi Z2W: Wake-Up via Real-Time Clock 
-Implemented a system for waking up a Raspberry Pi Z2W using a real-time clock [^4]
+Implemented a system for waking up a Raspberry Pi Z2W using a real-time clock [^4] with the following design flow:
+1. The Raspberry Pi Z2W sets an alarm on the real-time clock via Bash script and goes to sleep
+2. The alarm goes off which triggers an interrupt on a Raspberry Pi Pico, which is running a MicroPython program waiting for such interrupts
+3. The Pico sends a signal to the reboot pin of the Z2W, waking it up
 
 ## Raspberry Pi Pico W: FreeRTOS Time-Tracking System
-- Implemented a system for keeping time during a race
-- Split various features into FreeRTOS tasks to enable multi-tasking
-- Used FreeRTOS' "Direct-to-Task notification" system for inter-task communication
-- Used the Pico's TinyUSB hardware abstraction library to implement reading configuration settings from a text file easily accessible by USB connection
+Implemented a system for keeping time during a race. This involved:
+- Splitting various features into **FreeRTOS tasks** to enable multi-tasking
+- Using FreeRTOS' "**Direct-to-Task notification**" system for inter-task communication
+- Enabling more convenient settings configuration by exposing the Pico as a USB storage device with an editable text file (using the **TinyUSB** hardware abstraction library)
 # 自傳
 
 > [!Note] Sample 自傳 from [104](https://pda.104.com.tw/resumes/HuNJ1UVd2/about?utm_source=oldsite&utm_medium=301)
@@ -60,38 +75,27 @@ Implemented a system for waking up a Raspberry Pi Z2W using a real-time clock [^
 > 期許未來能夠發揮我的專長與經驗，運用AI和電腦視覺處理技術，在民生相關的居家智能管理，或是工業4.0的自動化產業鏈方面發展，幫公司解決問題與需求。
 
 ### About Me
-I was born in 2001 in Hong Kong. My parents had moved here from America, and so I grew up speaking English and consider it my native language. My dad was a software engineer and passed down an interest in computers to me. Ever since learning my first programming language, Pascal, in high school I have become fascinated by the poetry of writing code.   
+I was born in 2001 in Hong Kong. My parents had moved here from America, and so I grew up speaking English and consider it my native language. My dad was a software engineer and passed down an interest in computers to me. Ever since learning my first programming language, Pascal, in high school I have become fascinated by the beauty of code.   
 
-出生於2001年，香港人。父母是從美國搬過來的，家裏從小到大都是說英文。父親是工程師，對電腦的興趣是他傳給我的。他鼓勵我在中學修讀電腦科，我就是這樣學習我第一個程式語言 Pascal, 從此我就被程式設計的美妙所吸引。
+出生於2001年，香港人。父母是從美國搬過來的，家裏從小到大都是說英文。父親是工程師，是他鼓勵我在中學修讀電腦科。我就是這樣學習我第一個程式語言 Pascal, 從此我就被程式設計的美妙所吸引。
 
- In university, I was introduced to the wider world of programming with languages like C, C++, Java, Python and RISC-V Assembly, along with complex projects that forced us to really put into practice what we learned. 
+In university, I was introduced to the wider world of programming with languages like C, C++, Java, Python and RISC-V Assembly, along with complex projects that forced us to really put into practice what we learned. 
 
-For my final year project, I worked on an auto-grading system for assessing VHDL assignments (my supervisor taught a Digital System Design course). While the system itself is woefully outdated in today's world of generative AI, it was an incredible learning experience that made me learn about a broad range of subjects from compiler lexical/syntax analysis to web design. The report-writing process also made me discover the joy of technical writing, of taking complex subjects and making them simple to understand through clean and concise language.
+在大學我接觸了更多的程式語言，例如 C/C++, Java, Python, 連比較低階的語言如RISC-V Assembly 也有寫過。教授都會給我們滿有挑戰性的專案，推動我們把所學的認真地實用。
 
-Outside of school, I began delving deeper into embedded programming through a remote internship I was fortunate enough to receive from Podconn Limited. Although I had great mentors, a lot of my time was spent on my own reading documentation and learning the technology. It put my knowledge management skills to the test, and I built large databases of personal notes and articles using software such as Notion and Obsidian.
+For my final year project, I worked on an auto-grading system for assessing VHDL assignments. It was an incredible learning experience in which I learned about a wide range of subjects from compiler-level syntax analysis to web design. The report-writing process also made me discover the joy of technical writing, of taking complex subjects and making them simple to understand through clean and concise language.
+
+大學末年，我的專題是研究一個能自動批改VHDL功課的網上平台(我的導師是教VHDL課程的)。這個經驗帶給我的收穫很多，讓我學習了多元的程式設計領域。低階的也有（如編譯器語法分析)，高階的也有 (如網頁設計）。
+
+Outside of school, I began delving deeper into embedded programming through a remote internship I was fortunate enough to receive from Podconn Limited. Although I had great mentors, a lot of my time was spent on my own reading documentation and learning the technology. It put my knowledge management skills to the test, and I built large databases of personal notes and articles using software such as Notion and Obsidian. It also taught me that good programming isn't simply judged by how many lines of code you write, but whether you are willing to take the time to properly read through the documentation to make effective use of pre-existing functions and tools. 
+
+在學校以外，我也通過實習經驗有更深入地學習怎麽寫嵌入式程式。雖然我有很棒的指導，但是我大部分的時間都是自己在閲讀大量的技術手冊，學習怎麽去用龐大的SDK （如 Raspberry Pi Pico, FreeRTOS 等） 去達到程式的目的。這讓我明白寫程式不只是看你寫多少行程式碼，也是看你有沒有耐性認真閲讀去明白怎麽善用手上的科技。
 
 I currently use generative artifical intelligence as a search engine replacement when programming, but I'm excited to learn how to use this this fledgling technology to the fullest to improve the quality of my work and to launch projects that weren't possible before. 
 
+我在未來希望
+
 I also look forward to honing my technical writing skills, whether in English or Chinese, so that I can share my knowledge with the world and improve the clarity of my technical understanding. 
-
-Finally, I am also very interested in writing energy-efficient programs that save power and help relieve the burden of technology on our planet.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 ## Original resume
@@ -102,6 +106,5 @@ Finally, I am also very interested in writing energy-efficient programs that sav
 [^2]: - Due to the large amount of data that had to be downloaded and processed, multi-threading (using the `concurrent.futures` Python module) was implemented such that multiple downloads could happen simulatenously.
 
 [^3]:-  Identified a bug where the image header contained an invalid image length, which prevented the boot image manager from loading the firmware image:
-- Wrote a function for generating a factory image
 
 [^4]:  It was meant for use in a fish farm monitoring system that would be woken up at certain intervals to collect sensor data
