@@ -93,7 +93,7 @@ Outside of school, I began delving deeper into embedded programming through a re
 
 I currently use generative artifical intelligence as a search engine replacement when programming, but I'm excited to learn how to use this this fledgling technology to the fullest to improve the quality of my work and to launch projects that weren't possible before. 
 
-我在未來希望
+在未來，我希望可以更深入地學習怎麼善用Gen-AI提高工作效率，以及開發之前沒辦法靠自己實力完成的專案。我也期待掌握技術寫作能力，不論是英語還是中文，讓我可以更順暢地與同事溝通合作，並透過網路與世界分享我所學的一切。
 
 I also look forward to honing my technical writing skills, whether in English or Chinese, so that I can share my knowledge with the world and improve the clarity of my technical understanding. 
 
