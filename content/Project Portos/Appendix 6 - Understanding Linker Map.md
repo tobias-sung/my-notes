@@ -1,5 +1,5 @@
 ---
-title: Write-Up Appendix 5 - Understanding Linker Map
+title: Appendix 6 - Understanding Linker Map
 draft: true
 tags:
   -

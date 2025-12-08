@@ -63,6 +63,20 @@ ul,
   /* tr and td removed from list of selectors for overflow-wrap, allowing them to use default 'normal' property value */
 }
 
+
+
+.showcase {
+  display: flex;
+  /* Optional: Add space between elements */
+  gap: 10px; 
+  /* Optional: Control horizontal alignment */
+  justify-content: center; 
+}
+
+.showcase a:hover img {
+	opacity: 0.5;
+}
+
 .math {
   &.math-display {
     text-align: center;
@@ -127,7 +141,7 @@ a {
   }
 
   &.external .external-icon {
-    height: 1ex;
+    height: 0ex;
     margin: 0 0.15em;
 
     > path {

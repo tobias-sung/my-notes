@@ -1,3 +1,10 @@
+---
+title: The Wild Robot Review
+draft: true
+tags:
+  -
+---
+ 
 Films are artificial constructs, nothing more than blinking lights trying to convince you that they are reality. Modern animated films like The Wild Robot are literally *programmed* on computers. 
 
 These artificial constructs are designed to get a real emotional reaction out of you. If a film succeeds, you become emotional without even realizing it. But the moment you become aware that a film is trying to get you to feel something, the magic is lost and the only thing you feel is the desire to get your money back.

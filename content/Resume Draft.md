@@ -1,6 +1,6 @@
 ---
 title: Resume Draft
-draft: false
+draft: true
 tags:
   -
 ---
