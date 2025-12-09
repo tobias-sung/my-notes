@@ -99,7 +99,7 @@ I also look forward to honing my technical writing skills, whether in English or
 
 
 ## Original resume
-![[Resume.svg]]
+![[content/Images/Resume.svg]]
 
 [^1]: - Due to limits on how much data could be downloaded in a single API call, large jobs would be split into multiple API calls using recursion
 
