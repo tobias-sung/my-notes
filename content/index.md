@@ -3,7 +3,7 @@ title: Welcome to My Notes
 ---
 ![[Flight.png]]
 
-Welcome to my website! My name is Tobias Sung, and I'm an aspiring embedded software engineer.
+Welcome to my website! My name is Tobias, and I'm an aspiring embedded software engineer.
 
 This is just a simple website where I keep notes on the projects I've worked on. Feel free to look around!
 
