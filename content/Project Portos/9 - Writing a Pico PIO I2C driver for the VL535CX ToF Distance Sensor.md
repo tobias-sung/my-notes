@@ -36,7 +36,7 @@ But the program wasn't reading the correct values. Instead, it read **A7** and *
 
 I found this [forum post](https://forums.raspberrypi.com/viewtopic.php?t=340111) where someone had the exact same problem as me. In the end, they fixed the issue by adding one line (`mov isr, null`) to the PIO code in "i2c.pio" as follows:
 
-```
+```pio {13}
 bitloop:
     out pindirs, 1         [7] ; Serialise write data (all-ones if reading)
     nop             side 1 [2] ; SCL rising edge
