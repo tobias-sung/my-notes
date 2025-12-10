@@ -10,6 +10,7 @@ I strongly believe in the importance of personal documentation in programming. A
 Here's some of the latest projects I've worked on:
 
 <div class="carousel-container">
+<button class="nav-button" id="prevBtn">←</button>
 <div class="carousel-wrapper" id="carousel">
 <div class="carousel-track" id="carouselTrack">
 <div class="carousel-item">
@@ -38,8 +39,5 @@ Here's some of the latest projects I've worked on:
 </div>
 </div>
 </div>
-<div class="nav-buttons">
-<button class="nav-button" id="prevBtn">←</button>
 <button class="nav-button" id="nextBtn">→</button>
-</div>
 </div>

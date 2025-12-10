@@ -17,11 +17,13 @@ export default (() => {
       max-width: 1200px;
       margin: 0 auto;
       position: relative;
+      display: flex;
+      align-items: center;  
     }
 
 
-  .carousel-container::before,
-  .carousel-container::after {
+  .carousel-wrapper::before,
+  .carousel-wrapper::after {
     content: '';
     position: absolute;
     top: 0;
@@ -31,14 +33,14 @@ export default (() => {
     z-index: 1;
   }
 
-  .carousel-container::before {
+  .carousel-wrapper::before {
     left: 0;
     background: linear-gradient(to right, 
       rgba(227, 224, 215, 1) 0%, 
       rgba(227, 224, 215, 0) 100%);
   }
 
-  .carousel-container::after {
+  .carousel-wrapper::after {
     right: 0;
     background: linear-gradient(to left, 
       rgba(227, 224, 215, 1) 0%, 
@@ -52,6 +54,9 @@ export default (() => {
       overflow: hidden;
       position: relative;
       justify-content: center;
+      scroll-behavior: smooth;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
     }
     
     .carousel-track {
@@ -59,14 +64,19 @@ export default (() => {
       gap: 20px;
       transition: transform 0.5s ease;
     }
-
-    .carousel-wrapper::-webkit-scrollbar {
-      display: none;
+      
+   .carousel-wrapper::-webkit-scrollbar {
+      height: 8px;
     }
-    
-    .carousel-wrapper {
-      -ms-overflow-style: none;
-      scrollbar-width: none;
+
+    .carousel-wrapper::-webkit-scrollbar-track {
+      background: #e0e0e0;
+      border-radius: 4px;
+    }
+
+    .carousel-wrapper::-webkit-scrollbar-thumb {
+      background: #888;
+      border-radius: 4px;
     }
     
     .carousel-item {
