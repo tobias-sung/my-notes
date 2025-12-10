@@ -3,9 +3,9 @@ import script from "./scripts/carousel.inline"
 
 export default (() => {
   const ProjectCarousel: QuartzComponent = ({ displayClass, fileData }: QuartzComponentProps) => {
-    if (fileData.slug !== "index"){
+    /* if (fileData.slug !== "index" || fileData.slug !== ""){
       return null
-    }
+    } */
     
   }
 
