@@ -74,15 +74,15 @@ export default (() => {
       transition: transform 0.5s ease, opacity 0.5s ease;
       opacity: 0.6;
       transform: scale(0.85);
+      display: flex;           
+      flex-direction: column;  
+      align-items: center;   
 
     }
 
     .carousel-item.carousel-center {
       opacity: 1;
       transform: scale(1);
-      display: flex;           /* Add this */
-      flex-direction: column;  /* Add this */
-      align-items: center;     /* Add this - centers children horizontally */
     }
 
     .carousel-link {
