@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Carousel</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    html {
+      overflow: hidden;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      /* padding: 40px 20px; */
+      background: transparent;
+      overflow: hidden;
+      margin: 0;
+    }
+
+    .carousel-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .carousel-wrapper {
+      display: flex;
+      gap: 20px;
+      padding: 40px 0;
+      overflow: hidden;
+      position: relative;
+      justify-content: center;
+    }
+    
+    .carousel-track {
+      display: flex;
+      gap: 20px;
+      transition: transform 0.5s ease;
+    }
+
+    .carousel-wrapper::-webkit-scrollbar {
+      display: none;
+    }
+    
+    .carousel-wrapper {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    
+    .carousel-item {
+      flex: 0 0 auto;
+      transition: transform 0.5s ease, opacity 0.5s ease;
+      opacity: 0.6;
+      transform: scale(0.85);
+    }
+
+    .carousel-item.center {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .carousel-link {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .carousel-image {
+      width: 300px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .carousel-item.center .carousel-image {
+      width: 400px;
+      height: 267px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+
+    .carousel-link:hover .carousel-image {
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    }
+
+    .carousel-item.center .carousel-link:hover .carousel-image {
+      box-shadow: 0 12px 24px rgba(0,0,0,0.25);
+    }
+
+    .carousel-caption {
+      text-align: center;
+      margin-top: 12px;
+      font-size: 14px;
+      color: #333;
+      max-width: 300px;
+    }
+
+    .carousel-item.center .carousel-caption {
+      max-width: 400px;
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    .nav-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .nav-button {
+      background: #333;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 20px;
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.3s ease;
+    }
+
+    .nav-button:hover {
+      background: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="carousel-container">
+    <div class="carousel-wrapper" id="carousel">
+      <div class="carousel-track" id="carouselTrack">
+        <!-- Example items - Replace with your own projects -->
+        <div class="carousel-item">
+          <a 
+            href="https://tobias-sung.github.io/my-notes/Project-Portos/9---Writing-a-Pico-PIO-I2C-driver-for-the-VL535CX-ToF-Distance-Sensor" 
+            class="carousel-link" 
+            target="_top"
+          >
+            <img src="../Images/Guidance.png" alt="Project 1" class="carousel-image">
+          </a>
+          <p class="carousel-caption">Modified Distance Sensor Driver for the Pico</p>
+        </div>
+
+        <div class="carousel-item">
+          <a 
+            href="https://example.com/project2" 
+            class="carousel-link" 
+            target="_top"
+          >
+            <img src="../Images/Emotional.png" alt="Project 2" class="carousel-image">
+          </a>
+          <p class="carousel-caption">Mobile App Design</p>
+        </div>
+
+        <div class="carousel-item center">
+          <a 
+            href="https://example.com/project3" 
+            class="carousel-link"
+            target="_top"
+          >
+            <img src="../Images/Hug1.png" alt="Project 3" class="carousel-image">
+          </a>
+          <p class="carousel-caption">Machine Learning Pipeline</p>
+        </div>
+
+        <div class="carousel-item">
+          <a 
+            href="https://example.com/project4" 
+            class="carousel-link"
+            target="_top"
+          >
+            <img src="../Images/Ambiguity.png" alt="Project 4" class="carousel-image">
+          </a>
+          <p class="carousel-caption">Data Visualization Tool</p>
+        </div>
+
+        <div class="carousel-item">
+          <a 
+            href="https://example.com/project5" 
+            class="carousel-link"
+            target="_top"
+          >
+            <img src="../Images/Conflict.png" alt="Project 5" class="carousel-image">
+          </a>
+          <p class="carousel-caption">Cloud Infrastructure</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-buttons">
+      <button class="nav-button" id="prevBtn">←</button>
+      <button class="nav-button" id="nextBtn">→</button>
+    </div>
+  </div>
+
+  <script>
+    const carouselTrack = document.getElementById('carouselTrack');
+    const items = document.querySelectorAll('.carousel-item');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    
+    let currentIndex = 0;
+    const totalItems = items.length;
+
+    function updateCarousel() {
+      items.forEach((item, index) => {
+        item.classList.remove('center');
+        if (index === currentIndex) {
+          item.classList.add('center');
+        }
+      });
+
+      // Calculate the offset to center the current item
+      const itemWidth = items[currentIndex].offsetWidth;
+      const gap = 20;
+      
+      // Get the position of the current item
+      let offset = 0;
+      for (let i = 0; i < currentIndex; i++) {
+        offset += items[i].offsetWidth + gap;
+      }
+      
+      // Add half of the current item's width to center it
+      offset += itemWidth / 2;
+      
+      carouselTrack.style.transform = `translateX(calc(50% - ${offset}px))`;
+    }
+
+    prevBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+      updateCarousel();
+    });
+
+    nextBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % totalItems;
+      updateCarousel();
+    });
+
+    // Initialize
+    updateCarousel();
+    
+    // Recalculate on window resize
+    window.addEventListener('resize', updateCarousel);
+  </script>
+</body>
+</html>

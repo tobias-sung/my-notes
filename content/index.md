@@ -1,14 +1,13 @@
 ---
-title: Welcome to My Notes
+title: Welcome!
 ---
-![[Flight.png]]
+Hello! My name is Tobias, and I'm an aspiriring software engineer (click [[📜 About Me|here]] if you'd like to know more about me). 
 
-Welcome to my website! My name is Tobias, and I'm an aspiring embedded software engineer.
+This website is a place for me to keep notes on all the projects I've worked on. 
 
-This is just a simple website where I keep notes on the projects I've worked on. Feel free to look around!
+I strongly believe in the importance of personal documentation in programming. As the famous saying goes, *"When I wrote this code, only God and I understood what I did. Now only God knows."* Hence the need to **write things down**!
 
-<div class="showcase">
-<a href="https://tobias-sung.github.io/my-notes/Project-Portos/9---Writing-a-Pico-PIO-I2C-driver-for-the-VL535CX-ToF-Distance-Sensor">
-<img src="Images/Ambiguity.png" width=300 alt="buttonpng" border="0" />
-</a> <a href="https://tobias-sung.github.io/my-notes/Project-Portos/10---SD-Card-Debug-Logger"><img src="Images/Guidance.png" width=300 alt="buttonpng" border="0"  /> </a><a href="https://tobias-sung.github.io/my-notes/Project-Portos/7---Reading-from-Configuration-File"><img src="Images/Emotional.png" width=300 alt="buttonpng" border="0"  /></a>
+Here's some of the latest projects I've worked on:
+<div class="iframe-container">
+<iframe src="html/carousel.html" style="border: none;" width="100%" height="500px"></iframe>
 </div>
