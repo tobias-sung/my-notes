@@ -70,7 +70,7 @@ export default (() => {
     }
     
     .carousel-item {
-          flex: 0 0 auto;
+      flex: 0 0 auto;
       transition: transform 0.5s ease, opacity 0.5s ease;
       opacity: 0.6;
       transform: scale(0.85);
