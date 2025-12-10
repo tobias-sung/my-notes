@@ -10,5 +10,5 @@ I strongly believe in the importance of personal documentation in programming. A
 Here's some of the latest projects I've worked on:
 
 <div class="iframe-container">
-<iframe src="html/carousel.html" style="border: none;" width="100%" height="500px"></iframe>
+<iframe src="html/carousel" style="border: none;" width="100%" height="500px"></iframe>
 </div>
