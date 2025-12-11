@@ -6,11 +6,15 @@ tags:
 ---
  [GitHub code](https://github.com/tobias-sung/pico-vl53l5cx-pio/tree/main)
 
-At this point in development, both I2C connectors on the Pico 2W had been taken up by an OLED screen and a real-time clock respectively. So when it came time to add a *third* I2C periperhal, a VL535CX distance sensor, there was no longer any room left. 
+The Pico project I was working on needed to interface with a VL535CX distance sensor, but both of the Pico's I2C connectors had been taken up by other devices already. 
 
-Thankfully, the Pico series is equipped with Programmable Input-Output (PIO) cores that run independently of the CPU. They allow any GPIO pin to interface with hardware peripherals through "bit-banging". That is, sending a series of HIGH and LOW signals with precise timing. 
+The solution was to use a "software I2C" implementation via "bit-banging" (that is, simulating the hardware interface by sending a series of HIGH/LOW signals through GPIO pins with correct timing). 
 
-I took this existing [Pico driver](https://github.com/akionu/pico-vl53l5cx) for the VL535CX sensor (from GitHub user [akionu](https://github.com/akionu))and modified it to use a PIO I2C interface rather than the Pico's hardware I2C connector. I copied the low-level PIO I2C functions and PIO code from this [example](https://github.com/raspberrypi/pico-examples/tree/master/pio/i2c).
+Bit-banging is a very CPU-intensive process, but thankfully the Pico comes equipped with PIO (Programmable Input-Output) cores that can carry out bit-banging operations independently of the CPU.
+
+
+
+I took this existing [Pico driver](https://github.com/akionu/pico-vl53l5cx) for the VL535CX sensor (from GitHub user [akionu](https://github.com/akionu)) and modified it to use a PIO I2C interface rather than the Pico's hardware I2C connector. I copied the low-level PIO I2C functions and PIO code from this [example](https://github.com/raspberrypi/pico-examples/tree/master/pio/i2c).
 
 The Pico driver comes bundled with 11 examples, but for my testing I just used the most basic example `ex1_ranging_basic` which captures 10 ranging frames. All examples have the same setup: detect whether a VL535CX sensor is connected, then load the firmware onto the sensor before starting the real operation.
 

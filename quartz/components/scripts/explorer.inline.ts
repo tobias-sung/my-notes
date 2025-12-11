@@ -296,6 +296,8 @@ window.addEventListener("resize", function () {
   }
 })
 
+
+
 function setFolderState(folderElement: HTMLElement, collapsed: boolean) {
   return collapsed ? folderElement.classList.remove("open") : folderElement.classList.add("open")
 }
