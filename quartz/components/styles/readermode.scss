@@ -32,3 +32,9 @@
     }
   }
 }
+
+:root[reader-mode="off"] {
+  .readermode {
+      opacity: 0.4;
+  }
+}

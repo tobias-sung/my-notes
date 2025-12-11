@@ -7,9 +7,12 @@ let currentIndex: number = 0;
 const totalItems: number = items.length;
 
 function updateCarousel(): void {
+  console.log("Updating carousel.")
   items.forEach((item: HTMLElement, index: number) => {
     item.classList.remove('carousel-center');
+    console.log("Removed center class from " + index)
     if (index === currentIndex) {
+      console.log("Added center class to " + index)
       item.classList.add('carousel-center');
     }
   });
@@ -45,3 +48,4 @@ updateCarousel();
 
 // Recalculate on window resize
 window.addEventListener('resize', updateCarousel);
+

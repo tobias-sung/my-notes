@@ -9,35 +9,37 @@ I strongly believe in the importance of personal documentation in programming. A
 
 Here's some of the latest projects I've worked on:
 
-<div class="carousel-container">
+<div class="nav-buttons">
 <button class="nav-button" id="prevBtn">←</button>
+<button class="nav-button" id="nextBtn">→</button>
+</div>
+<div class="carousel-container">
 <div class="carousel-wrapper" id="carousel">
 <div class="carousel-track" id="carouselTrack">
 <div class="carousel-item">
+<p class="carousel-caption">Modified Distance Sensor Driver for the Pico</p>
 <a href="https://tobias-sung.github.io/my-notes/Project-Portos/9---Writing-a-Pico-PIO-I2C-driver-for-the-VL535CX-ToF-Distance-Sensor" class="carousel-link" target="_top">
 <img src="../Images/Guidance.png" alt="Project 1" class="carousel-image">
 </a>
-<p class="carousel-caption">Modified Distance Sensor Driver for the Pico</p>
 </div>
 <div class="carousel-item">
+<p class="carousel-caption">Mobile App Design</p>
 <a href="https://example.com/project2" class="carousel-link" target="_top">
 <img src="../Images/Emotional.png" alt="Project 2" class="carousel-image">
 </a>
-<p class="carousel-caption">Mobile App Design</p>
 </div>
 <div class="carousel-item">
+<p class="carousel-caption">Mobile App Design</p>
 <a href="https://example.com/project2" class="carousel-link" target="_top">
 <img src="../Images/Emotional.png" alt="Project 2" class="carousel-image">
 </a>
-<p class="carousel-caption">Mobile App Design</p>
 </div>
 <div class="carousel-item">
+<p class="carousel-caption">Mobile App Design</p>
 <a href="https://example.com/project2" class="carousel-link" target="_top">
 <img src="../Images/Emotional.png" alt="Project 2" class="carousel-image">
 </a>
-<p class="carousel-caption">Mobile App Design</p>
 </div>
 </div>
 </div>
-<button class="nav-button" id="nextBtn">→</button>
 </div>

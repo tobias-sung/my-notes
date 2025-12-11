@@ -8,12 +8,7 @@ export const sharedPageComponents: SharedLayout = {
   afterBody: [
     Component.ProjectCarousel()
   ],
-  footer: Component.Footer({
-    links: {
-      GitHub: "https://github.com/jackyzha0/quartz",
-      "Discord Community": "https://discord.gg/cRFFHYye7t",
-    },
-  }), 
+  footer: Component.Footer(), 
 }
 
 // components for pages that display a single page (e.g. a single note)
@@ -29,18 +24,19 @@ export const defaultContentPageLayout: PageLayout = {
   ],
   left: [
     Component.PageTitle(),
+    Component.Flex({
+      components: [
+        { Component: Component.Search() },
+        { Component: Component.Darkmode() },
+        { Component: Component.ReaderMode() },
+      ],
+    }),
     Component.MobileOnly(Component.Spacer()),
     Component.DesktopOnly(Component.Explorer()),
   ],
   right: [
     //Component.Graph(),
-    Component.Flex({
-      components: [
-        { Component: Component.Darkmode() },
-        { Component: Component.ReaderMode() },
-        { Component: Component.Search()}
-      ],
-    }),
+    
     Component.DesktopOnly(Component.TableOfContents()),
     //Component.Backlinks(),
   ],

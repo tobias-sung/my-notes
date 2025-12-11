@@ -23,8 +23,15 @@ const config: QuartzConfig = {
       fontOrigin: "googleFonts",
       cdnCaching: true,
       typography: {
-        header: "IM Fell English",
-        body: "Gabarito",
+        header: { 
+	    name: "Barlow",
+	    weight: 600
+	},
+        body: { 
+	    name: "Barlow",
+	    weight: [300, 500, 800],
+	    includeItalic: true,
+	},
         code: "JetBrains Mono SemiBold",
       },
       colors: {

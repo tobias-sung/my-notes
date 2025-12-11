@@ -29,7 +29,7 @@ Here's a brief overview of how the feature works.
 ## Using a Queue to Store Messages
 I decided to use a **[Queue](https://freertos.org/Documentation/02-Kernel/02-Kernel-features/02-Queues-mutexes-and-semaphores/01-Queues)** to store messages temporarily before they are written to the SD card. This solved two problems.
 
-The first problem was that the **[driver](https://github.com/carlk3/FreeRTOS-FAT-CLI-for-RPi-Pico)** I was using to interface with the SD card reader was written in such a way that the initialization of the SD Card reader begins inside of a Task. 
+The first problem was that the **[driver](https://github.com/carlk3/FreeRTOS-FAT-CLI-for-RPi-Pico)** I was using to interface with the SD card reader was written in such a way that the initialization of the SD Card reader must be called from insde a Task. 
 
 **This means that until the Task Scheduler is started, nothing can be written to the SD card**. There's a lot of important initialization work happening before the Task Scheduler begins, and any good debug log would be incomplete without recording those jobs.
 
