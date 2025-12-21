@@ -1,5 +1,5 @@
 ---
-title: 9 - VL535CX PIO I2C Driver
+title: Modifying VL535CX Driver to Use Software I2C (PIO)
 draft: false
 tags:
   -
@@ -12,33 +12,37 @@ The solution was to use a "software I2C" implementation via "bit-banging" (that 
 
 Bit-banging is a very CPU-intensive process, but thankfully the Pico comes equipped with PIO (Programmable Input-Output) cores that can carry out bit-banging operations independently of the CPU.
 
+![[Pasted image 20251212125430.png|400]]
 
+I took this existing [Pico driver](https://github.com/akionu/pico-vl53l5cx) for the VL535CX sensor (from GitHub user [akionu](https://github.com/akionu)) and modified it to use a software I2C interface by merging code from this [PIO I2C example](https://github.com/raspberrypi/pico-examples/tree/master/pio/i2c).
 
-I took this existing [Pico driver](https://github.com/akionu/pico-vl53l5cx) for the VL535CX sensor (from GitHub user [akionu](https://github.com/akionu)) and modified it to use a PIO I2C interface rather than the Pico's hardware I2C connector. I copied the low-level PIO I2C functions and PIO code from this [example](https://github.com/raspberrypi/pico-examples/tree/master/pio/i2c).
-
-The Pico driver comes bundled with 11 examples, but for my testing I just used the most basic example `ex1_ranging_basic` which captures 10 ranging frames. All examples have the same setup: detect whether a VL535CX sensor is connected, then load the firmware onto the sensor before starting the real operation.
+The Pico driver comes bundled with 11 examples, but for my testing I just used the most basic example `ex1_ranging_basic` which captures 10 ranging frames. All examples have the same setup: detect whether a VL535CX sensor is connected, then load the firmware onto the sensor before starting the main operation.
 
 All the platform-dependent code is segmented in a single file, "platform.c". 
 
-At first, I just went through all the functions in "platform.c" and replaced every `i2c_write_blocking()` with `pio_i2c_write_blocking()` and every `i2c_read_blocking()` with `pio_i2c_read_blocking()`. 
+At first, I thought it would be as simple as replacing every instance of `i2c_write_blocking()` with `pio_i2c_write_blocking()` and every `i2c_read_blocking()` with `pio_i2c_read_blocking()`. 
 
 But I ran into some issues.
 
 # Reading the Wrong Data
-I was having issues with reading data from the sensor via I2C. 
+Whenever `pio_i2c_read_blocking()` was run, somehow it was reading the wrong data from the device.
 
-At first I commented out most of the code in `ex1_ranging_basic`, with the aim of simply detecting the sensor. But it wasn't being detected, even though a [PIO I2C bus scan](https://github.com/raspberrypi/pico-examples/blob/master/pio/i2c/i2c_bus_scan.c) showed that there was indeed a device detected at the correct address. 
+It all started when the device wasn't being detected by the program, even though a [PIO I2C bus scan](https://github.com/raspberrypi/pico-examples/blob/master/pio/i2c/i2c_bus_scan.c) showed that there was indeed a device detected at the correct address. 
 
-It turns out that the program will perform 2 reads to confirm 2 values of the device: its device ID and its revision ID. The problem is that `pio_i2c_read_blocking()` was returning 2 incorrect values, which led the program to conclude that no valid sensor was connected.
+It turns out that the program will read 2 values from the device to authenticate it: its device ID and its revision ID. `pio_i2c_read_blocking()` was returning incorrect values for both, which led the program to conclude that no valid sensor was connected.
 
 Looking at the Logic Analyzer readings in PulseView, I could see that the *correct data was being sent from the sensor to the Pico* (**F0** and **02** respectively). 
 
-![[Pasted image 20251120174914.png]]
-![[Pasted image 20251120174932.png]]
+<div style="display: flex; gap: 10px;justify-content: center">
+<img src="Images/I2C - F0.png" width=200/>
+<img src="Images/I2C - 02.png" width=200/>
+</div>
 
 But the program wasn't reading the correct values. Instead, it read **A7** and **A6**.
 
-I found this [forum post](https://forums.raspberrypi.com/viewtopic.php?t=340111) where someone had the exact same problem as me. In the end, they fixed the issue by adding one line (`mov isr, null`) to the PIO code in "i2c.pio" as follows:
+I found this [forum post](https://forums.raspberrypi.com/viewtopic.php?t=340111) where someone had the exact same problem as me (i.e. the program was not reading the correct values even though the device was sending the correct signals). 
+
+In the end, they fixed the issue by adding one line (`mov isr, null`) to the PIO code in "i2c.pio" as follows:
 
 ```pio {13}
 bitloop:
@@ -59,7 +63,7 @@ bitloop:
 I don't quite understand how, but this fixed the issue for me. Now `pio_i2c_read_blocking()` would return the correct values, and the program would recognize that a VL535CX sensor was connected. 
 
 # Writing Multiple Bytes
-I hit another roadblock with the function `WrMulti()`. As the name suggests, it writes multiple bytes of data in a single write operation, and is used for writing the sensor firmware to the device. The firmware comes in the form of a really long integer array (about 86000 bytes), and it must be sent sequentially without stopping. Without the firmware, the sensor can't do anything.
+I hit another roadblock with the function `WrMulti()`. As the name suggests, it writes multiple bytes of data in a single write operation, and is used for very important functions like writing the sensor firmware to the device. The firmware comes in the form of a really long integer array (about 86000 bytes), and it must be sent sequentially without stopping. Without the firmware, the sensor can't do anything.
 
 `WrMulti()` does not contain any use of `i2c_write_blocking()`. Instead, it contained modified code copied from within the `i2c_write_blocking()` function, doing all kinds of hardware-specific operations like modifying the I2C hardware registers. 
 
@@ -124,9 +128,9 @@ What I did instead was creare two new write functions, `pio_i2c_write_blocking_n
 
 `pio_i2c_write_blocking_nostop()` sends the device address and 2 bytes of data but does not send a STOP signal.
 
-`pio_i2c_write_block_nostop()` does not send a START signal, nor does it send the device address, and just starts writing data.
+`pio_i2c_write_block_nostart()` does not send a START signal, nor does it send the device address, and just starts writing data. It sends a STOP signal once it is done.
 
-So I could use `pio_i2c_write_blocking_nostop()` to send the device address and register address. And then `pio_i2c_write_blocking_nostart()` to send the long string of data. With no STOP and START signals in between, just like during regular operation with the hardware I2C. 
+So I could use `pio_i2c_write_blocking_nostop()` to send the device address and register address. And then `pio_i2c_write_blocking_nostart()` to send the long string of data. This way, there would be no STOP and START signals in between, just like during regular operation with the hardware I2C. 
 
 After being confused by the code in the original driver, I was able to clarify what was happening by checking the Logic Analyzer output and in the end all I had to do was copy and paste `pio_write_blocking()` with a few lines removed. With `WrMulti()` finally working, the driver finally worked with all the examples.
 

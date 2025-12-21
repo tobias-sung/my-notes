@@ -10,8 +10,8 @@ The Debug Probe comes with 3 debug cables. Take the 3-pin debug to 3-pin debug c
 
 ![[20250924_175412.jpg|250]] 
 
-# Installing pyOCD
-pyOCD is a simple-to-install tool that bridges the host computer with the debug interface (i.e. the debug probe).  
+# (Bonus) Installing pyOCD
+pyOCD is a simple-to-install tool that bridges the host computer with the debug interface (i.e. the debug probe). It's useful because it can be directly integrated with Python programs using the pyocd library, but one drawback I found compared to using OpenOCD is that loading programs is much slower for some reason.  
  
  I followed the [installation instructions](https://pyocd.io/docs/installing.html) and installed it with:
 ```shellscript
