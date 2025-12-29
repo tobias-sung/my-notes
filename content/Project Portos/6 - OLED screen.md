@@ -1,6 +1,6 @@
 ---
 title: 6 - OLED screen
-draft: true
+draft: false
 tags:
 ---
 *[View the full code on GitHub](https://github.com/tobias-sung/picow_oled)*

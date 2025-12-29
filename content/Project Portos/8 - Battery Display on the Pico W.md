@@ -1,5 +1,5 @@
 ---
-title: Battery Display on the Pico W
+title: 8 - Battery Display on the Pico W
 draft: false
 tags:
   -

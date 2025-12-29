@@ -1,5 +1,5 @@
 ---
-title: Pico W SD Card Debug Logger
+title: 10 - Pico W SD Card Debug Logger
 draft: false
 tags:
   -

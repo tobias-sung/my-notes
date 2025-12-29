@@ -1,6 +1,6 @@
 ---
 title: 2 - UART Communication
-draft: true
+draft: false
 tags:
 ---
 *[View the full code on GitHub](https://github.com/tobias-sung/uart_console)*

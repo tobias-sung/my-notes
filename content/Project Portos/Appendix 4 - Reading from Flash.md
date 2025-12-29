@@ -4,7 +4,7 @@ draft: false
 tags:
   -
 ---
-Before settling on the final [[7 - Reading from Configuration File|solution]] for reading from a configuration file, I had experimented with loading a binary file onto the Pico W's internal flash via OpenOCD/pyOCD's flash commands, and then reading its contents using C's memory functions. 
+Before settling on the final [[7 - Configuration File|solution]] for reading from a configuration file, I had experimented with loading a binary file onto the Pico W's internal flash via OpenOCD/pyOCD's flash commands, and then reading its contents using C's memory functions. 
 
 ![[Pasted image 20251001105453.png|300]]
 

@@ -1,6 +1,6 @@
 ---
 title: 3 - GPIO Button Input
-draft: true
+draft: false
 tags:
 ---
 *[View the full code on GitHub](https://github.com/tobias-sung/picow_freertos_gpio_button)*
