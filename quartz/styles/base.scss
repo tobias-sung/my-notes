@@ -385,12 +385,14 @@ thead {
   color: var(--dark);
   font-weight: revert;
   margin-bottom: 0;
-
+  
   article > & > a[role="anchor"] {
     color: var(--dark);
     background-color: transparent;
   }
+
 }
+
 
 h1,
 h2,

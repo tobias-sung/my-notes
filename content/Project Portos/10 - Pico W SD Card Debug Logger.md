@@ -4,6 +4,8 @@ draft: false
 tags:
   -
 ---
+[GitHub code](https://github.com/tobias-sung/picow-freertos-sd-logger)
+
 I built a simple debug logging feature to help keep a record of what's going on when the system is running. Debug logs are saved to a text file stored on an SD card, connected to the Pico W via an SPI card reader.
 
 During development, I've been using simple "print" statements to output messages via UART, which I can read using a serial communication program like [minicom](https://wiki.emacinc.com/wiki/Getting_Started_With_Minicom). This is useful for debugging during development, when I'm only running the program for short periods of time. But in real-life operation, the program would be running for hours and a lot could go wrong. Therefore, it would be useful to have a **permanent, timestamped record** of what happened during operation in the event that it suddenly crashes.

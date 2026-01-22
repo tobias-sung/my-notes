@@ -4,10 +4,7 @@ draft: false
 tags:
   -
 ---
- 
-
-
-*[View the full code on GitHub](https://github.com/tobias-sung/picow-battery-status)*
+ *[View the full code on GitHub](https://github.com/tobias-sung/picow-battery-status)*
 
 Another useful feature to implement would be power monitoring. That is, if the system is running off of a battery, a "battery percentage" could be printed onto the [[6 - OLED screen|OLED screen]]. 
 

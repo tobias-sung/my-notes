@@ -6,15 +6,15 @@ tags:
 ---
  [GitHub code](https://github.com/tobias-sung/pico-vl53l5cx-pio/tree/main)
 
-The Pico project I was working on needed to interface with a VL535CX distance sensor, but both of the Pico's I2C connectors had been taken up by other devices already. 
+The Pico project I was working on needed to interface with a VL535CX distance sensor, but both of the Pico's I<sup>2</sup>C connectors had been taken up by other devices already (and the connections had been fixed on a PCB already, so even though the sensor does have a unique I<sup>2</sup>C address I couldn't just add it onto one of the connectors). 
 
-The solution was to use a "software I2C" implementation via "bit-banging" (that is, simulating the hardware interface by sending a series of HIGH/LOW signals through GPIO pins with correct timing). 
+The (temporary) solution was to use a "software I<sup>2</sup>C" implementation via "bit-banging" (that is, simulating the hardware interface by sending a series of HIGH/LOW signals through GPIO pins with correct timing). 
 
 Bit-banging is a very CPU-intensive process, but thankfully the Pico comes equipped with PIO (Programmable Input-Output) cores that can carry out bit-banging operations independently of the CPU.
 
 ![[Pasted image 20251212125430.png|400]]
 
-I took this existing [Pico driver](https://github.com/akionu/pico-vl53l5cx) for the VL535CX sensor (from GitHub user [akionu](https://github.com/akionu)) and modified it to use a software I2C interface by merging code from this [PIO I2C example](https://github.com/raspberrypi/pico-examples/tree/master/pio/i2c).
+I took this existing [Pico driver](https://github.com/akionu/pico-vl53l5cx) for the VL535CX sensor (from GitHub user [akionu](https://github.com/akionu)) and modified it to use a software I<sup>2</sup>C interface by merging code from this [PIO I<sup>2</sup>C example](https://github.com/raspberrypi/pico-examples/tree/master/pio/i2c).
 
 The Pico driver comes bundled with 11 examples, but for my testing I just used the most basic example `ex1_ranging_basic` which captures 10 ranging frames. All examples have the same setup: detect whether a VL535CX sensor is connected, then load the firmware onto the sensor before starting the main operation.
 
@@ -33,9 +33,9 @@ It turns out that the program will read 2 values from the device to authenticate
 
 Looking at the Logic Analyzer readings in PulseView, I could see that the *correct data was being sent from the sensor to the Pico* (**F0** and **02** respectively). 
 
-<div style="display: flex; gap: 10px;justify-content: center">
-<img src="Images/I2C - F0.png" width=200/>
-<img src="Images/I2C - 02.png" width=200/>
+<div style="display: flex; flex-direction:column; gap: 1px;justify-content: center">
+<img src="Images/I2C - F0.png" width=300px/>
+<img src="Images/I2C - 02.png" width=300px/>
 </div>
 
 But the program wasn't reading the correct values. Instead, it read **A7** and **A6**.

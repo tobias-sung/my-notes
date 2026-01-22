@@ -24,11 +24,11 @@ const config: QuartzConfig = {
       cdnCaching: true,
       typography: {
         header: { 
-	    name: "Barlow",
+	    name: "Jersey 25",
 	    weight: 600
 	},
         body: { 
-	    name: "Barlow",
+	    name: "Solway",
 	    weight: [300, 500, 800],
 	    includeItalic: true,
 	},
@@ -36,7 +36,7 @@ const config: QuartzConfig = {
       },
       colors: {
         lightMode: {
-          light: "#E3E0D7",
+          light: "#eee8d5",
           lightgray: "#e5e5e5",
           gray: "#b8b8b8",
           darkgray: "#4e4e4e",

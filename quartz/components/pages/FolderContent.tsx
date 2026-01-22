@@ -20,7 +20,7 @@ interface FolderContentOptions {
 }
 
 const defaultOptions: FolderContentOptions = {
-  showFolderCount: true,
+  showFolderCount: false,
   showSubfolders: true,
 }
 
@@ -35,6 +35,9 @@ export default ((opts?: Partial<FolderContentOptions>) => {
     if (!folder) {
       return null
     }
+
+   
+
 
     const allPagesInFolder: QuartzPluginData[] =
       folder.children
@@ -101,6 +104,13 @@ export default ((opts?: Partial<FolderContentOptions>) => {
         ? fileData.description
         : htmlToJsx(fileData.filePath!, tree)
     ) as ComponentChildren
+
+    const folderCom = folder.data;
+    if (folder.data){
+      console.log("Folder node data keys:", Object.keys(folder));
+    }
+     
+    console.log("Folder data:", folder)
 
     return (
       <div class="popover-hint">

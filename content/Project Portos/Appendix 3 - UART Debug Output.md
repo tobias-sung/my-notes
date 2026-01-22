@@ -1,6 +1,6 @@
 ---
 title: Appendix 3 - UART Debug Output
-draft: true
+draft: false
 tags:
   -
 ---

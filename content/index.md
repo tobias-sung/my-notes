@@ -3,31 +3,33 @@ title: Welcome!
 ---
 Hello! My name is Tobias, and I'm an aspiriring software engineer (click [[📜 About Me|here]] if you'd like to know more about me). 
 
-Here are some of the projects I've worked on (click on each image to see my write-up on the subject):
+
+
 
 <div class="nav-buttons">
-<button class="nav-button" id="prevBtn">←</button>
-<button class="nav-button" id="nextBtn">→</button>
+<button class="nav-button" id="prevBtn"><img src="Images/left-arrow.png"></button>
+<p style="justify-content: center; font-family: var(--headerFont); font-size:20; display: flex;"><b>Projects</b></p>
+<button class="nav-button" id="nextBtn"><img width=100% src="Images/right-arrow.png"></button>
 </div>
 <div class="carousel-container">
 <div class="carousel-wrapper" id="carousel">
 <div class="carousel-track" id="carouselTrack">
 <div class="carousel-item">
-<p class="carousel-caption">Modified Distance Sensor Driver for the Pico</p>
+<p class="carousel-caption">Modifying VL535CX Driver</br>to Use Software I2C (PIO)</p>
 <a href="./Project-Portos/9 - Modifying-VL535CX-Driver-to-Use-Software-I2C-(PIO)" class="carousel-link" target="_top">
-<img src="../Images/I2C Driver.png" alt="Project 1" class="carousel-image">
+<img src="../Images/DRIVER.png" alt="Project 1" class="carousel-image">
 </a>
 </div>
 <div class="carousel-item">
 <p class="carousel-caption">MSC Text File Configuration</p>
 <a href="./Project-Portos/7 - Configuration File" class="carousel-link" target="_top">
-<img src="../Images/Config File Chinese.png" alt="Project 2" class="carousel-image">
+<img src="../Images/CONFIG.png" alt="Project 2" class="carousel-image">
 </a>
 </div>
 <div class="carousel-item">
 <p class="carousel-caption">SD Card Debug Logger</p>
 <a href="./Project-Portos/10 - Pico W SD Card Debug Logger" class="carousel-link" target="_top">
-<img src="../Images/SD Card Queue.png" alt="Project 2" class="carousel-image">
+<img src="../Images/SD.png" alt="Project 2" class="carousel-image">
 </a>
 </div>
 <div class="carousel-item">
