@@ -10,7 +10,7 @@ const PageTitle: QuartzComponent = ({ fileData, cfg, displayClass }: QuartzCompo
 
   return (
     <div class={classNames(displayClass, "header")}>
-      <img class="site-icon" src={iconPath}/>
+      <a href={baseDir}><img class="site-icon" src={iconPath}/></a>
       <h2 class={classNames(displayClass, "page-title")}>
       
         <a href={baseDir}>Tobey's Notebook</a>
@@ -25,7 +25,7 @@ PageTitle.css = `
   width: 50px;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 800px) {
   .site-icon {
     width: 200px;
   }
@@ -46,11 +46,12 @@ PageTitle.css = `
 }
 
 /* Default styles for all devices (often mobile-first) */
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 800px) {
   .header {
     display: flex;
     flex-direction:column;
     gap:10px;
+    align-content:center;
   }
 }
 `
