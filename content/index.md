@@ -42,6 +42,6 @@ Hello! My name is Tobias, and I'm an aspiriring software engineer (click [[📜 
 </div>
 </div>
 
-This website is a place for me to keep notes on all the projects I've worked on. 
+This website is a place for me to keep notes on all the projects I've worked on. It's a bit bare-bones in terms of design or artistic flair, but it does its job!
 
 I strongly believe in the importance of personal documentation when programming. As the famous saying goes, *"When I wrote this code, only God and I understood what I did. Now only God knows."* Hence the need to **write things down**!
