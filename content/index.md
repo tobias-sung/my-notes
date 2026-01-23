@@ -45,3 +45,10 @@ Hello! My name is Tobias, and I'm an aspiriring software engineer (click [[📜 
 This website is a place for me to keep notes on all the projects I've worked on. It's a bit bare-bones in terms of design or artistic flair, but it does its job!
 
 I strongly believe in the importance of personal documentation when programming. As the famous saying goes, *"When I wrote this code, only God and I understood what I did. Now only God knows."* Hence the need to **write things down**!
+****
+In an effort to improve my technical communication skills, I've also tried my hand at making some educational videos using animation tools like [MotionCanvas](https://motioncanvas.io). Here are some of my video works:
+
+<p style="justify-content: center; font-family: var(--headerFont); font-size:20; display: flex;"><b>Videos</b></p>
+<div style="display: flex; justify-content:center;">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/SI5AwqomayY" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
