@@ -50,6 +50,7 @@ In an effort to improve my technical communication skills, I've also tried my ha
 
 <p style="justify-content: center; font-family: var(--headerFont); font-size:20; display: flex;"><b>Videos</b></p>
 <div style="display: flex; flex-direction:column; gap: 15px; justify-content:center; align-items:center;">
-<iframe width="500" height="315" src="https://www.youtube.com/embed/SI5AwqomayY" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="500" height="315" src="https://www.youtube.com/embed/vikNJufaOAw" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="500" height="315" src="https://www.youtube.com/embed/jMgYWifqxLE" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="500" height="315" src="https://www.youtube.com/embed/qynVLnXVOPg" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="500" height="315" src="https://www.youtube.com/embed/QqenFBlPgXI" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
