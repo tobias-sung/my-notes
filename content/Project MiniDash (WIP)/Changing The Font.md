@@ -1,3 +1,9 @@
+---
+title: Changing the Font
+draft: false
+tags:
+  -
+---
 By default, the font for drawing strings on the display is Courier New which is nice and all, but it'd be nice to have my own custom fonts.
 
 In the demo project, all the font styles are saved as C files in the folder "lib/fonts". All the font files are named with the same convention. For example, a Courier New font style with a size of 12 pixels is saved as "font12.c".

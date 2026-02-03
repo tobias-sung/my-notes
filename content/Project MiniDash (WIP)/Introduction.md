@@ -1,3 +1,10 @@
+---
+title: 1 - Introduction
+draft: false
+tags:
+  -
+---
+
 I bought a new little desk shelf and thought it would be cool to have a little clock there. This little thought eventually grew into an idea to have an e-ink dashboard that could show stuff like a calendar, the weather, inspiring quotes, to-do lists and so on. 
 
 ![[Pasted image 20260203103535.png]]
