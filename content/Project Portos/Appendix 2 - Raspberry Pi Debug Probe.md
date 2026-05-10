@@ -6,7 +6,7 @@ tags:
 These are notes on how I set up the Raspberry Pi Debug Probe with the Pico W. Using the Debug Probe allowed me to get a closer look at what was going wrong during crashes and made it much more convenient to reload programs onto the Pico W. 
 
 # Connecting the Debug Probe to the Pico W
-The Debug Probe comes with 3 debug cables. Take the 3-pin debug to 3-pin debug cable and connect the "D" port on the probe to the debug connector on the Pico W (it's located in the middle of the board). Then take the 3-pin debug to male cable and connect the "U" port of the probe to the RX (orange), GND (black) and TX (yellow) pins on the Pico W.
+The Debug Probe comes with 3 debug cables. Take the 3-pin debug to 3-pin debug cable and connect the "D" port on the probe to the debug connector on the Pico W (it's located in the middle of the board). Then take the 3-pin debug to male cable and connect the "U" port of the probe to the Pico (orange to RX, black to GND and yellow to TX). This will enable UART output from the board to be routed through the Debug Probe.
 
 ![[20250924_175412.jpg|250]] 
 
