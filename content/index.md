@@ -57,10 +57,6 @@ In an effort to improve my technical communication skills, I've also tried my ha
 <div class="carousel-wrapper" id="carousel">
 <div class="carousel-track" id="carouselTrack2">
 <div class="carousel-item video-carousel-item">
-<p class="carousel-caption">Raspberry Pi Pico</br>Programmable I/O (A Visual Explanation)</p>
-<iframe width="500" height="315" src="https://www.youtube.com/embed/iynYiE6B01w" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-<div class="carousel-item video-carousel-item">
 <p class="carousel-caption">How Ring Buffers Work</br>(The Playground Roundabout Analogy)</p>
 <iframe width="500" height="315" src="https://www.youtube.com/embed/jMgYWifqxLE" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>

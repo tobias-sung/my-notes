@@ -1,3 +1,10 @@
+---
+title: 2 - Changing the Font
+draft: false
+tags:
+  -
+---
+
 I wanted to draw an icon on the screen to represent the current weather conditions. Like this photo:
 
 ![[E-Ink Weather Icon Prototype.png]]
