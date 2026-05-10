@@ -1,5 +1,5 @@
 ---
-title: 2 - Changing the Font
+title: 3 - Drawing Icons on the Screen (Converting PNG-to-Bitmap)
 draft: false
 tags:
   -
